@@ -2,19 +2,9 @@ from typing import Any, Optional, Callable, List, Type, Set, Tuple
 from types import FrameType, TracebackType
 import sys
 import inspect
-
-from prueba import cgi_decode
-
-Location = Tuple[str, int, str]
+Location = Tuple[str, int]
 
 class Coverage:
-    """Track coverage within a `with` block. Use as
-    ```
-    with Coverage() as cov:
-        function_to_be_traced()
-    c = cov.coverage()
-    ```
-    """
     
     def __init__(self) -> None:   
         self._trace: List[Location] = [] 
@@ -23,7 +13,9 @@ class Coverage:
         """Tracing function. To be overloaded in subclasses."""
         co = frame.f_code
         func_name = co.co_name
-        
+        line_no = frame.f_lineno
+        filename = co.co_filename
+    
         if self.original_trace_function is not None:
             self.original_trace_function(frame, event, arg)
 
@@ -31,8 +23,16 @@ class Coverage:
             function_name = frame.f_code.co_name
             lineno = frame.f_lineno
             if function_name != '__exit__':  # avoid tracing ourselves:
-                self._trace.append((function_name, lineno, func_name))
-        
+                self._trace.append((function_name, lineno))
+                
+        if event == 'call':
+            # if filename == ROOT_DIR_SUT:    
+            print ('Call to %s on line %s of %s' % (func_name, line_no, filename))
+            # return trace_calls_and_returns
+        elif event == 'return':
+            # if filename == ROOT_DIR_SUT:
+                print ('%s => %s' % (func_name, arg))
+                print('**Return Type**', type(arg))
 
         return self.traceit
 
