@@ -1,9 +1,16 @@
+
+def get():
+    return (3)
+
 def Prints( a, b): 
     if(a!=b):
-        result = a + b
+        # result = get() + b
+        result = get() + b
+        
+
         print ("Positive", result)
-    else:
-        print('hola')
+
+ 
     # try:
     #     print("Hello")
     # except:
@@ -11,8 +18,7 @@ def Prints( a, b):
     # else:
     #     print("Nothing went wrong") 
 
-
-        
+    print('hola')
 
 
     
