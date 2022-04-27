@@ -18,9 +18,7 @@ class EyeRa(object):
         """Tracing function. To be overloaded in subclasses."""
         co = frame.f_code
         func_name = co.co_name
-        line_no = frame.f_lineno
-        filename = co.co_filename
-    
+
         if self.original_trace_function is not None:
             self.original_trace_function(frame, event, arg)
 
@@ -33,7 +31,6 @@ class EyeRa(object):
                 self._trace.append((function_name, lineno))
                 
         elif event == 'return':
-            # if filename == ROOT_DIR_SUT:
                 print ('%s => %s' % (func_name, arg))
                 print('**Return Type**', type(arg))
 
@@ -59,11 +56,6 @@ class EyeRa(object):
         """The set of executed lines, as (function_name, line_number) pairs"""
         return set(self.trace())
     
-    def avg_statement_coverage(self) -> float:
-        avg_cov = 0
-
-        return 0
-
     def function_names(self) -> Set[str]:
         """The set of function names seen"""
         return set(function_name for (function_name, line_number) in self.coverage())
@@ -114,6 +106,30 @@ class CodeInspector(object):
     def read_file(self):
         return self.srcData.read()
     
+    def is_else_statement(self):
+
+        for i in self.srcData:
+            statement = i.replace(' ','')
+            if statement.find('\n') != -1:
+                statement = statement.replace('\n', '')
+            
+            if statement.find('else:') != -1:
+                if len(statement) == 5:
+                    return True
+                else:
+                    return False
+                #     print('s')
+
+    def else_counter(self):
+        elseCounter = 0
+        for i in self.srcData:
+            statement = i.replace(' ','')
+            if statement.find('else:') != -1:
+                
+                elseCounter += 1
+        
+        return elseCounter
+    
     def nloc(self):
         code = lizard.analyze_file(self.filePath)
         nlocT = 0
@@ -154,3 +170,19 @@ class CodeInspector(object):
             return method_names
         else:
             return code.function_list[0].__dict__['name']
+    
+    def avg_statement_coverage(self, cov) -> List[float]:
+        
+        elseCounter = self.else_counter()
+        tloc = self.nloc()
+        isElse = self.is_else_statement()
+        tloc = tloc - elseCounter
+        if(isElse):
+            avg_stm = round(len(cov)/tloc, 5)
+            return avg_stm
+        
+        else:
+            # print('sdasdasa')
+            avg_stm = round(len(cov)/tloc, 5)
+            # print('==========',len(cov), tloc)
+            return avg_stm
