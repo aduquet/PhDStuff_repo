@@ -13,10 +13,11 @@ def Prints( a, b):
  
     # try:
     #     print("Hello")
-    # except:
-    #     print("Something went wrong")
-    # else:
-    #     print("Nothing went wrong") 
+    elif a == a:
+        print("Something went wrong")
+        
+    else:
+        print("Nothing went wrong") 
 
     print('hola')
 

@@ -16,6 +16,8 @@ def readSUT(sut):
             print('start_line:', CodeInspector(sut).start_line())
             print('end_line:', CodeInspector(sut).end_line())
             print('method_name:', CodeInspector(sut).method_name())
+            # print(EyeRa(sut).avg_statement_coverage())
+            # print('content', content)
             return content
         else:
             raise ValueError('Empty file!')
@@ -25,12 +27,14 @@ def readSUT(sut):
 def run_alejaCovSystem(sut):
     try:
         with EyeRa('example1.py') as cov:
-            Prints(3,3)
+            Prints(3,4)
     except:
             pass
     print('*** cov.coverage ***')
     print(type(cov))
     print(cov.coverage())
+    covw = cov.coverage()
+    print(CodeInspector(sut).avg_statement_coverage(covw))
     print('trace', cov.trace())
     
 if __name__ == '__main__':
@@ -52,7 +56,7 @@ if __name__ == '__main__':
         if not os.path.exists(resultsPath):
             os.mkdir(resultsPath)
         
-        print(readSUT(sut='example1.py'))
+        # print(readSUT(sut='example1.py'))
 
         run_alejaCovSystem(sut='example1.py')
 
