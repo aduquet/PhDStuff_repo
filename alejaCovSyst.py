@@ -63,6 +63,7 @@ class EyeRa():
         return self._trace
     
     def trace_return_values(self)-> List[Location]:
+        """The list of executed lines, as (function_name, lineno, arg, type(arg))"""
         return self._traceReturn
 
     def coverage(self) -> Set[Location]:
