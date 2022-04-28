@@ -83,8 +83,8 @@ class CodeInspector(object):
             return method_names
         else:
             return code.function_list[0].__dict__['name']
-    
-    def avg_statement_coverage(self, cov) -> List[float]:
+    #quitar avg
+    def statement_coverage(self, cov) -> List[float]:
         
         elseCounter = self.else_counter()
         tloc = self.nloc()
@@ -99,7 +99,7 @@ class CodeInspector(object):
             # print('==========',len(cov), tloc)
             return avg_stm
     
-    def avg_method_coverage(self, func_used):
+    def method_coverage(self, func_used):
         total_num_methods = self.method_name()
         if type(total_num_methods) == str:
             return 1
