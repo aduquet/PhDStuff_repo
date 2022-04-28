@@ -1,7 +1,8 @@
 from example1 import *
 
 if __name__ == '__main__':
-    Prints(3,4)
+    Prints(3,3)
+    Prints(3,2)
     # try:
     #     with Coverage() as cov:
     #         Prints(3,9)

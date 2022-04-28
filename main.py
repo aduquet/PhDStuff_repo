@@ -3,6 +3,7 @@ import pathlib
 import glob as gl
 import numpy as np
 import pandas as pd
+from CodeInspector import CodeInspector
 
 from example1 import Prints
 # from CodeInspector import *
@@ -25,17 +26,20 @@ def readSUT(sut):
         raise ValueError('The file ' '"', sut, '" does not exist!')
 
 def run_alejaCovSystem(sut):
+    
     try:
-        with EyeRa('example1.py') as cov:
-            Prints(3,4)
+        with EyeRa() as cov:
+            Prints(3,3)
+            # Prints(3,2)
     except:
             pass
-    print('*** cov.coverage ***')
-    print(type(cov))
-    print(cov.coverage())
+    print('*** Statement coverage ***')
     covw = cov.coverage()
-    print(CodeInspector(sut).avg_statement_coverage(covw))
+    print( cov.coverage())
     print('trace', cov.trace())
+    print('trace_return', cov.trace_return_values())
+    print('***** Avg statement****:', CodeInspector(sut).avg_statement_coverage(covw))
+    
     
 if __name__ == '__main__':
     import click
