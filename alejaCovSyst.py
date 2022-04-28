@@ -30,10 +30,10 @@ class EyeRa():
             lineno = frame.f_lineno
             
             if function_name != '__exit__':  # avoid tracing ourselves:
-                self._trace.append((function_name, lineno))
+                if event != 'return':    
+                    self._trace.append((function_name, lineno))
             
             if event == 'return':
-                print(event)
                 self._traceReturn.append((function_name, lineno, arg, type(arg)))
 
         # if event == 'call':
@@ -42,7 +42,6 @@ class EyeRa():
         # elif event == 'return':
         #         print('%s => %s' % (frame.f_code.co_name, arg))
         #         print('**Return Type**', type(arg))
-
 
         return self.traceit
 
@@ -73,6 +72,17 @@ class EyeRa():
     def function_names(self) -> Set[str]:
         """The set of function names seen"""
         return set(function_name for (function_name, line_number) in self.coverage())
+
+    def branch_coverage(self) ->List[Location]:
+        coverage = set()
+        past_line = None
+        trace = self.trace()
+        
+        for line in trace:
+            if past_line is not None:
+                coverage.add((past_line, line))
+            past_line = line
+        return coverage
 
     def __repr__(self) -> str:
         """Return a string representation of this object.
