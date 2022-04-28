@@ -6,15 +6,6 @@ import lizard
 import string
 import fileinput
     
-class keyWords():
-    loops = ['for ', 'while ', 'do ', 'if']
-    op = ['and', 'or', 'xor']
-    aritmeticOperator = ['+', '-', '*', '/', '%', 'sqrt', '^', 'pow', 'abs', 'log']
-    specialOperands = ['++', '--', '**']
-    comparativeOperator = ['<', '>', '<=', '>=', '==', '!=', '&&', '||', '!', '&', '|', '<<', '>>', '~', '^' ]
-    comments = ['/*', '//', '*/', '/**', '*/' ]
-    dataType = ['byte ', 'short ', 'int ', 'long ', 'double ', 'char ', 'boolean ', 'Integer ', 'float ', 'Byte ', 'Short ', 'Long ', 'Double ', 'Char ', 'Boolean ',]
-
 class CodeInspector(object):
     
     def __init__(self, filePath):
@@ -110,3 +101,8 @@ class CodeInspector(object):
             avg_stm = round(len(cov)/tloc, 5)
             # print('==========',len(cov), tloc)
             return avg_stm
+    
+    def avg_method_coverage(self, func_used):
+        total_num_methods = self.method_name()
+        return round(len(func_used)/len(total_num_methods), 5)
+    
