@@ -1,10 +1,11 @@
 import os
 import re
 import sys
+from typing import Any, Optional, Callable, List, Type, Set, Tuple
 import lizard
 import string
 import fileinput
-
+    
 class keyWords():
     loops = ['for ', 'while ', 'do ', 'if']
     op = ['and', 'or', 'xor']
@@ -28,6 +29,30 @@ class CodeInspector(object):
     
     def read_file(self):
         return self.srcData.read()
+    
+    def is_else_statement(self):
+
+        for i in self.srcData:
+            statement = i.replace(' ','')
+            if statement.find('\n') != -1:
+                statement = statement.replace('\n', '')
+            
+            if statement.find('else:') != -1:
+                if len(statement) == 5:
+                    return True
+                else:
+                    return False
+                #     print('s')
+
+    def else_counter(self):
+        elseCounter = 0
+        for i in self.srcData:
+            statement = i.replace(' ','')
+            if statement.find('else:') != -1:
+                
+                elseCounter += 1
+        
+        return elseCounter
     
     def nloc(self):
         code = lizard.analyze_file(self.filePath)
@@ -69,6 +94,19 @@ class CodeInspector(object):
             return method_names
         else:
             return code.function_list[0].__dict__['name']
-        
-           
     
+    def avg_statement_coverage(self, cov) -> List[float]:
+        
+        elseCounter = self.else_counter()
+        tloc = self.nloc()
+        isElse = self.is_else_statement()
+        tloc = tloc - elseCounter
+        if(isElse):
+            avg_stm = round(len(cov)/tloc, 5)
+            return avg_stm
+        
+        else:
+            # print('sdasdasa')
+            avg_stm = round(len(cov)/tloc, 5)
+            # print('==========',len(cov), tloc)
+            return avg_stm
