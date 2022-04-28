@@ -1,3 +1,4 @@
+import ast
 import os
 import pathlib
 import glob as gl
@@ -16,7 +17,7 @@ def readSUT(sut):
             print('nloc:', CodeInspector(sut).nloc())
             print('start_line:', CodeInspector(sut).start_line())
             print('end_line:', CodeInspector(sut).end_line())
-            print('method_name:', CodeInspector(sut).method_name())
+            # print('method_name:', CodeInspector(sut).method_name())
             # print(EyeRa(sut).avg_statement_coverage())
             # print('content', content)
             return content
@@ -29,18 +30,23 @@ def run_alejaCovSystem(sut):
     
     try:
         with EyeRa() as cov:
-            Prints(3,3)
+            Prints(3,2)
             # Prints(3,2)
     except:
             pass
     print('*** Statement coverage ***')
-    covw = cov.coverage()
-    print( cov.coverage())
+    # covw = cov.coverage()
+    print('coverage:', cov.coverage())
     print('trace', cov.trace())
     print('trace_return', cov.trace_return_values())
-    print('***** Avg statement****:', CodeInspector(sut).avg_statement_coverage(covw))
-    
-    
+    # print('function_names:', cov.function_names())
+    # print(CodeInspector(sut).method_name())
+    print('***** Avg statement****:', CodeInspector(sut).avg_statement_coverage(cov.coverage()))
+    print('***** avg_method_coverage****:', CodeInspector(sut).avg_method_coverage(cov.function_names()))
+    print('***** branch_coverage****:', cov.branch_coverage())
+
+
+   
 if __name__ == '__main__':
     import click
 
