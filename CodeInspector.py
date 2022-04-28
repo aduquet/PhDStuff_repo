@@ -89,18 +89,20 @@ class CodeInspector(object):
         elseCounter = self.else_counter()
         tloc = self.nloc()
         isElse = self.is_else_statement()
-        tloc = tloc - elseCounter
+        
         if(isElse):
+            tloc = tloc - elseCounter
             avg_stm = round(len(cov)/tloc, 5)
             return avg_stm
-        
         else:
-            # print('sdasdasa')
             avg_stm = round(len(cov)/tloc, 5)
             # print('==========',len(cov), tloc)
             return avg_stm
     
     def avg_method_coverage(self, func_used):
         total_num_methods = self.method_name()
-        return round(len(func_used)/len(total_num_methods), 5)
+        if type(total_num_methods) == str:
+            return 1
+        else:
+            return round(len(func_used)/len(total_num_methods), 5)
     
