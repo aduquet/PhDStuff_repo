@@ -1,10 +1,8 @@
 import os
-import re
-import sys
-from typing import Any, Optional, Callable, List, Type, Set, Tuple
 import lizard
-import string
-import fileinput
+
+from typing import List
+
     
 class CodeInspector(object):
     
