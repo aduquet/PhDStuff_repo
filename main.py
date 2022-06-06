@@ -30,8 +30,8 @@ def run_alejaCovSystem(sut):
     
     try:
         with EyeRa() as cov:
-            Prints(3,2)
             # Prints(3,2)
+            Prints(2,3)
     except:
             pass
     print('*** Statement coverage ***')
@@ -41,8 +41,8 @@ def run_alejaCovSystem(sut):
     print('trace_return', cov.trace_return_values())
     # print('function_names:', cov.function_names())
     # print(CodeInspector(sut).method_name())
-    print('***** Avg statement****:', CodeInspector(sut).avg_statement_coverage(cov.coverage()))
-    print('***** avg_method_coverage****:', CodeInspector(sut).avg_method_coverage(cov.function_names()))
+    print('***** statement****:', CodeInspector(sut).statement_coverage(cov.coverage()))
+    print('***** method_coverage****:', CodeInspector(sut).method_coverage(cov.function_names()))
     print('***** branch_coverage****:', cov.branch_coverage())
 
 
