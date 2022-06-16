@@ -5,8 +5,6 @@ import astunparse
 import os
 import time
 
-#  python3.6   conda   TensorFlow
-
 class FunctionVisitor(ast.NodeVisitor):
     def __init__(self):
         self.number = 0 # 节点编号
@@ -330,6 +328,8 @@ class CFGGenerator(ast.NodeVisitor):
             path = self.prefix + '.' + node.name + '.png'
         path = os.path.join(self.folder, path)
         graph.write_png(path)
+        print('asdfasdfadsfafd')
+        print(graph)
         print('generate ' + path)
 
 if __name__ == '__main__':
