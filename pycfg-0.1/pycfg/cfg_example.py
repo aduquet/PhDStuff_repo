@@ -26,7 +26,7 @@ if __name__ == '__main__':
 	img1 = img1.resize((800, 600), Image.ANTIALIAS)
 	img = ImageTk.PhotoImage(img1)
 	printsdf(g)
- 
+
 	background ="gray"
 
 	panel = tk.Label(root, height = 600, image = img)
