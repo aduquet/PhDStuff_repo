@@ -1,9 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium import webdriver
 from shutil import which
-import string
 import json
-
 
 def InitWebDriver():
 
@@ -55,6 +53,25 @@ def KeyWordsExtractor(keywordsList):
             keywordsFinalList.append(keywordAux)
     # print('----', keywordsFinalList, len(keywordsFinalList))
     return keywordsFinalList
+
+def FunctionalityNumMRsExtractor(functionalityList):
+    
+    functionalityFinalList = []
+    numMRsFinalList = []
+    functionalityAuxList = []
+    numMRsAuxList = []
+
+    for i in range(len(functionalityList)):
+        if i % 2 == 0:
+            print(functionalityList[i])
+            functionalityAuxList.append(functionalityList[i])
+        else:
+            numMRsAuxList.append(functionalityList[i])
+    
+    print(functionalityAuxList)
+    print(numMRsAuxList)
+
+
 driver = InitWebDriver()
 
 # driver.get('http://www.metwiki.net/')
@@ -109,10 +126,10 @@ keywordsElemets = FindElementsbyXpath(keywords_xpath)
 keywordsList = WebElementInfoToList(keywordsElemets)
 
 keywordsList = KeyWordsExtractor(keywordsList)
-print(keywordsList, len(keywordsList))
+# print(keywordsList, len(keywordsList))
 
-# functionalityDesprition_xpath = '//ul[@class="repo-list"]/li[@class="repo-list-item"]/div[@class="repo-list-all"]/div[@class="repo-list-left"]/div[@class="repo-list-description"]'
-# functionalityElements = FindElementsbyXpath(functionalityDesprition_xpath)
-# functionalityList = WebElementInfoToList(functionalityElements)
-
+functionalityDesprition_xpath = '//ul[@class="repo-list"]/li[@class="repo-list-item"]/div[@class="repo-list-all"]/div[@class="repo-list-left"]/div[@class="repo-list-description"]'
+functionalityElements = FindElementsbyXpath(functionalityDesprition_xpath)
+functionalityList = WebElementInfoToList(functionalityElements)
+FunctionalityNumMRsExtractor(functionalityList)
 # print(functionalityList)
