@@ -1,0 +1,34 @@
+{
+    "number": {
+        "name": "Numerical program",
+        "link_number": "http://www.metwiki.net/viewDomainProgram?domainName=Numerical%20program"
+    },
+    "machine": {
+        "name": "Machine learning",
+        "link_machine": "http://www.metwiki.net/viewDomainProgram?domainName=Machine%20learning"
+    },
+    "algorithm": {
+        "name": "Algorithm",
+        "link_algorithm": "http://www.metwiki.net/viewDomainProgram?domainName=Algorithm"
+    },
+    "geometry": {
+        "name": "Geometry",
+        "link_geometry": "http://www.metwiki.net/viewDomainProgram?domainName=Geometry"
+    },
+    "opt": {
+        "name": "Web application",
+        "link_opt": "http://www.metwiki.net/viewDomainProgram?domainName=%20web%20service%20and%20application"
+    },
+    "calculus": {
+        "name": "Optimization algorithms",
+        "link_calculus": "http://www.metwiki.net/viewDomainProgram?domainName=%20Optimization%20algorithms"
+    },
+    "bio": {
+        "name": "Bioinformatics",
+        "link_bio": "http://www.metwiki.net/viewDomainProgram?domainName=Bioinformatics"
+    },
+    "graph": {
+        "name": "Graph and Image",
+        "link_graph": "http://www.metwiki.net/viewDomainProgram?domainName=Graph%20and%20Image"
+    }
+}
