@@ -68,8 +68,22 @@ def FunctionalityNumMRsExtractor(functionalityList):
         else:
             numMRsAuxList.append(functionalityList[i])
     
-    print(functionalityAuxList)
-    print(numMRsAuxList)
+    for description in functionalityAuxList:
+        if(description.find('Functionality : ') != -1):
+            desc = description.replace('Functionality : ','')
+        if(desc.find('\n') != -1):
+            desc = desc.replace('\n', ' ')
+        if(desc.find('  ') != -1):
+            desc = desc.replace('  ', '')
+        if(desc.find('.') != -1):
+            desc = desc.replace('.', '')
+        desc = desc.rstrip()
+        desc = desc.lstrip()
+        functionalityFinalList.append(desc)
+
+    print(functionalityFinalList)
+    # print(functionalityAuxList)
+    print(len(functionalityFinalList))
 
 
 driver = InitWebDriver()
