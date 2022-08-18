@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 from selenium import webdriver
 from shutil import which
+import string
 import json
 
 
@@ -34,6 +35,26 @@ def WebElementInfoToList(webElement):
 
     return finalList
 
+def KeyWordsExtractor(keywordsList):
+    keywordsFinalList = []
+    keywordsAuxList = []
+    for keyword in keywordsList:
+        
+        if(keyword.find('Keywords :') != -1):
+            keyw = keyword.replace('Keywords :','N/A')
+            keywAux = keyw.split(' ')
+            keywordsAuxList.append(keywAux)
+    
+    for keywordAux in keywordsAuxList:
+        if(keywordAux == 1):
+            keywordsFinalList.append(keywordAux)
+        else:
+            keywordAux.pop(0)
+            if('' in keywordAux):
+                keywordAux.pop(keywordAux.index(''))
+            keywordsFinalList.append(keywordAux)
+    # print('----', keywordsFinalList, len(keywordsFinalList))
+    return keywordsFinalList
 driver = InitWebDriver()
 
 # driver.get('http://www.metwiki.net/')
@@ -74,23 +95,24 @@ pragramName_xpath = '//ul[@class="repo-list"]/li[@class="repo-list-item"]/h3'
 programNames = FindElementsbyXpath(pragramName_xpath)
 programNamesList = WebElementInfoToList(programNames)
 
-print(programNamesList)
+# print(programNamesList)
 
 programLinks = []
 
 for i in programNamesList:
     link = GetLinksbyLinkText(i)
     programLinks.append(link)
-print(programLinks)
+# print(programLinks)
 
 keywords_xpath = '//ul[@class="repo-list"]/li[@class="repo-list-item"]/div[@class="repo-list-all"]/div[@class="repo-list-left"]/div[@class="repo-list-tags"]'
 keywordsElemets = FindElementsbyXpath(keywords_xpath)
 keywordsList = WebElementInfoToList(keywordsElemets)
 
-print(keywordsList)
+keywordsList = KeyWordsExtractor(keywordsList)
+print(keywordsList, len(keywordsList))
 
-functionalityDesprition_xpath = '//ul[@class="repo-list"]/li[@class="repo-list-item"]/div[@class="repo-list-all"]/div[@class="repo-list-left"]/div[@class="repo-list-description"]'
-functionalityElements = FindElementsbyXpath(functionalityDesprition_xpath)
-functionalityList = WebElementInfoToList(functionalityElements)
+# functionalityDesprition_xpath = '//ul[@class="repo-list"]/li[@class="repo-list-item"]/div[@class="repo-list-all"]/div[@class="repo-list-left"]/div[@class="repo-list-description"]'
+# functionalityElements = FindElementsbyXpath(functionalityDesprition_xpath)
+# functionalityList = WebElementInfoToList(functionalityElements)
 
-print(functionalityList)
+# print(functionalityList)
