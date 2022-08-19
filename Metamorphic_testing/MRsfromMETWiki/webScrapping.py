@@ -1,7 +1,9 @@
 from selenium.webdriver.common.by import By
 from selenium import webdriver
 from shutil import which
+import shortuuid
 import json
+
 
 def InitWebDriver():
 
@@ -126,6 +128,35 @@ def GetProgramsInfo(link):
 
     return programNamesList, programLinks, keywordsList, functionalityList, numMRsList
 
+def UpdateMainDic(mainDic, cat, programNamesList, programLinksList, keywordsList, functionalityList, numMRsList):
+
+    auxDicList = []
+    for i in range(0, len(programNamesList)):
+        prgramID = shortuuid.uuid(name = programNamesList[i])
+        if(i == 0):
+            print('*****')
+            auxDic = {'programs': { prgramID: {
+                'program_Name' : programNamesList[i],
+                'program_Link' :  programLinksList[i],
+                'program_Keywords' : keywordsList[i],
+                'program_Description' : functionalityList[i],
+                'Num_MRs' : numMRsList[i]}
+                }
+            }
+            mainDic[cat].update(auxDic)
+
+        else:
+            mainDic[cat]['programs'][prgramID] = {
+                'program_Name' : programNamesList[i],
+                'program_Link' :  programLinksList[i],
+                'program_Keywords' : keywordsList[i],
+                'program_Description' : functionalityList[i],
+                'Num_MRs' : numMRsList[i]}
+                
+    json_object = json.dumps(mainDic, indent = 4) 
+    print(json_object)
+
+    
 
 driver = InitWebDriver()
 
@@ -162,7 +193,11 @@ for cat in categories:
 
 for cat in categories:
     link = mainDic[cat]['link']
-    print(link)
+    programNamesList, programLinksList, keywordsList, functionalityList, numMRsList = GetProgramsInfo(mainDic[cat]['link'])
+    UpdateMainDic(mainDic, cat, programNamesList, programLinksList, keywordsList, functionalityList, numMRsList)
+    # print(link)
+    if(cat == 'number'):
+        break
 
 # programNamesList, programLinksList, keywordsList, functionalityList, numMRsList = GetProgramsInfo('http://www.metwiki.net/viewDomainProgram?domainName=Numerical%20program')
 # print('*** program names ***')
