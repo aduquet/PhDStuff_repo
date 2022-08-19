@@ -106,7 +106,6 @@ def GetProgramsInfo(link):
 
     for i in programNamesList:
         if(i == 'Testing of Boyer Program '):
-            print('eeeee')
             i = 'Testing of Boyer '
             link = GetLinksbyLinkText(i)
             programLinks.append(link)
@@ -147,7 +146,7 @@ for cat in categories:
     categoryName = categoryName_aux.text
     categoryLink = categoryLink_aux.get_attribute('href')
 
-    auxDic = { cat: {'name': categoryName, 'link_'+ cat: categoryLink}}
+    auxDic = { cat: {'name': categoryName, 'link': categoryLink}}
     mainDic.update(auxDic)
 
 # mainDic['number'].update({'program': {'program_name': 'asdf', 'key_words': [1,2,3,4,5], 'asdfa': 'dfadf'}})
@@ -161,18 +160,22 @@ for cat in categories:
 # json_object = json.dumps(mainDic, indent = 4) 
 # print(json_object)
 
-programNamesList, programLinksList, keywordsList, functionalityList, numMRsList = GetProgramsInfo('http://www.metwiki.net/viewDomainProgram?domainName=Numerical%20program')
-print('*** program names ***')
-print(programNamesList, '\n', len(programNamesList))
+for cat in categories:
+    link = mainDic[cat]['link']
+    print(link)
 
-print('*** program links ***')
-print(programLinksList, '\n', len(programLinksList))
+# programNamesList, programLinksList, keywordsList, functionalityList, numMRsList = GetProgramsInfo('http://www.metwiki.net/viewDomainProgram?domainName=Numerical%20program')
+# print('*** program names ***')
+# print(programNamesList, '\n', len(programNamesList))
 
-print('*** keywords List ***')
-print(keywordsList, '\n',len(keywordsList))
+# print('*** program links ***')
+# print(programLinksList, '\n', len(programLinksList))
 
-print('*** program functionalityList ***')
-print(functionalityList, '\n', len(functionalityList))
+# print('*** keywords List ***')
+# print(keywordsList, '\n',len(keywordsList))
 
-print('*** program numMRsList ***')
-print(numMRsList, '\n', len(numMRsList))
+# print('*** program functionalityList ***')
+# print(functionalityList, '\n', len(functionalityList))
+
+# print('*** program numMRsList ***')
+# print(numMRsList, '\n', len(numMRsList))
