@@ -63,28 +63,37 @@ def FunctionalityNumMRsExtractor(functionalityList):
 
     for i in range(len(functionalityList)):
         if i % 2 == 0:
-            print(functionalityList[i])
             functionalityAuxList.append(functionalityList[i])
         else:
             numMRsAuxList.append(functionalityList[i])
     
     for description in functionalityAuxList:
         if(description.find('Functionality : ') != -1):
-            desc = description.replace('Functionality : ','')
-        if(desc.find('\n') != -1):
-            desc = desc.replace('\n', ' ')
-        if(desc.find('  ') != -1):
-            desc = desc.replace('  ', '')
-        if(desc.find('.') != -1):
-            desc = desc.replace('.', '')
-        desc = desc.rstrip()
-        desc = desc.lstrip()
-        functionalityFinalList.append(desc)
+            description = description.replace('Functionality : ','')
+        if(description.find('\n') != -1):
+            description = description.replace('\n', ' ')
+        if(description.find('  ') != -1):
+            description = description.replace('  ', '')
+        if(description.find('.') != -1):
+            description = description.replace('.', '')
+        description = description.rstrip()
+        description = description.lstrip()
+        functionalityFinalList.append(description)
 
-    print(functionalityFinalList)
-    # print(functionalityAuxList)
-    print(len(functionalityFinalList))
+    for mr in numMRsAuxList:
+        if(mr.find(' ') != -1):
+            mr = mr.replace(' ', '')
+        if(mr.find('MRNum:') != -1):
+            mr = mr.replace('MRNum:', '')
+        
+        if(type(mr) == str):
+            numMRsFinalList.append(int(mr))
 
+    # print(numMRsFinalList)
+    # print(len(numMRsFinalList))
+    # print(functionalityFinalList)
+    # print(len(functionalityFinalList))
+    return functionalityFinalList, numMRsFinalList
 
 driver = InitWebDriver()
 
