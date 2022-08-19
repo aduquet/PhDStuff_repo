@@ -15,7 +15,7 @@ def InitWebDriver():
 
 def GetLinksbyLinkText(link_name):
 
-    return driver.find_element(By.LINK_TEXT, link_name).get_attribute('href')
+    return driver.find_element(By.PARTIAL_LINK_TEXT, link_name).get_attribute('href')
 
 def FindElementenbyXpath(xpath):
 
@@ -51,7 +51,7 @@ def KeyWordsExtractor(keywordsList):
             if('' in keywordAux):
                 keywordAux.pop(keywordAux.index(''))
             keywordsFinalList.append(keywordAux)
-    # print('----', keywordsFinalList, len(keywordsFinalList))
+
     return keywordsFinalList
 
 def FunctionalityNumMRsExtractor(functionalityList):
@@ -89,33 +89,66 @@ def FunctionalityNumMRsExtractor(functionalityList):
         if(type(mr) == str):
             numMRsFinalList.append(int(mr))
 
-    # print(numMRsFinalList)
-    # print(len(numMRsFinalList))
-    # print(functionalityFinalList)
-    # print(len(functionalityFinalList))
     return functionalityFinalList, numMRsFinalList
+
+def GetProgramsInfo(link):
+
+    driver.get(link)
+
+    pragramName_xpath = '//ul[@class="repo-list"]/li[@class="repo-list-item"]/h3'
+
+    programNames = FindElementsbyXpath(pragramName_xpath)
+    programNamesList = WebElementInfoToList(programNames)
+
+    print(programNamesList)
+
+    programLinks = []
+
+    for i in programNamesList:
+        if(i == 'Testing of Boyer Program '):
+            print('eeeee')
+            i = 'Testing of Boyer '
+            link = GetLinksbyLinkText(i)
+            programLinks.append(link)
+        
+        else:
+            link = GetLinksbyLinkText(i)
+            programLinks.append(link)
+
+    keywords_xpath = '//ul[@class="repo-list"]/li[@class="repo-list-item"]/div[@class="repo-list-all"]/div[@class="repo-list-left"]/div[@class="repo-list-tags"]'
+    keywordsElemets = FindElementsbyXpath(keywords_xpath)
+    keywordsList = WebElementInfoToList(keywordsElemets)
+    keywordsList = KeyWordsExtractor(keywordsList)
+
+    functionalityDesprition_xpath = '//ul[@class="repo-list"]/li[@class="repo-list-item"]/div[@class="repo-list-all"]/div[@class="repo-list-left"]/div[@class="repo-list-description"]'
+    functionalityElements = FindElementsbyXpath(functionalityDesprition_xpath)
+    functionalityList = WebElementInfoToList(functionalityElements)
+    functionalityList, numMRsList = FunctionalityNumMRsExtractor(functionalityList)
+
+    return programNamesList, programLinks, keywordsList, functionalityList, numMRsList
+
 
 driver = InitWebDriver()
 
-# driver.get('http://www.metwiki.net/')
+driver.get('http://www.metwiki.net/')
 
-# categories = ['number', 'machine', 'algorithm', 'geometry', 'opt', 'calculus', 'bio', 'graph']
+categories = ['number', 'machine', 'algorithm', 'geometry', 'opt', 'calculus', 'bio', 'graph']
 
-# mainDic = dict()
+mainDic = dict()
 
-# for cat in categories:
+for cat in categories:
 
-#     xpath_CategoryName = '//div[@class="part"]/div[@class="' + cat + '"]/div[@class="zi"]'
-#     xpath_CategoryLink = '//div[@class="part"]/div[@class="' + cat + '"]/a'
+    xpath_CategoryName = '//div[@class="part"]/div[@class="' + cat + '"]/div[@class="zi"]'
+    xpath_CategoryLink = '//div[@class="part"]/div[@class="' + cat + '"]/a'
     
-#     categoryName_aux = FindElementenbyXpath(xpath_CategoryName)
-#     categoryLink_aux = FindElementenbyXpath(xpath_CategoryLink)
+    categoryName_aux = FindElementenbyXpath(xpath_CategoryName)
+    categoryLink_aux = FindElementenbyXpath(xpath_CategoryLink)
 
-#     categoryName = categoryName_aux.text
-#     categoryLink = categoryLink_aux.get_attribute('href')
+    categoryName = categoryName_aux.text
+    categoryLink = categoryLink_aux.get_attribute('href')
 
-#     auxDic = { cat: {'name': categoryName, 'link_'+ cat: categoryLink}}
-#     mainDic.update(auxDic)
+    auxDic = { cat: {'name': categoryName, 'link_'+ cat: categoryLink}}
+    mainDic.update(auxDic)
 
 # mainDic['number'].update({'program': {'program_name': 'asdf', 'key_words': [1,2,3,4,5], 'asdfa': 'dfadf'}})
 # # mainDic.update(mainDic2)
@@ -128,31 +161,18 @@ driver = InitWebDriver()
 # json_object = json.dumps(mainDic, indent = 4) 
 # print(json_object)
 
-driver.get('http://www.metwiki.net/viewDomainProgram?domainName=Numerical%20program')
+programNamesList, programLinksList, keywordsList, functionalityList, numMRsList = GetProgramsInfo('http://www.metwiki.net/viewDomainProgram?domainName=Numerical%20program')
+print('*** program names ***')
+print(programNamesList, '\n', len(programNamesList))
 
-pragramName_xpath = '//ul[@class="repo-list"]/li[@class="repo-list-item"]/h3'
+print('*** program links ***')
+print(programLinksList, '\n', len(programLinksList))
 
-programNames = FindElementsbyXpath(pragramName_xpath)
-programNamesList = WebElementInfoToList(programNames)
+print('*** keywords List ***')
+print(keywordsList, '\n',len(keywordsList))
 
-# print(programNamesList)
+print('*** program functionalityList ***')
+print(functionalityList, '\n', len(functionalityList))
 
-programLinks = []
-
-for i in programNamesList:
-    link = GetLinksbyLinkText(i)
-    programLinks.append(link)
-# print(programLinks)
-
-keywords_xpath = '//ul[@class="repo-list"]/li[@class="repo-list-item"]/div[@class="repo-list-all"]/div[@class="repo-list-left"]/div[@class="repo-list-tags"]'
-keywordsElemets = FindElementsbyXpath(keywords_xpath)
-keywordsList = WebElementInfoToList(keywordsElemets)
-
-keywordsList = KeyWordsExtractor(keywordsList)
-# print(keywordsList, len(keywordsList))
-
-functionalityDesprition_xpath = '//ul[@class="repo-list"]/li[@class="repo-list-item"]/div[@class="repo-list-all"]/div[@class="repo-list-left"]/div[@class="repo-list-description"]'
-functionalityElements = FindElementsbyXpath(functionalityDesprition_xpath)
-functionalityList = WebElementInfoToList(functionalityElements)
-FunctionalityNumMRsExtractor(functionalityList)
-# print(functionalityList)
+print('*** program numMRsList ***')
+print(numMRsList, '\n', len(numMRsList))
