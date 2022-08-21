@@ -5,7 +5,8 @@ import shortuuid
 import json
 
 
-def InitWebDriver():
+# this method is for initialization of the browser, it is configured to work in "background" and does not open the browser
+def InitWebDriver(): 
 
     from selenium.webdriver.chrome.options import Options
 
@@ -13,28 +14,33 @@ def InitWebDriver():
     op = webdriver.ChromeOptions()
     op.add_argument('headless')
     driver = webdriver.Chrome(options=op)
+    # driver = webdriver.Chrome(CHROMEPATH)
+
     return driver
 
+# This method find an element in the html by partial link text, and returns if it has a link
 def GetLinksbyLinkText(link_name):
 
     return driver.find_element(By.PARTIAL_LINK_TEXT, link_name).get_attribute('href')
 
+# find and returns an element through specific path
 def FindElementenbyXpath(xpath):
 
     return driver.find_element('xpath', xpath)
 
+# Finde a list of elements through specific path
 def FindElementsbyXpath(xpath):
 
     return driver.find_elements('xpath', xpath)
 
 def WebElementInfoToList(webElement):
-    
     finalList = []
     for element in webElement:
         finalList.append(element.text)
 
     return finalList
 
+# This method is specific to METWiki, it extracts the keywords that belong to a specific category
 def KeyWordsExtractor(keywordsList):
     keywordsFinalList = []
     keywordsAuxList = []
@@ -56,6 +62,7 @@ def KeyWordsExtractor(keywordsList):
 
     return keywordsFinalList
 
+# This method is specific to METWiki, it extracts the functionality info and the Num of MRs that belong to a specific category and programm 
 def FunctionalityNumMRsExtractor(functionalityList):
     
     functionalityFinalList = []
@@ -107,6 +114,9 @@ def GetProgramsInfo(link):
     programLinks = []
 
     for i in programNamesList:
+
+        # There is a misspeling in the html file when the program "Testign of Boyer" is calling
+        # this if is only to get the info of that program
         if(i == 'Testing of Boyer Program '):
             i = 'Testing of Boyer '
             link = GetLinksbyLinkText(i)
@@ -128,6 +138,7 @@ def GetProgramsInfo(link):
 
     return programNamesList, programLinks, keywordsList, functionalityList, numMRsList
 
+# This method updates the main dictionary with the program info 
 def UpdateMainDic(mainDic, cat, programNamesList, programLinksList, keywordsList, functionalityList, numMRsList):
 
     for i in range(0, len(programNamesList)):
@@ -155,12 +166,14 @@ def UpdateMainDic(mainDic, cat, programNamesList, programLinksList, keywordsList
     # print(json_object)    
     return mainDic
 
+# Call for initialising the webDriver
 driver = InitWebDriver()
 
+# Main page
 driver.get('http://www.metwiki.net/')
 
+# These categories are extracted form MetWiki, and they are the real tags real names used in the HTML file
 categories = ['number', 'machine', 'algorithm', 'geometry', 'opt', 'calculus', 'bio', 'graph']
-
 mainDic = dict()
 
 for cat in categories:
@@ -177,26 +190,14 @@ for cat in categories:
     auxDic = { cat: {'name': categoryName, 'link': categoryLink}}
     mainDic.update(auxDic)
 
-# mainDic['number'].update({'program': {'program_name': 'asdf', 'key_words': [1,2,3,4,5], 'asdfa': 'dfadf'}})
-# # mainDic.update(mainDic2)
-# print(mainDic['number'].keys())
-# print(mainDic)
-
-# # with open("sample.json", "w") as outfile:
-#     # json.dump(mainDic, outfile, indent = 4)
-
-# json_object = json.dumps(mainDic, indent = 4) 
-# print(json_object)
 
 for cat in categories:
     link = mainDic[cat]['link']
     programNamesList, programLinksList, keywordsList, functionalityList, numMRsList = GetProgramsInfo(mainDic[cat]['link'])
     mainDic = UpdateMainDic(mainDic, cat, programNamesList, programLinksList, keywordsList, functionalityList, numMRsList)
 
-with open("METWikiProgramInfo.json", "w") as outfile:
-    json.dump(mainDic, outfile, indent = 4)
+### Printing stuff
 
-# programNamesList, programLinksList, keywordsList, functionalityList, numMRsList = GetProgramsInfo('http://www.metwiki.net/viewDomainProgram?domainName=Numerical%20program')
 # print('*** program names ***')
 # print(programNamesList, '\n', len(programNamesList))
 
@@ -211,3 +212,75 @@ with open("METWikiProgramInfo.json", "w") as outfile:
 
 # print('*** program numMRsList ***')
 # print(numMRsList, '\n', len(numMRsList))
+
+###
+
+with open("METWiki2.json", "w") as outfile:
+    json.dump(mainDic, outfile, indent = 4)
+
+json_object = json.dumps(mainDic, indent = 4) 
+print(json_object)
+
+
+
+'''HERE THE PROBLEMS STARTED'''
+# driver.get('http://www.metwiki.net/viewDomainProgram?domainName=Numerical%20program')
+# driver.get('http://www.metwiki.net/')
+# driver.get('http://www.metwiki.net/viewProgramDetail?index=537&userId=&type=view')
+# driver.find_element(By.XPATH, '//div=[@class="part"]/div=[@class="number"]/a').click()
+# driver.find_element(By.LINK_TEXT, 'GetMid').click()
+
+
+
+# idProgramsList = list(mainDic['number']['programs'].keys())
+
+# linkPrograms = []
+
+# for id in idProgramsList:
+#     linkPrograms.append(mainDic['number']['programs'][id]['program_Link'])
+
+
+# print(linkPrograms)
+
+
+# print(idProgramsList)
+# print(type(idProgramsList))
+
+# with open("sample2.json", "w") as outfile:
+#     json.dump(mainDic, outfile, indent = 4)\
+
+
+# xpath = '//'
+
+# pragramName_xpath = '//ul[@class="repo-list"]/li[@class="repo-list-item"]/h3'
+
+# xpath_CategoryName = '//div[@class="all"]/div[@class="hero-unit"]/div[@id="editor"]/h3[@class="attr1"]'
+
+# print(driver.find_element('xpath','//div[@class="all"]/div[@class="hero-unit"]/div[@id="editor"]/h3[@class="attr1"]').text)
+
+
+# print(driver.find_element(By.CSS_SELECTOR, "*[id$='editor']"))
+
+# print(driver.find_element('xpath', xpath_CategoryName).text)
+# print(driver.find_element(By.ID, 'editor').text)
+# programNames = FindElementsbyXpath(xpath_CategoryName)
+# programNames = FindElementenbyXpath(xpath_CategoryName)
+
+# xpath_CategoryLink = '//div[@class="part"]/div[@class="' + cat + '"]/a'
+    
+# categoryName_aux = FindElementenbyXpath(xpath_CategoryName)
+
+# print(programNames)
+
+
+
+'''Try to access with BeautifilSoup :/ it did not work'''
+# from bs4 import BeautifulSoup
+# from urllib.request import Request, urlopen
+# import re
+
+# req = Request("http://www.metwiki.net/viewProgramDetail?index=12&userId=&type=view")
+# html_page = urlopen(req)
+
+# soup = BeautifulSoup(html_page, "html.parser")
+# print(soup)
