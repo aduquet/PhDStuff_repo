@@ -19,10 +19,10 @@ def InitWebDriver():
 
 
 driver = InitWebDriver()
+driver.get('http://www.metwiki.net/viewProgramDetail?index=537&userId=&type=view')
+# driver.get('file:///Users/alduck/Documents/PhDStuff_repo/Metamorphic_testing/MRsfromMETWiki/html/ViewDetail.html')
 
-driver.get('file:///Users/alduck/Documents/PhDStuff_repo/Metamorphic_testing/MRsfromMETWiki/html/ViewDetail.html')
-
-print(driver.find_element('xpath','//div[@class="all"]/div[@class="hero-unit"]/div[@id="editor"]/h3[@class="attr1"]').text)
+# print(driver.find_element('xpath','//div[@class="all"]/div[@class="hero-unit"]/div[@id="editor"]/h3[@class="attr1"]').text)
 
 # driver.find_element(By.XPATH, '//div=[@class="part"]/div=[@class="number"]/a=[@href="http://www.metwiki.net/viewDomainProgram?domainName=Numerical%20program"]').click()
 # driver.find_element(By.LINK_TEXT, 'GetMid').click()
