@@ -102,7 +102,7 @@ def GetProgramsInfo(link):
     programNames = FindElementsbyXpath(pragramName_xpath)
     programNamesList = WebElementInfoToList(programNames)
 
-    print(programNamesList)
+    # print(programNamesList)
 
     programLinks = []
 
@@ -130,11 +130,9 @@ def GetProgramsInfo(link):
 
 def UpdateMainDic(mainDic, cat, programNamesList, programLinksList, keywordsList, functionalityList, numMRsList):
 
-    auxDicList = []
     for i in range(0, len(programNamesList)):
         prgramID = shortuuid.uuid(name = programNamesList[i])
         if(i == 0):
-            print('*****')
             auxDic = {'programs': { prgramID: {
                 'program_Name' : programNamesList[i],
                 'program_Link' :  programLinksList[i],
@@ -152,11 +150,10 @@ def UpdateMainDic(mainDic, cat, programNamesList, programLinksList, keywordsList
                 'program_Keywords' : keywordsList[i],
                 'program_Description' : functionalityList[i],
                 'Num_MRs' : numMRsList[i]}
-                
-    json_object = json.dumps(mainDic, indent = 4) 
-    print(json_object)
 
-    
+    # json_object = json.dumps(mainDic, indent = 4) 
+    # print(json_object)    
+    return mainDic
 
 driver = InitWebDriver()
 
@@ -194,10 +191,10 @@ for cat in categories:
 for cat in categories:
     link = mainDic[cat]['link']
     programNamesList, programLinksList, keywordsList, functionalityList, numMRsList = GetProgramsInfo(mainDic[cat]['link'])
-    UpdateMainDic(mainDic, cat, programNamesList, programLinksList, keywordsList, functionalityList, numMRsList)
-    # print(link)
-    if(cat == 'number'):
-        break
+    mainDic = UpdateMainDic(mainDic, cat, programNamesList, programLinksList, keywordsList, functionalityList, numMRsList)
+
+with open("METWikiProgramInfo.json", "w") as outfile:
+    json.dump(mainDic, outfile, indent = 4)
 
 # programNamesList, programLinksList, keywordsList, functionalityList, numMRsList = GetProgramsInfo('http://www.metwiki.net/viewDomainProgram?domainName=Numerical%20program')
 # print('*** program names ***')
