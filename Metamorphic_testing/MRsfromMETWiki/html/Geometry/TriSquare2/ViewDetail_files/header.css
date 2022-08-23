@@ -1,0 +1,135 @@
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+	text-decoration:none;
+}
+
+body,html{
+	width:100%;
+	height:100%;
+}
+
+.parent{
+	position:relative;
+}
+
+#butt{
+	cursor:pointer;
+}
+
+.button {
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    background:url(./pic/btn.png) ;
+    top: 7px;
+    left: 267px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.site-header{
+	width:100%;
+	height:60px;
+	font-size:20px;
+	background-color:white;
+	position:fixed;
+	z-index:100;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.site-header .site-pic{
+	float:left;
+	width:200px;
+	height:60px;
+	margin-left:20px;
+	text-align:center;
+}
+
+.site-header .site-pic .img{
+	width:170px;
+	height:35px;	
+	padding-top:9px;
+}
+
+.site-header .site-search{
+	margin-left:20px;
+	width:500px;
+	height:40px;
+	margin-top:10px;
+	float:left;
+}
+
+.site-header .header-zi{
+	height:40px;
+	word-spacing:50px;
+	margin-top:10px;
+	float:right;
+	font-size:16px;
+	margin-right:5%;
+}
+.site-header .header-zi ul li{
+	float:left;
+	margin-right:50px;
+	margin-top:3px;
+	width:70px;
+	height:35px;
+	text-align:center;
+}
+
+.dropbtn{
+	display:inline-block;
+}
+
+.login{
+	display:inline-block;
+}
+
+.loginitem {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 120px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.loginitem a {
+display: block;
+color: black;
+text-decoration:none;
+}
+
+.site-header .header-zi .login .loginitem{
+	position: absolute;
+	width: 8%;
+	height: 120px;
+	background-color: white;
+	display:none;
+}
+.site-header .header-zi .login .loginitem p{
+	font-size:15px;
+	word-spacing:0px;
+	text-align:center;
+}
+
+.site-header .header-zi .login .loginitem p:hover{
+	background-color: #f0f0f0;
+}
+
+.site-header .header-zi a{
+	line-height:40px;
+	color:black;
+}
+.site-header .header-zi li:hover{
+	background-color: #f0f0f0;
+}
+.site-header .header-client{
+	float:right;
+	height:40px;
+	width:150px;
+	margin-top:10px;
+	margin-right:20px;
+	line-height:40px;
+}
