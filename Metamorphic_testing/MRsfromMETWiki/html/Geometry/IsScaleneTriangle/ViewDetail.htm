@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html><script type="text/javascript" async="" src="ViewDetail_files/ga.js"></script><script>
+    window[Symbol.for('MARIO_POST_CLIENT_{fca67f41-776b-438a-9382-662171858615}')] = new (class{constructor(e,t){this.name=e,this.destination=t,this.serverListeners={},this.bgRequestsListeners={},this.bgEventsListeners={},window.addEventListener("message",e=>{const t=e.data,n=!(t.destination&&t.destination===this.name),s=!t.event;if(!n&&!s)if("MARIO_POST_SERVER__BG_RESPONSE"===t.event){const e=t.args;if(this.hasBgRequestListener(e.requestId)){try{this.bgRequestsListeners[e.requestId](e.response)}catch(e){}delete this.bgRequestsListeners[e.requestId]}}else if("MARIO_POST_SERVER__BG_EVENT"===t.event){const e=t.args;if(this.hasBgEventListener(e.event))try{this.bgEventsListeners[t.id](e.payload)}catch(e){}}else if(this.hasServerListener(t.event))try{this.serverListeners[t.event](t.args)}catch(e){}})}emitToServer(e,t){const n=this.generateUIID(),s={args:t,destination:this.destination,event:e,id:n};return window.postMessage(s,location.origin),n}emitToBg(e,t){const n=this.generateUIID(),s={bgEventName:e,requestId:n,args:t};return this.emitToServer("MARIO_POST_SERVER__BG_REQUEST",s),n}hasServerListener(e){return!!this.serverListeners[e]}hasBgRequestListener(e){return!!this.bgRequestsListeners[e]}hasBgEventListener(e){return!!this.bgEventsListeners[e]}fromServerEvent(e,t){this.serverListeners[e]=t}fromBgEvent(e,t){this.bgEventsListeners[e]=t}fromBgResponse(e,t){this.bgRequestsListeners[e]=t}generateUIID(){return"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,(function(e){const t=16*Math.random()|0;return("x"===e?t:3&t|8).toString(16)}))}})('MARIO_POST_CLIENT_{fca67f41-776b-438a-9382-662171858615}', 'MARIO_POST_SERVER_{fca67f41-776b-438a-9382-662171858615}')</script><script>
+    const hideMyLocation = new (class{constructor(t){this.clientKey=t,this.watchIDs={},this.client=window[Symbol.for(t)];const e=navigator.geolocation.getCurrentPosition,n=navigator.geolocation.watchPosition,o=navigator.geolocation.clearWatch,r=this;navigator.geolocation.getCurrentPosition=function(t,n,o){r.handle(e,"GET",t,n,o)},navigator.geolocation.watchPosition=function(t,e,o){return r.handle(n,"WATCH",t,e,o)},navigator.geolocation.clearWatch=function(t){if(-1===t)return;const e=r.watchIDs[t];return delete r.watchIDs[t],o.apply(this,[e])}}handle(t,e,n,o,r){const i=this.client.emitToBg("HIDE_MY_LOCATION__GET_LOCATION");let a=this.getRandomInt(0,1e5);if(this.client.fromBgResponse(i,i=>{if(i.enabled)if("SUCCESS"===i.status){const t=this.map(i);n(t)}else{const t=this.errorObj();o(t),a=-1}else{const i=[n,o,r],c=t.apply(navigator.geolocation,i);"WATCH"===e&&(this.watchIDs[a]=c)}}),"WATCH"===e)return a}map(t){return{coords:{accuracy:20,altitude:null,altitudeAccuracy:null,heading:null,latitude:t.latitude,longitude:t.longitude,speed:null},timestamp:Date.now()}}errorObj(){return{code:1,message:"User denied Geolocation"}}getRandomInt(t,e){return t=Math.ceil(t),e=Math.floor(e),Math.floor(Math.random()*(e-t+1))+t}})('MARIO_POST_CLIENT_{fca67f41-776b-438a-9382-662171858615}')
+  </script><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- base href="http://www.metwiki.net/" -->
+    <title>ViewDetail</title>
+
+	<!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+	<script src="ViewDetail_files/ie-emulation-modes-warning.js"></script>
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+  	<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  	<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	
+    <script type="text/javascript" src="ViewDetail_files/jquery.min.js"></script>
+    <script type="text/javascript" src="ViewDetail_files/dialog-min.js"></script>
+
+    <!-- Favicons -->
+	
+	
+        <script src="ViewDetail_files/behavior_legacy.js"></script>
+        <script>$(function(){ $("img.lazy").jail({effect: "fadeIn", speed: 500, placeholder: "//d85wutc1n854v.cloudfront.net/live/imgs/placeholder.gif"}); });</script>
+        <script type="text/javascript">
+        	var _hmt = _hmt || [];
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-28871117-1']);
+            _gaq.push(['_setDomainName', 'wrapbootstrap.com']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    
+    <script type="text/javascript" src="ViewDetail_files/MathJax.js">
+    </script>
+    <script type="text/x-mathjax-config;executed=true">
+		MathJax.Hub.Config({
+  		tex2jax: {
+			inlineMath: [['$','$'], ['\\(','\\)']],
+			displayMath: [["$$", "$$"],["\\[", "\\]"]],
+			processEscapes: true
+		},
+		"HTML-CSS": { availableFonts: ["TeX"] }
+		});
+    </script>
+    <script>
+//        收藏程序
+     
+        function star(userId,programId){
+        	 var flag=-1;
+        var data = {
+            "userId" : userId,
+            "programId" : programId
+        };
+       
+
+        $.post(
+            "starProgram",//请求的action相对路径
+            data,
+                function () {
+                    var tip2 = dialog({
+                        content: '<p>Star Success<p>',
+                        quickClose: true});
+                    tip2.show();
+                },
+            "text"
+            );
+        document.execCommand('Refresh') ;
+      //  location.reload() ;
+    	// location=location ;
+    //	 location.assign(location) ;
+    //	 document.execCommand('Refresh') ;
+    //	 window.navigate(location) ;
+    //	 location.replace(location) ;
+     //   window.location.reload(true);
+    }
+    $(document).ready(function(){
+    	setTimeout(function () {
+       	 
+    	
+    	var flag=-1;
+    	 var imgstar=document.getElementById("star");
+     	if(flag!=-1){
+ 		imgstar.setAttribute("src","img/stared.png");
+     	}else{
+     		imgstar.setAttribute("src","img/star.png");
+     	}
+     //	window.confirm(flag);
+    	},2000);
+    });
+
+    </script>    
+    <script>
+function DeleteProgram(){
+if(confirm("你是否要删除此项目？")){
+window.location.href="deleteProgram?programid=32&index=32";
+}
+}
+
+</script>
+<link rel="stylesheet" type="text/css" href="ViewDetail_files/viewDetail.css"> 
+
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><script type="text/javascript" data-name="TokenSigning" data-by="Web-eID extension">(function pageScript() {
+        let hasDeprecationWarningDisplayed = false;
+        const eidPromises = {};
+        window.addEventListener("message", function (event) {
+            if (event.source !== window)
+                return;
+            if (event.data.src && (event.data.src === "background.js")) {
+                console.log("Page received: ");
+                console.log(event.data);
+                if (event.data.nonce) {
+                    const p = eidPromises[event.data.nonce];
+                    if (event.data.result === "ok") {
+                        if (event.data.signature !== undefined) {
+                            p.resolve({ hex: event.data.signature });
+                        }
+                        else if (event.data.version !== undefined) {
+                            p.resolve(event.data.extension + "/" + event.data.version);
+                        }
+                        else if (event.data.cert !== undefined) {
+                            p.resolve({ hex: event.data.cert });
+                        }
+                        else {
+                            console.log("No idea how to handle message");
+                            console.log(event.data);
+                        }
+                    }
+                    else {
+                        p.reject(new Error(event.data.result));
+                    }
+                    delete eidPromises[event.data.nonce];
+                }
+                else {
+                    console.log("No nonce in event msg");
+                }
+            }
+        }, false);
+        function nonce() {
+            let val = "";
+            const hex = "abcdefghijklmnopqrstuvwxyz0123456789";
+            for (let i = 0; i < 16; i++)
+                val += hex.charAt(Math.floor(Math.random() * hex.length));
+            return val;
+        }
+        function messagePromise(msg) {
+            if (!hasDeprecationWarningDisplayed) {
+                console.warn("TokenSigning API is deprecated. Please consider switching to the new Web-eID library.");
+                hasDeprecationWarningDisplayed = true;
+            }
+            return new Promise(function (resolve, reject) {
+                window.postMessage(msg, "*");
+                eidPromises[msg.nonce] = { resolve, reject };
+            });
+        }
+        window.TokenSigning = class TokenSigning {
+            getCertificate(options) {
+                const msg = {
+                    src: "page.js",
+                    nonce: nonce(),
+                    type: "CERT",
+                    lang: options.lang,
+                    filter: options.filter,
+                };
+                console.log("getCertificate()");
+                return messagePromise(msg);
+            }
+            sign(cert, hash, options) {
+                const msg = {
+                    src: "page.js",
+                    nonce: nonce(),
+                    type: "SIGN",
+                    cert: cert.hex,
+                    hash: hash.hex,
+                    hashtype: hash.type,
+                    lang: options.lang,
+                    info: options.info,
+                };
+                console.log("sign()");
+                return messagePromise(msg);
+            }
+            getVersion() {
+                const msg = {
+                    src: "page.js",
+                    nonce: nonce(),
+                    type: "VERSION",
+                };
+                console.log("getVersion()");
+                return messagePromise(msg);
+            }
+        };
+    })();</script></head>
+<body data-new-gr-c-s-check-loaded="8.901.0" data-gr-ext-installed=""><div id="MathJax_Message" style="display: none;"></div>
+
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ViewDetail_files/header.css">
+<title>header</title>
+
+
+	<div class="site-header">
+		<div class="site-pic">
+			<a style="text-decoration: none;" href="http://www.metwiki.net/viewTop8Domain"><img src="ViewDetail_files/word.png" class="img"></a>		
+		</div>
+		<div class="site-search">
+            <form id="form1" accept-charset="UTF-8" action="searchProgram" method="get" class="parent">
+            	<input type="text" class="chromeless-input" name="q" value="Search MetWiki" style="padding-left: 20px; position:absolute; outline:none; border:1.5px solid gray;color:gray;width:300px;height:35px;border-radius:18px;" onfocus="if(this.value=='Search MetWiki'){this.value='';}" onblur="if(this.value==''){this.value='Search MetWiki'}">
+            	<input type="button" class="button" onclick="document.getElementById('form1').submit();">
+            </form>
+        </div>
+        <div class="header-client">
+        	Hi!  MY Friend     
+        </div>  
+        <div class="header-zi">
+          <ul>
+ 			<li><a target="_blank" style="text-decoration: none;" href="http://cstar.whu.edu.cn/">CSTAR</a></li>
+			<li class="login">
+				<a style="text-decoration: none;" class="dropbtn" id="butt">Login</a>
+				<div class="loginitem" id="layer">
+					<p><a href="http://www.metwiki.net/PAGE/user/login.jsp" id="signin">Sign In</a></p>
+					<p><a href="http://www.metwiki.net/logOut?userId=">Sign Out</a></p>
+					<p><a href="http://www.metwiki.net/PAGE/user/register.jsp" id="register">Register</a></p>	
+					<input type="hidden" id="userstate" name="userstate" value="MY Friend">	
+				</div>			
+			</li>
+			<li><a style="text-decoration: none;" href="http://www.metwiki.net/getProfile?userId=">Profile</a></li>
+		  </ul>
+		</div>          
+    </div>
+    <script src="ViewDetail_files/script.js"></script>
+
+
+
+ 
+ <div id="page_home" style="background-image: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzODQiIGhlaWdodD0iNDQzIj48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJyZ2IoNTYsIDIwNCwgMTQxKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xMDY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQyLjY2NjY2NjY2NjY2NjY2NCwgLTM2Ljk1MDQxNzIyODEzNjA1KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xMDY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzQxLjMzMzMzMzMzMzMzMzMsIC0zNi45NTA0MTcyMjgxMzYwNSkiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMTA2NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00Mi42NjY2NjY2NjY2NjY2NjQsIDQwNi40NTQ1ODk1MDk0OTY1KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xMDY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzQxLjMzMzMzMzMzMzMzMzMsIDQwNi40NTQ1ODk1MDk0OTY1KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4wMiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjEuMzMzMzMzMzMzMzMzMzM2LCAwLjApIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIwLjAyIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMS4zMzMzMzMzMzMzMzMzMzYsIDQ0My40MDUwMDY3Mzc2MzI1NikiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMTI0MDAwMDAwMDAwMDAwMDEiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDg1LjMzMzMzMzMzMzMzMzM0LCAtMzYuOTUwNDE3MjI4MTM2MDUpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIwLjEyNDAwMDAwMDAwMDAwMDAxIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4NS4zMzMzMzMzMzMzMzMzNCwgNDA2LjQ1NDU4OTUwOTQ5NjUpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iIzIyMiIgZmlsbC1vcGFjaXR5PSIwLjA0NiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQ5LjMzMzMzMzMzMzMzMzM0LCAwLjApIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iIzIyMiIgZmlsbC1vcGFjaXR5PSIwLjA0NiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQ5LjMzMzMzMzMzMzMzMzM0LCA0NDMuNDA1MDA2NzM3NjMyNTYpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIwLjA4OTMzMzMzMzMzMzMzMzMzIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMTMuMzMzMzMzMzMzMzMzMzQsIC0zNi45NTA0MTcyMjgxMzYwNSkiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMDg5MzMzMzMzMzMzMzMzMzMiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIxMy4zMzMzMzMzMzMzMzMzNCwgNDA2LjQ1NDU4OTUwOTQ5NjUpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIwLjE0MTMzMzMzMzMzMzMzMzM0IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNzcuMzMzMzMzMzMzMzMzMywgMC4wKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xNDEzMzMzMzMzMzMzMzMzNCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjc3LjMzMzMzMzMzMzMzMzMsIDQ0My40MDUwMDY3Mzc2MzI1NikiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMTI0MDAwMDAwMDAwMDAwMDEiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00Mi42NjY2NjY2NjY2NjY2NjQsIDM2Ljk1MDQxNzIyODEzNjA1KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xMjQwMDAwMDAwMDAwMDAwMSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzQxLjMzMzMzMzMzMzMzMzMsIDM2Ljk1MDQxNzIyODEzNjA1KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC4xNSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjEuMzMzMzMzMzMzMzMzMzM2LCA3My45MDA4MzQ0NTYyNzIxKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xMDY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODUuMzMzMzMzMzMzMzMzMzQsIDM2Ljk1MDQxNzIyODEzNjA1KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC4wODA2NjY2NjY2NjY2NjY2NiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQ5LjMzMzMzMzMzMzMzMzM0LCA3My45MDA4MzQ0NTYyNzIxKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4wMiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjEzLjMzMzMzMzMzMzMzMzM0LCAzNi45NTA0MTcyMjgxMzYwNSkiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjMjIyIiBmaWxsLW9wYWNpdHk9IjAuMTUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI3Ny4zMzMzMzMzMzMzMzMzLCA3My45MDA4MzQ0NTYyNzIxKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xNDEzMzMzMzMzMzMzMzMzNCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQyLjY2NjY2NjY2NjY2NjY2NCwgMTEwLjg1MTI1MTY4NDQwODE0KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xNDEzMzMzMzMzMzMzMzMzNCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzQxLjMzMzMzMzMzMzMzMzMsIDExMC44NTEyNTE2ODQ0MDgxNCkiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjMjIyIiBmaWxsLW9wYWNpdHk9IjAuMDI4NjY2NjY2NjY2NjY2NjY3IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMS4zMzMzMzMzMzMzMzMzMzYsIDE0Ny44MDE2Njg5MTI1NDQyKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC4wOTgiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDg1LjMzMzMzMzMzMzMzMzM0LCAxMTAuODUxMjUxNjg0NDA4MTQpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIwLjAzNzMzMzMzMzMzMzMzMzMzIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNDkuMzMzMzMzMzMzMzMzMzQsIDE0Ny44MDE2Njg5MTI1NDQyKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4wODkzMzMzMzMzMzMzMzMzMyIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjEzLjMzMzMzMzMzMzMzMzM0LCAxMTAuODUxMjUxNjg0NDA4MTQpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIwLjA3MjAwMDAwMDAwMDAwMDAxIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNzcuMzMzMzMzMzMzMzMzMywgMTQ3LjgwMTY2ODkxMjU0NDIpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iIzIyMiIgZmlsbC1vcGFjaXR5PSIwLjEzMjY2NjY2NjY2NjY2NjY1IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNDIuNjY2NjY2NjY2NjY2NjY0LCAxODQuNzUyMDg2MTQwNjgwMjMpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iIzIyMiIgZmlsbC1vcGFjaXR5PSIwLjEzMjY2NjY2NjY2NjY2NjY1IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzNDEuMzMzMzMzMzMzMzMzMywgMTg0Ljc1MjA4NjE0MDY4MDIzKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xNDEzMzMzMzMzMzMzMzMzNCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjEuMzMzMzMzMzMzMzMzMzM2LCAyMjEuNzAyNTAzMzY4ODE2MjUpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iIzIyMiIgZmlsbC1vcGFjaXR5PSIwLjA2MzMzMzMzMzMzMzMzMzM0IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4NS4zMzMzMzMzMzMzMzMzNCwgMTg0Ljc1MjA4NjE0MDY4MDIzKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC4wMjg2NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE0OS4zMzMzMzMzMzMzMzMzNCwgMjIxLjcwMjUwMzM2ODgxNjI1KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC4wOTgiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIxMy4zMzMzMzMzMzMzMzMzNCwgMTg0Ljc1MjA4NjE0MDY4MDIzKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC4wNDYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI3Ny4zMzMzMzMzMzMzMzMzLCAyMjEuNzAyNTAzMzY4ODE2MjUpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIwLjEyNDAwMDAwMDAwMDAwMDAxIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNDIuNjY2NjY2NjY2NjY2NjY0LCAyNTguNjUyOTIwNTk2OTUyMykiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMTI0MDAwMDAwMDAwMDAwMDEiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM0MS4zMzMzMzMzMzMzMzMzLCAyNTguNjUyOTIwNTk2OTUyMykiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMTA2NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIxLjMzMzMzMzMzMzMzMzMzNiwgMjk1LjYwMzMzNzgyNTA4ODQpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iIzIyMiIgZmlsbC1vcGFjaXR5PSIwLjExNTMzMzMzMzMzMzMzMzM0IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4NS4zMzMzMzMzMzMzMzMzNCwgMjU4LjY1MjkyMDU5Njk1MjMpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iIzIyMiIgZmlsbC1vcGFjaXR5PSIwLjA4MDY2NjY2NjY2NjY2NjY2IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNDkuMzMzMzMzMzMzMzMzMzQsIDI5NS42MDMzMzc4MjUwODg0KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4wNzIwMDAwMDAwMDAwMDAwMSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjEzLjMzMzMzMzMzMzMzMzM0LCAyNTguNjUyOTIwNTk2OTUyMykiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMDg5MzMzMzMzMzMzMzMzMzMiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI3Ny4zMzMzMzMzMzMzMzMzLCAyOTUuNjAzMzM3ODI1MDg4NCkiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMDU0NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00Mi42NjY2NjY2NjY2NjY2NjQsIDMzMi41NTM3NTUwNTMyMjQ0NSkiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMDU0NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM0MS4zMzMzMzMzMzMzMzMzLCAzMzIuNTUzNzU1MDUzMjI0NDUpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIwLjEwNjY2NjY2NjY2NjY2NjY3IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMS4zMzMzMzMzMzMzMzMzMzYsIDM2OS41MDQxNzIyODEzNjA0KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC4wNjMzMzMzMzMzMzMzMzMzNCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODUuMzMzMzMzMzMzMzMzMzQsIDMzMi41NTM3NTUwNTMyMjQ0NSkiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMTQxMzMzMzMzMzMzMzMzMzQiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE0OS4zMzMzMzMzMzMzMzMzNCwgMzY5LjUwNDE3MjI4MTM2MDQpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iIzIyMiIgZmlsbC1vcGFjaXR5PSIwLjEzMjY2NjY2NjY2NjY2NjY1IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMTMuMzMzMzMzMzMzMzMzMzQsIDMzMi41NTM3NTUwNTMyMjQ0NSkiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMTQxMzMzMzMzMzMzMzMzMzQiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI3Ny4zMzMzMzMzMzMzMzMzLCAzNjkuNTA0MTcyMjgxMzYwNCkiICAvPjwvc3ZnPg==&quot;);" align="center">&gt;
+    <div class="container">
+        <div class="hero-unit1" style="margin-bottom: 25px;">
+          <span class="title"> <strong>   Is scalene triangle</strong></span>  
+		<br>
+		<h3>
+        <small>
+            Tag:
+
+            
+                <a class="post-tag" href="http://www.metwiki.net/viewProgramByTag?tagName=Geometry">
+                    Geometry</a>
+            
+                <a class="post-tag" href="http://www.metwiki.net/viewProgramByTag?tagName=Triangle%20classification">
+                    Triangle classification</a>
+            
+            <br>
+            
+
+            <a href="http://www.metwiki.net/viewProgramDetailBeforeUpdate?index=32">
+                Edit  <img src="ViewDetail_files/edit.gif" alt="edit" width="18" height="18">
+            </a>
+            &nbsp;
+            <a style="cursor: pointer;" onclick="star(,32);">
+                Star<img src="ViewDetail_files/star.png" id="star" alt="star" width="18" height="18"> </a>
+            &nbsp;
+            <a style="cursor: pointer;" onclick="DeleteProgram();">Delete</a>
+               &nbsp; 
+             <a href="http://www.metwiki.net/FileUploadRequest?index=32">Add Picture</a>
+        </small>
+            </h3>
+         </div>
+    </div>
+</div>
+<div class="all">
+<div class="hero-unit">
+		<input type="hidden" name="dbIndex" value="32">
+    	<div id="editor" contenteditable="false" align="left">
+        <h3 class="attr1">Program Information</h3>
+        <code class="attr2">Name:</code> 
+        <font size="3" face="Arial"> Is scalene triangle</font><br>
+        <code class="attr2">Domain:</code>
+        <font size="3" face="Arial"> Geometry</font><br>
+        <code class="attr2">Functionality:</code>
+            <font style="white-space:pre-line;" size="3" face="Arial"> Triangle classification program </font><br>
+        <code class="attr2">Input:</code>
+        
+            <font style="white-space:pre-line;" size="3" face="Arial"> 
+X: The length of first edge (Type: Real) Y: The length of second edge (Type: Real) Z: The length of third edge (Type: Real) 
+</font><br>
+        
+        <code class="attr2">Output:</code>
+        
+            <font style="white-space:pre-line;" size="3" face="Arial"> 
+K: The corresponding triangle as scalene (output = 1), isocele (2), equilateral (3) or illegal (4) (Type: Integer) 
+</font>
+        
+        <hr>
+
+        <h4 class="attr4">Reference</h4>
+        
+            <pre><font size="3" face="Arial">
+
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;Automated Metamorphic Testing http://dx.doi.org/10.1109/CMPSAC.2003.1245319 &nbsp;&nbsp;&nbsp;&nbsp;An Effective Iterative Metamorphic Testing Algorithm Based on Program Path Analysis http://dx.doi.org/10.1109/QSIC.2007.4385510 
+
+<br></font></pre>
+        
+        <hr>
+        
+ 		
+        <hr> 
+
+         <h3 class="attr1">
+                MR Information
+        </h3>
+		<div class="format"><font class="lala" id="summa" style="display: none;" size="3" face="Arial"> </font></div>
+        
+            
+            <h4 class="attr3">MR1<font id="mrn1" style="display: none;">------</font></h4>
+            <div class="format"><code class="attr2" id="des1" style="display: none;">Description:</code><font class="lala" id="descript1" style="display: none;" size="3" face="Arial"> </font></div>
+           	<div class="format"><code class="attr2" id="con1" style="display: none;">Property:</code><font class="lala" id="name1" style="display: none;" size="3" face="Arial"> </font></div>
+            
+                <div class="format"><code class="attr2" id="sour1">Source input:</code> <font class="lala" id="sourin1" size="3" face="Arial">  &lt;Xs, Ys, Zs&gt;</font></div> 
+                <div class="format"><code class="attr2" id="sourc1">Source output:</code> <font class="lala" id="sourout1" size="3" face="Arial"> Ks </font></div>
+            
+            
+                <div class="format"><code class="attr2" id="foll1">Follow-up input:</code> <font class="lala" id="follin1" size="3" face="Arial"> &lt;Xf, Yf, Zf&gt;</font></div>
+                <div class="format"><code class="attr2" id="follo1">Follow-up output:</code> <font class="lala" id="follout1" size="3" face="Arial"> Kf  </font></div>
+            
+            <div class="format"><code class="attr2" id="inr1">Input relation:</code> <font class="lala" id="inrel1" size="3" face="Arial"> let {Xf, Yf, Xf </font></div>
+            <div class="format"><code class="attr2" id="outr1">Output relation:</code> <font class="lala" id="outrel1" size="3" face="Arial"> Kf = Ks.</font></div>
+            <div class="format"><code class="attr2" id="pan1" style="display: none;">Pattern:</code><font id="tex1" style="display: none;" size="3" face="Arial"> </font></div>
+        <script>
+	   		var mrname = document.getElementById("mrn1");
+	   		var desc = document.getElementById("descript1");
+	   		var text = document.getElementById("name1");
+	   		var pattern = document.getElementById("tex1");
+	   		var sourcein = document.getElementById("sourin1");
+	   		var sourceout = document.getElementById("sourout1");
+	   		var followin = document.getElementById("follin1");
+	   		var followout = document.getElementById("follout1");
+	   		var inrelation = document.getElementById("inrel1");
+	   		var outrelation = document.getElementById("outrel1");
+			if(mrname.innerText.length<=6){
+	    		//内容为空
+	    	document.getElementById("mrn1").style.display="none";	    	
+			}
+			if(desc.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("descript1").style.display="none";
+			document.getElementById("des1").style.display="none";	    	
+			} 
+	   		if(text.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("name1").style.display="none";
+			document.getElementById("con1").style.display="none";	    	
+			} 
+			if(pattern.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("tex1").style.display="none";
+			document.getElementById("pan1").style.display="none";	    	
+			}
+			if(sourcein.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("sourin1").style.display="none";
+			document.getElementById("sour1").style.display="none";	    	
+			}
+			if(sourceout.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("sourout1").style.display="none";
+			document.getElementById("sourc1").style.display="none";	    	
+			}
+			if(followin.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("follin1").style.display="none";
+			document.getElementById("foll1").style.display="none";	    	
+			}
+			if(followout.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("follout1").style.display="none";
+			document.getElementById("follo1").style.display="none";	    	
+			}
+			if(inrelation.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("inrel1").style.display="none";
+			document.getElementById("inr1").style.display="none";	    	
+			}
+			if(outrelation.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("outrel1").style.display="none";
+			document.getElementById("outr1").style.display="none";	    	
+			}
+		</script>
+        
+            
+            <h4 class="attr3">MR2<font id="mrn2" style="display: none;">------</font></h4>
+            <div class="format"><code class="attr2" id="des2" style="display: none;">Description:</code><font class="lala" id="descript2" style="display: none;" size="3" face="Arial"> </font></div>
+           	<div class="format"><code class="attr2" id="con2" style="display: none;">Property:</code><font class="lala" id="name2" style="display: none;" size="3" face="Arial"> </font></div>
+            
+                <div class="format"><code class="attr2" id="sour2">Source input:</code> <font class="lala" id="sourin2" size="3" face="Arial">  &lt;Xs, Ys, Zs&gt;</font></div> 
+                <div class="format"><code class="attr2" id="sourc2">Source output:</code> <font class="lala" id="sourout2" size="3" face="Arial"> Ks </font></div>
+            
+            
+                <div class="format"><code class="attr2" id="foll2">Follow-up input:</code> <font class="lala" id="follin2" size="3" face="Arial"> &lt;Xf, Yf, Zf&gt;</font></div>
+                <div class="format"><code class="attr2" id="follo2">Follow-up output:</code> <font class="lala" id="follout2" size="3" face="Arial"> Kf  </font></div>
+            
+            <div class="format"><code class="attr2" id="inr2">Input relation:</code> <font class="lala" id="inrel2" size="3" face="Arial"> let Xf = 2 * Xs, Yf = 2 * Ys, Zf = 2 * Zs </font></div>
+            <div class="format"><code class="attr2" id="outr2">Output relation:</code> <font class="lala" id="outrel2" size="3" face="Arial"> Kf = Ks.</font></div>
+            <div class="format"><code class="attr2" id="pan2" style="display: none;">Pattern:</code><font id="tex2" style="display: none;" size="3" face="Arial"> </font></div>
+        <script>
+	   		var mrname = document.getElementById("mrn2");
+	   		var desc = document.getElementById("descript2");
+	   		var text = document.getElementById("name2");
+	   		var pattern = document.getElementById("tex2");
+	   		var sourcein = document.getElementById("sourin2");
+	   		var sourceout = document.getElementById("sourout2");
+	   		var followin = document.getElementById("follin2");
+	   		var followout = document.getElementById("follout2");
+	   		var inrelation = document.getElementById("inrel2");
+	   		var outrelation = document.getElementById("outrel2");
+			if(mrname.innerText.length<=6){
+	    		//内容为空
+	    	document.getElementById("mrn2").style.display="none";	    	
+			}
+			if(desc.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("descript2").style.display="none";
+			document.getElementById("des2").style.display="none";	    	
+			} 
+	   		if(text.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("name2").style.display="none";
+			document.getElementById("con2").style.display="none";	    	
+			} 
+			if(pattern.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("tex2").style.display="none";
+			document.getElementById("pan2").style.display="none";	    	
+			}
+			if(sourcein.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("sourin2").style.display="none";
+			document.getElementById("sour2").style.display="none";	    	
+			}
+			if(sourceout.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("sourout2").style.display="none";
+			document.getElementById("sourc2").style.display="none";	    	
+			}
+			if(followin.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("follin2").style.display="none";
+			document.getElementById("foll2").style.display="none";	    	
+			}
+			if(followout.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("follout2").style.display="none";
+			document.getElementById("follo2").style.display="none";	    	
+			}
+			if(inrelation.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("inrel2").style.display="none";
+			document.getElementById("inr2").style.display="none";	    	
+			}
+			if(outrelation.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("outrel2").style.display="none";
+			document.getElementById("outr2").style.display="none";	    	
+			}
+		</script>
+        
+
+    	</div>
+</div>
+ <!-- <div class="relate">
+	<h3>Related</h3> 
+		<div class="related_one">
+			<div class="word">
+				<a href="viewProgramDetail?index=33&type=view" style="color: white">TriSquare</a><br>
+			</div>
+		</div>
+		<div class="related_two">
+			<div class="word2">
+				<a href="viewProgramDetail?index=35&type=view" style="color: white">ComputePower</a><br>
+			</div>
+		</div>
+		<div class="related_three">
+			<div class="word3">
+				<a href="viewProgramDetail?index=36&type=view" style="color: white">Determinant Computation</a>
+			</div>
+		</div> 
+</div>  -->
+</div>
+
+
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="ViewDetail_files/footer.css">
+<title>Insert title here</title>
+     
+
+	<div class="footer">
+		<div class="left">
+			© 2018 Cstar <a>Terms</a> <a>Privacy</a> <a href="http://www.metwiki.net/MetWiki/download/Database.zip">LatestMTLibrary</a>
+      <a href="https://beian.miit.gov.cn/">鄂ICP备18020834号</a>
+		</div>
+		<div class="right">
+			<a>Links</a> <a>Emails</a> <a>About</a>
+		</div>
+	</div>
+
+
+
+<script>
+	var summary = document.getElementById("summa");
+	if(summary.innerText.length<=0){
+		//内容为空
+	document.getElementById("summa").style.display="none";
+	document.getElementById("sum").style.display="none";	    	
+	}
+
+</script>
+
+<script>mendeleyWebImporter = {
+  downloadPdfs(e,t) { return this._call('downloadPdfs', [e,t]); },
+  open() { return this._call('open', []); },
+  setLoginToken(e) { return this._call('setLoginToken', [e]); },
+  _call(methodName, methodArgs) {
+    const id = Math.random();
+    window.postMessage({ id, token: '0.5750410574351463', methodName, methodArgs }, 'http://www.metwiki.net');
+    return new Promise(resolve => {
+      const listener = window.addEventListener('message', event => {
+        const data = event.data;
+        if (typeof data !== 'object' || !('result' in data) || data.id !== id) return;
+        window.removeEventListener('message', listener);
+        resolve(data.result);
+      });
+    });
+  }
+};</script></body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
+<!-- 
+<div align="center" class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav">
+    <h3>
+        <b>  Is scalene triangle :  Triangle classification program  </b>
+        <br>
+
+        <small>
+            <br>
+            Tag:
+
+            
+                <a class="post-tag" href="viewProgramByTag?tagName=Geometry">
+                    Geometry</a>
+            
+                <a class="post-tag" href="viewProgramByTag?tagName=Triangle classification">
+                    Triangle classification</a>
+            
+
+            <a href="viewProgramDetail?index=32&type=update">
+                <img src="img/edit.gif" height="42" width="42" alt="edit"/>
+            </a>
+        </small>
+    </h3>
+</div>
+ -->
