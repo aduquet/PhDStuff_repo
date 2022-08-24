@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)http://www.metwiki.net/viewProgramDetail?index=368&userId=&type=view -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<base href="http://www.metwiki.net:80/">--><base href=".">
+    <title>ViewDetail</title>
+
+	<!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+	<script type="text/javascript" async="" src="./ViewDetail_files/ga.js"></script><script src="./ViewDetail_files/ie-emulation-modes-warning.js"></script>
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+  	<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  	<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	
+    <script type="text/javascript" src="./ViewDetail_files/jquery.min.js"></script>
+    <script type="text/javascript" src="./ViewDetail_files/dialog-min.js"></script>
+
+    <!-- Favicons -->
+	
+	
+        <script src="./ViewDetail_files/behavior_legacy.js"></script>
+        <script>$(function(){ $("img.lazy").jail({effect: "fadeIn", speed: 500, placeholder: "//d85wutc1n854v.cloudfront.net/live/imgs/placeholder.gif"}); });</script>
+        <script type="text/javascript">
+        	var _hmt = _hmt || [];
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-28871117-1']);
+            _gaq.push(['_setDomainName', 'wrapbootstrap.com']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    
+    <script type="text/javascript" src="./ViewDetail_files/MathJax.js">
+    </script>
+    <script type="text/x-mathjax-config;executed=true">
+		MathJax.Hub.Config({
+  		tex2jax: {
+			inlineMath: [['$','$'], ['\\(','\\)']],
+			displayMath: [["$$", "$$"],["\\[", "\\]"]],
+			processEscapes: true
+		},
+		"HTML-CSS": { availableFonts: ["TeX"] }
+		});
+    </script>
+    <script>
+//        收藏程序
+     
+        function star(userId,programId){
+        	 var flag=-1;
+        var data = {
+            "userId" : userId,
+            "programId" : programId
+        };
+       
+
+        $.post(
+            "starProgram",//请求的action相对路径
+            data,
+                function () {
+                    var tip2 = dialog({
+                        content: '<p>Star Success<p>',
+                        quickClose: true});
+                    tip2.show();
+                },
+            "text"
+            );
+        document.execCommand('Refresh') ;
+      //  location.reload() ;
+    	// location=location ;
+    //	 location.assign(location) ;
+    //	 document.execCommand('Refresh') ;
+    //	 window.navigate(location) ;
+    //	 location.replace(location) ;
+     //   window.location.reload(true);
+    }
+    $(document).ready(function(){
+    	setTimeout(function () {
+       	 
+    	
+    	var flag=-1;
+    	 var imgstar=document.getElementById("star");
+     	if(flag!=-1){
+ 		imgstar.setAttribute("src","img/stared.png");
+     	}else{
+     		imgstar.setAttribute("src","img/star.png");
+     	}
+     //	window.confirm(flag);
+    	},2000);
+    });
+
+    </script>    
+    <script>
+function DeleteProgram(){
+if(confirm("你是否要删除此项目？")){
+window.location.href="deleteProgram?programid=368&index=368";
+}
+}
+
+</script>
+<link rel="stylesheet" type="text/css" href="./ViewDetail_files/viewDetail.css"> 
+
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; border: 0; padding: 0; margin: 0}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0 !important; padding: 0 !important; margin: 0 !important; vertical-align: 0 !important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap ! important}
+.MathJax img {display: inline ! important; float: none ! important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block; overflow: hidden; width: 1px; height: 60ex}
+.MathJax .MathJax_EmBox {display: block; overflow: hidden; width: 1px; height: 60em}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff') format('woff'), url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Main; src: url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff') format('woff'), url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf') format('opentype'); font-weight: bold}
+@font-face {font-family: MathJax_Main; src: url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff') format('woff'), url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Math; src: url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff') format('woff'), url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Caligraphic; src: url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff') format('woff'), url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff') format('woff'), url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff') format('woff'), url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff') format('woff'), url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff') format('woff'), url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><script type="text/javascript" data-name="TokenSigning" data-by="Web-eID extension">(function pageScript() {
+        let hasDeprecationWarningDisplayed = false;
+        const eidPromises = {};
+        window.addEventListener("message", function (event) {
+            if (event.source !== window)
+                return;
+            if (event.data.src && (event.data.src === "background.js")) {
+                console.log("Page received: ");
+                console.log(event.data);
+                if (event.data.nonce) {
+                    const p = eidPromises[event.data.nonce];
+                    if (event.data.result === "ok") {
+                        if (event.data.signature !== undefined) {
+                            p.resolve({ hex: event.data.signature });
+                        }
+                        else if (event.data.version !== undefined) {
+                            p.resolve(event.data.extension + "/" + event.data.version);
+                        }
+                        else if (event.data.cert !== undefined) {
+                            p.resolve({ hex: event.data.cert });
+                        }
+                        else {
+                            console.log("No idea how to handle message");
+                            console.log(event.data);
+                        }
+                    }
+                    else {
+                        p.reject(new Error(event.data.result));
+                    }
+                    delete eidPromises[event.data.nonce];
+                }
+                else {
+                    console.log("No nonce in event msg");
+                }
+            }
+        }, false);
+        function nonce() {
+            let val = "";
+            const hex = "abcdefghijklmnopqrstuvwxyz0123456789";
+            for (let i = 0; i < 16; i++)
+                val += hex.charAt(Math.floor(Math.random() * hex.length));
+            return val;
+        }
+        function messagePromise(msg) {
+            if (!hasDeprecationWarningDisplayed) {
+                console.warn("TokenSigning API is deprecated. Please consider switching to the new Web-eID library.");
+                hasDeprecationWarningDisplayed = true;
+            }
+            return new Promise(function (resolve, reject) {
+                window.postMessage(msg, "*");
+                eidPromises[msg.nonce] = { resolve, reject };
+            });
+        }
+        window.TokenSigning = class TokenSigning {
+            getCertificate(options) {
+                const msg = {
+                    src: "page.js",
+                    nonce: nonce(),
+                    type: "CERT",
+                    lang: options.lang,
+                    filter: options.filter,
+                };
+                console.log("getCertificate()");
+                return messagePromise(msg);
+            }
+            sign(cert, hash, options) {
+                const msg = {
+                    src: "page.js",
+                    nonce: nonce(),
+                    type: "SIGN",
+                    cert: cert.hex,
+                    hash: hash.hex,
+                    hashtype: hash.type,
+                    lang: options.lang,
+                    info: options.info,
+                };
+                console.log("sign()");
+                return messagePromise(msg);
+            }
+            getVersion() {
+                const msg = {
+                    src: "page.js",
+                    nonce: nonce(),
+                    type: "VERSION",
+                };
+                console.log("getVersion()");
+                return messagePromise(msg);
+            }
+        };
+    })();</script><style type="text/css">@font-face {font-family: MathJax_AMS; src: url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_AMS-Regular.woff') format('woff'), url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_AMS-Regular.otf') format('opentype')}
+</style></head>
+<body><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="./ViewDetail_files/header.css">
+<title>header</title>
+
+
+	<div class="site-header">
+		<div class="site-pic">
+			<a style="text-decoration: none;" href="http://www.metwiki.net/viewTop8Domain"><img src="./ViewDetail_files/word.png" class="img"></a>		
+		</div>
+		<div class="site-search">
+            <form id="form1" accept-charset="UTF-8" action="http://www.metwiki.net/searchProgram" method="get" class="parent">
+            	<input type="text" class="chromeless-input" name="q" value="Search MetWiki" style="padding-left: 20px; position:absolute; outline:none; border:1.5px solid gray;color:gray;width:300px;height:35px;border-radius:18px;" onfocus="if(this.value==&#39;Search MetWiki&#39;){this.value=&#39;&#39;;}" onblur="if(this.value==&#39;&#39;){this.value=&#39;Search MetWiki&#39;}">
+            	<input type="button" class="button" onclick="document.getElementById(&#39;form1&#39;).submit();">
+            </form>
+        </div>
+        <div class="header-client">
+        	Hi!  MY Friend     
+        </div>  
+        <div class="header-zi">
+          <ul>
+ 			<li><a target="_blank" style="text-decoration: none;" href="http://cstar.whu.edu.cn/">CSTAR</a></li>
+			<li class="login">
+				<a style="text-decoration: none;" class="dropbtn" id="butt">Login</a>
+				<div class="loginitem" id="layer">
+					<p><a href="http://www.metwiki.net/PAGE/user/login.jsp" id="signin">Sign In</a></p>
+					<p><a href="http://www.metwiki.net/logOut?userId=">Sign Out</a></p>
+					<p><a href="http://www.metwiki.net/PAGE/user/register.jsp" id="register">Register</a></p>	
+					<input type="hidden" id="userstate" name="userstate" value="MY Friend">	
+				</div>			
+			</li>
+			<li><a style="text-decoration: none;" href="http://www.metwiki.net/getProfile?userId=">Profile</a></li>
+		  </ul>
+		</div>          
+    </div>
+    <script src="./ViewDetail_files/script.js"></script>
+
+
+<!-- 
+<div align="center" class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav">
+    <h3>
+        <b>  Spotify: Create a playlist  :  This service creates a playlist for a Spotify user.  </b>
+        <br>
+
+        <small>
+            <br>
+            Tag:
+
+            
+                <a class="post-tag" href="viewProgramByTag?tagName=RESTful API">
+                    RESTful API</a>
+            
+                <a class="post-tag" href="viewProgramByTag?tagName=Spotify">
+                    Spotify</a>
+            
+
+            <a href="viewProgramDetail?index=368&type=update">
+                <img src="img/edit.gif" height="42" width="42" alt="edit"/>
+            </a>
+        </small>
+    </h3>
+</div>
+ -->
+ 
+ <div align="center" id="page_home" style="background-image: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzODQiIGhlaWdodD0iNDQzIj48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJyZ2IoNTYsIDIwNCwgMTQxKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xMDY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQyLjY2NjY2NjY2NjY2NjY2NCwgLTM2Ljk1MDQxNzIyODEzNjA1KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xMDY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzQxLjMzMzMzMzMzMzMzMzMsIC0zNi45NTA0MTcyMjgxMzYwNSkiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMTA2NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00Mi42NjY2NjY2NjY2NjY2NjQsIDQwNi40NTQ1ODk1MDk0OTY1KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xMDY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzQxLjMzMzMzMzMzMzMzMzMsIDQwNi40NTQ1ODk1MDk0OTY1KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4wMiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjEuMzMzMzMzMzMzMzMzMzM2LCAwLjApIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIwLjAyIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMS4zMzMzMzMzMzMzMzMzMzYsIDQ0My40MDUwMDY3Mzc2MzI1NikiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMTI0MDAwMDAwMDAwMDAwMDEiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDg1LjMzMzMzMzMzMzMzMzM0LCAtMzYuOTUwNDE3MjI4MTM2MDUpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIwLjEyNDAwMDAwMDAwMDAwMDAxIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4NS4zMzMzMzMzMzMzMzMzNCwgNDA2LjQ1NDU4OTUwOTQ5NjUpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iIzIyMiIgZmlsbC1vcGFjaXR5PSIwLjA0NiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQ5LjMzMzMzMzMzMzMzMzM0LCAwLjApIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iIzIyMiIgZmlsbC1vcGFjaXR5PSIwLjA0NiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQ5LjMzMzMzMzMzMzMzMzM0LCA0NDMuNDA1MDA2NzM3NjMyNTYpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIwLjA4OTMzMzMzMzMzMzMzMzMzIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMTMuMzMzMzMzMzMzMzMzMzQsIC0zNi45NTA0MTcyMjgxMzYwNSkiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMDg5MzMzMzMzMzMzMzMzMzMiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIxMy4zMzMzMzMzMzMzMzMzNCwgNDA2LjQ1NDU4OTUwOTQ5NjUpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIwLjE0MTMzMzMzMzMzMzMzMzM0IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNzcuMzMzMzMzMzMzMzMzMywgMC4wKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xNDEzMzMzMzMzMzMzMzMzNCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjc3LjMzMzMzMzMzMzMzMzMsIDQ0My40MDUwMDY3Mzc2MzI1NikiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMTI0MDAwMDAwMDAwMDAwMDEiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00Mi42NjY2NjY2NjY2NjY2NjQsIDM2Ljk1MDQxNzIyODEzNjA1KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xMjQwMDAwMDAwMDAwMDAwMSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzQxLjMzMzMzMzMzMzMzMzMsIDM2Ljk1MDQxNzIyODEzNjA1KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC4xNSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjEuMzMzMzMzMzMzMzMzMzM2LCA3My45MDA4MzQ0NTYyNzIxKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xMDY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODUuMzMzMzMzMzMzMzMzMzQsIDM2Ljk1MDQxNzIyODEzNjA1KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC4wODA2NjY2NjY2NjY2NjY2NiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQ5LjMzMzMzMzMzMzMzMzM0LCA3My45MDA4MzQ0NTYyNzIxKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4wMiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjEzLjMzMzMzMzMzMzMzMzM0LCAzNi45NTA0MTcyMjgxMzYwNSkiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjMjIyIiBmaWxsLW9wYWNpdHk9IjAuMTUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI3Ny4zMzMzMzMzMzMzMzMzLCA3My45MDA4MzQ0NTYyNzIxKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xNDEzMzMzMzMzMzMzMzMzNCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQyLjY2NjY2NjY2NjY2NjY2NCwgMTEwLjg1MTI1MTY4NDQwODE0KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xNDEzMzMzMzMzMzMzMzMzNCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzQxLjMzMzMzMzMzMzMzMzMsIDExMC44NTEyNTE2ODQ0MDgxNCkiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjMjIyIiBmaWxsLW9wYWNpdHk9IjAuMDI4NjY2NjY2NjY2NjY2NjY3IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMS4zMzMzMzMzMzMzMzMzMzYsIDE0Ny44MDE2Njg5MTI1NDQyKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC4wOTgiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDg1LjMzMzMzMzMzMzMzMzM0LCAxMTAuODUxMjUxNjg0NDA4MTQpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIwLjAzNzMzMzMzMzMzMzMzMzMzIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNDkuMzMzMzMzMzMzMzMzMzQsIDE0Ny44MDE2Njg5MTI1NDQyKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4wODkzMzMzMzMzMzMzMzMzMyIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjEzLjMzMzMzMzMzMzMzMzM0LCAxMTAuODUxMjUxNjg0NDA4MTQpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIwLjA3MjAwMDAwMDAwMDAwMDAxIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNzcuMzMzMzMzMzMzMzMzMywgMTQ3LjgwMTY2ODkxMjU0NDIpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iIzIyMiIgZmlsbC1vcGFjaXR5PSIwLjEzMjY2NjY2NjY2NjY2NjY1IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNDIuNjY2NjY2NjY2NjY2NjY0LCAxODQuNzUyMDg2MTQwNjgwMjMpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iIzIyMiIgZmlsbC1vcGFjaXR5PSIwLjEzMjY2NjY2NjY2NjY2NjY1IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzNDEuMzMzMzMzMzMzMzMzMywgMTg0Ljc1MjA4NjE0MDY4MDIzKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xNDEzMzMzMzMzMzMzMzMzNCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjEuMzMzMzMzMzMzMzMzMzM2LCAyMjEuNzAyNTAzMzY4ODE2MjUpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iIzIyMiIgZmlsbC1vcGFjaXR5PSIwLjA2MzMzMzMzMzMzMzMzMzM0IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4NS4zMzMzMzMzMzMzMzMzNCwgMTg0Ljc1MjA4NjE0MDY4MDIzKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC4wMjg2NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE0OS4zMzMzMzMzMzMzMzMzNCwgMjIxLjcwMjUwMzM2ODgxNjI1KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC4wOTgiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIxMy4zMzMzMzMzMzMzMzMzNCwgMTg0Ljc1MjA4NjE0MDY4MDIzKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC4wNDYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI3Ny4zMzMzMzMzMzMzMzMzLCAyMjEuNzAyNTAzMzY4ODE2MjUpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIwLjEyNDAwMDAwMDAwMDAwMDAxIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNDIuNjY2NjY2NjY2NjY2NjY0LCAyNTguNjUyOTIwNTk2OTUyMykiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMTI0MDAwMDAwMDAwMDAwMDEiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM0MS4zMzMzMzMzMzMzMzMzLCAyNTguNjUyOTIwNTk2OTUyMykiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMTA2NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIxLjMzMzMzMzMzMzMzMzMzNiwgMjk1LjYwMzMzNzgyNTA4ODQpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iIzIyMiIgZmlsbC1vcGFjaXR5PSIwLjExNTMzMzMzMzMzMzMzMzM0IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4NS4zMzMzMzMzMzMzMzMzNCwgMjU4LjY1MjkyMDU5Njk1MjMpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iIzIyMiIgZmlsbC1vcGFjaXR5PSIwLjA4MDY2NjY2NjY2NjY2NjY2IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNDkuMzMzMzMzMzMzMzMzMzQsIDI5NS42MDMzMzc4MjUwODg0KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4wNzIwMDAwMDAwMDAwMDAwMSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjEzLjMzMzMzMzMzMzMzMzM0LCAyNTguNjUyOTIwNTk2OTUyMykiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMDg5MzMzMzMzMzMzMzMzMzMiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI3Ny4zMzMzMzMzMzMzMzMzLCAyOTUuNjAzMzM3ODI1MDg4NCkiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMDU0NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00Mi42NjY2NjY2NjY2NjY2NjQsIDMzMi41NTM3NTUwNTMyMjQ0NSkiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMDU0NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM0MS4zMzMzMzMzMzMzMzMzLCAzMzIuNTUzNzU1MDUzMjI0NDUpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIwLjEwNjY2NjY2NjY2NjY2NjY3IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMS4zMzMzMzMzMzMzMzMzMzYsIDM2OS41MDQxNzIyODEzNjA0KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC4wNjMzMzMzMzMzMzMzMzMzNCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODUuMzMzMzMzMzMzMzMzMzQsIDMzMi41NTM3NTUwNTMyMjQ0NSkiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMTQxMzMzMzMzMzMzMzMzMzQiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE0OS4zMzMzMzMzMzMzMzMzNCwgMzY5LjUwNDE3MjI4MTM2MDQpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iIzIyMiIgZmlsbC1vcGFjaXR5PSIwLjEzMjY2NjY2NjY2NjY2NjY1IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMTMuMzMzMzMzMzMzMzMzMzQsIDMzMi41NTM3NTUwNTMyMjQ0NSkiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMTQxMzMzMzMzMzMzMzMzMzQiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI3Ny4zMzMzMzMzMzMzMzMzLCAzNjkuNTA0MTcyMjgxMzYwNCkiICAvPjwvc3ZnPg==&quot;);">&gt;
+    <div class="container">
+        <div class="hero-unit1" style="margin-bottom: 25px;">
+          <span class="title"> <strong>   Spotify: Create a playlist </strong></span>  
+		<br>
+		<h3>
+        <small>
+            Tag:
+
+            
+                <a class="post-tag" href="http://www.metwiki.net/viewProgramByTag?tagName=RESTful%20API">
+                    RESTful API</a>
+            
+                <a class="post-tag" href="http://www.metwiki.net/viewProgramByTag?tagName=Spotify">
+                    Spotify</a>
+            
+            <br>
+            
+
+            <a href="http://www.metwiki.net/viewProgramDetailBeforeUpdate?index=368">
+                Edit  <img src="./ViewDetail_files/edit.gif" height="18" width="18" alt="edit">
+            </a>
+            &nbsp;
+            <a style="cursor: pointer;" onclick="star(,368);">
+                Star<img src="./ViewDetail_files/star.png" id="star" height="18" width="18" alt="star"> </a>
+            &nbsp;
+            <a style="cursor: pointer;" onclick="DeleteProgram();">Delete</a>
+               &nbsp; 
+             <a href="http://www.metwiki.net/FileUploadRequest?index=368">Add Picture</a>
+        </small>
+            </h3>
+         </div>
+    </div>
+</div>
+<div class="all">
+<div class="hero-unit">
+		<input type="hidden" name="dbIndex" value="368">
+    	<div id="editor" contenteditable="false" align="left">
+        <h3 class="attr1">Program Information</h3>
+        <code class="attr2">Name:</code> 
+        <font face="Arial" size="3"> Spotify: Create a playlist </font><br>
+        <code class="attr2">Domain:</code>
+        <font face="Arial" size="3"> web service and application </font><br>
+        <code class="attr2">Functionality:</code>
+            <font face="Arial" size="3" style="white-space:pre-line;"> This service creates a playlist for a Spotify user. </font><br>
+        <code class="attr2">Input:</code>
+        
+            <font face="Arial" size="3" style="white-space:pre-line;">
+<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-1-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-1" style="width: 8.909em; display: inline-block;"><span style="display: inline-block; position: relative; width: 7.398em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.826em, 1000em, 3.128em, -0.518em); top: -2.706em; left: 0.003em;"><span class="mrow" id="MathJax-Span-2"><span class="mi" id="MathJax-Span-3" style="font-family: MathJax_Math; font-style: italic;">p</span><span class="mi" id="MathJax-Span-4" style="font-family: MathJax_Math; font-style: italic;">u</span><span class="mi" id="MathJax-Span-5" style="font-family: MathJax_Math; font-style: italic;">b</span><span class="mi" id="MathJax-Span-6" style="font-family: MathJax_Math; font-style: italic;">l</span><span class="mi" id="MathJax-Span-7" style="font-family: MathJax_Math; font-style: italic;">i</span><span class="mi" id="MathJax-Span-8" style="font-family: MathJax_Math; font-style: italic;">c</span><span class="mi" id="MathJax-Span-9" style="font-family: MathJax_Math; font-style: italic;">C<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.055em;"></span></span><span class="mi" id="MathJax-Span-10" style="font-family: MathJax_Math; font-style: italic;">r</span><span class="mi" id="MathJax-Span-11" style="font-family: MathJax_Math; font-style: italic;">e</span><span class="mi" id="MathJax-Span-12" style="font-family: MathJax_Math; font-style: italic;">a</span><span class="mi" id="MathJax-Span-13" style="font-family: MathJax_Math; font-style: italic;">t</span><span class="mo" id="MathJax-Span-14" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-15" style="font-family: MathJax_Math; font-style: italic;">l</span><span class="mi" id="MathJax-Span-16" style="font-family: MathJax_Math; font-style: italic;">i</span><span class="mi" id="MathJax-Span-17" style="font-family: MathJax_Math; font-style: italic;">s</span><span class="mi" id="MathJax-Span-18" style="font-family: MathJax_Math; font-style: italic;">t</span><span class="mo" id="MathJax-Span-19" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 2.711em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.316em; vertical-align: -0.372em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-1">publicCreat(list)</script>: create a public playlist (parameter public=true)
+<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-2-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-20" style="width: 9.586em; display: inline-block;"><span style="display: inline-block; position: relative; width: 7.971em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.826em, 1000em, 3.128em, -0.518em); top: -2.706em; left: 0.003em;"><span class="mrow" id="MathJax-Span-21"><span class="mi" id="MathJax-Span-22" style="font-family: MathJax_Math; font-style: italic;">p</span><span class="mi" id="MathJax-Span-23" style="font-family: MathJax_Math; font-style: italic;">r</span><span class="mi" id="MathJax-Span-24" style="font-family: MathJax_Math; font-style: italic;">i</span><span class="mi" id="MathJax-Span-25" style="font-family: MathJax_Math; font-style: italic;">v</span><span class="mi" id="MathJax-Span-26" style="font-family: MathJax_Math; font-style: italic;">a</span><span class="mi" id="MathJax-Span-27" style="font-family: MathJax_Math; font-style: italic;">t</span><span class="mi" id="MathJax-Span-28" style="font-family: MathJax_Math; font-style: italic;">e</span><span class="mi" id="MathJax-Span-29" style="font-family: MathJax_Math; font-style: italic;">C<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.055em;"></span></span><span class="mi" id="MathJax-Span-30" style="font-family: MathJax_Math; font-style: italic;">r</span><span class="mi" id="MathJax-Span-31" style="font-family: MathJax_Math; font-style: italic;">e</span><span class="mi" id="MathJax-Span-32" style="font-family: MathJax_Math; font-style: italic;">a</span><span class="mi" id="MathJax-Span-33" style="font-family: MathJax_Math; font-style: italic;">t</span><span class="mo" id="MathJax-Span-34" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-35" style="font-family: MathJax_Math; font-style: italic;">l</span><span class="mi" id="MathJax-Span-36" style="font-family: MathJax_Math; font-style: italic;">i</span><span class="mi" id="MathJax-Span-37" style="font-family: MathJax_Math; font-style: italic;">s</span><span class="mi" id="MathJax-Span-38" style="font-family: MathJax_Math; font-style: italic;">t</span><span class="mo" id="MathJax-Span-39" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 2.711em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.316em; vertical-align: -0.372em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-2">privateCreat(list)</script>: create a private playlist (public=false)
+</font><br>
+        
+        <code class="attr2">Output:</code>
+        
+            <font face="Arial" size="3" style="white-space:pre-line;">
+<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-3-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-40" style="width: 0.836em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.68em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mrow" id="MathJax-Span-41"><span class="mi" id="MathJax-Span-42" style="font-family: MathJax_Math; font-style: italic;">L</span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.941em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-3">L</script>: the created list
+</font>
+        
+        <hr>
+
+        <h4 class="attr4">Reference</h4>
+        
+            <pre><font face="Arial" size="3"> Metamorphic Testing of RESTful Web APIs.
+https://dx.doi.org/10.1109/TSE.2017.2764464&nbsp; <br></font></pre>
+        
+        <hr>
+        
+ 		
+        <hr> 
+
+         <h3 class="attr1">
+                MR Information
+        </h3>
+		<div class="format"><font face="Arial" size="3" class="lala" id="summa" style="display: none;"> </font></div>
+        
+            
+            <h4 class="attr3">MR1<font id="mrn1" style="display: none;">------ </font></h4>
+            <div class="format"><code class="attr2" id="des1" style="display: none;">Description:</code><font face="Arial" size="3" class="lala" id="descript1" style="display: none;">  </font></div>
+           	<div class="format"><code class="attr2" id="con1">Property:</code><font face="Arial" size="3" class="lala" id="name1">  Create a playlist. Then, create another playlist with a different name. Both output playlist resources should only differ in the value of the property name. </font></div>
+            
+                <div class="format"><code class="attr2" id="sour1">Source input:</code> <font face="Arial" size="3" class="lala" id="sourin1">  <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-4-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-43" style="width: 8.909em; display: inline-block;"><span style="display: inline-block; position: relative; width: 7.398em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.826em, 1000em, 3.128em, -0.518em); top: -2.706em; left: 0.003em;"><span class="mrow" id="MathJax-Span-44"><span class="mi" id="MathJax-Span-45" style="font-family: MathJax_Math; font-style: italic;">p</span><span class="mi" id="MathJax-Span-46" style="font-family: MathJax_Math; font-style: italic;">u</span><span class="mi" id="MathJax-Span-47" style="font-family: MathJax_Math; font-style: italic;">b</span><span class="mi" id="MathJax-Span-48" style="font-family: MathJax_Math; font-style: italic;">l</span><span class="mi" id="MathJax-Span-49" style="font-family: MathJax_Math; font-style: italic;">i</span><span class="mi" id="MathJax-Span-50" style="font-family: MathJax_Math; font-style: italic;">c</span><span class="mi" id="MathJax-Span-51" style="font-family: MathJax_Math; font-style: italic;">C<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.055em;"></span></span><span class="mi" id="MathJax-Span-52" style="font-family: MathJax_Math; font-style: italic;">r</span><span class="mi" id="MathJax-Span-53" style="font-family: MathJax_Math; font-style: italic;">e</span><span class="mi" id="MathJax-Span-54" style="font-family: MathJax_Math; font-style: italic;">a</span><span class="mi" id="MathJax-Span-55" style="font-family: MathJax_Math; font-style: italic;">t</span><span class="mo" id="MathJax-Span-56" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-57" style="font-family: MathJax_Math; font-style: italic;">l</span><span class="mi" id="MathJax-Span-58" style="font-family: MathJax_Math; font-style: italic;">i</span><span class="mi" id="MathJax-Span-59" style="font-family: MathJax_Math; font-style: italic;">s</span><span class="mi" id="MathJax-Span-60" style="font-family: MathJax_Math; font-style: italic;">t</span><span class="mo" id="MathJax-Span-61" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 2.711em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.316em; vertical-align: -0.372em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-4">publicCreat(list)</script> </font></div> 
+                <div class="format"><code class="attr2" id="sourc1">Source output:</code> <font face="Arial" size="3" class="lala" id="sourout1"> <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-5-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-62" style="width: 0.836em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.68em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mrow" id="MathJax-Span-63"><span class="mi" id="MathJax-Span-64" style="font-family: MathJax_Math; font-style: italic;">L</span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.941em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-5">L</script> </font></div>
+            
+            
+                <div class="format"><code class="attr2" id="foll1">Follow-up input:</code> <font face="Arial" size="3" class="lala" id="follin1">
+<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-6-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-65" style="width: 9.586em; display: inline-block;"><span style="display: inline-block; position: relative; width: 7.971em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.826em, 1000em, 3.128em, -0.518em); top: -2.706em; left: 0.003em;"><span class="mrow" id="MathJax-Span-66"><span class="mi" id="MathJax-Span-67" style="font-family: MathJax_Math; font-style: italic;">p</span><span class="mi" id="MathJax-Span-68" style="font-family: MathJax_Math; font-style: italic;">r</span><span class="mi" id="MathJax-Span-69" style="font-family: MathJax_Math; font-style: italic;">i</span><span class="mi" id="MathJax-Span-70" style="font-family: MathJax_Math; font-style: italic;">v</span><span class="mi" id="MathJax-Span-71" style="font-family: MathJax_Math; font-style: italic;">a</span><span class="mi" id="MathJax-Span-72" style="font-family: MathJax_Math; font-style: italic;">t</span><span class="mi" id="MathJax-Span-73" style="font-family: MathJax_Math; font-style: italic;">e</span><span class="mi" id="MathJax-Span-74" style="font-family: MathJax_Math; font-style: italic;">C<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.055em;"></span></span><span class="mi" id="MathJax-Span-75" style="font-family: MathJax_Math; font-style: italic;">r</span><span class="mi" id="MathJax-Span-76" style="font-family: MathJax_Math; font-style: italic;">e</span><span class="mi" id="MathJax-Span-77" style="font-family: MathJax_Math; font-style: italic;">a</span><span class="mi" id="MathJax-Span-78" style="font-family: MathJax_Math; font-style: italic;">t</span><span class="mo" id="MathJax-Span-79" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-80" style="font-family: MathJax_Math; font-style: italic;">l</span><span class="mi" id="MathJax-Span-81" style="font-family: MathJax_Math; font-style: italic;">i</span><span class="mi" id="MathJax-Span-82" style="font-family: MathJax_Math; font-style: italic;">s</span><span class="mi" id="MathJax-Span-83" style="font-family: MathJax_Math; font-style: italic;">t</span><span class="mo" id="MathJax-Span-84" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 2.711em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.316em; vertical-align: -0.372em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-6">privateCreat(list)</script>
+</font></div>
+                <div class="format"><code class="attr2" id="follo1">Follow-up output:</code> <font face="Arial" size="3" class="lala" id="follout1"> another meme created <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-7-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-85" style="width: 1.148em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.253em, 1000em, 2.346em, -0.414em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-86"><span class="msup" id="MathJax-Span-87"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-88" style="font-family: MathJax_Math; font-style: italic;">L</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.706em; left: 0.68em;"><span class="mo" id="MathJax-Span-89" style="font-size: 70.7%; font-family: MathJax_Main;">′</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.066em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-7">L'</script>  </font></div>
+            
+            <div class="format"><code class="attr2" id="inr1">Input relation:</code> <font face="Arial" size="3" class="lala" id="inrel1">
+only the parameter "public" or "private" changed in both lists
+&nbsp;&nbsp;&nbsp;&nbsp; </font></div>
+            <div class="format"><code class="attr2" id="outr1">Output relation:</code> <font face="Arial" size="3" class="lala" id="outrel1">
+Both output playlist resources should only differ in the value of the property public
+</font></div>
+            <div class="format"><code class="attr2" id="pan1">Pattern:</code><font face="Arial" size="3" id="tex1">  asymmetry </font></div>
+        <script>
+	   		var mrname = document.getElementById("mrn1");
+	   		var desc = document.getElementById("descript1");
+	   		var text = document.getElementById("name1");
+	   		var pattern = document.getElementById("tex1");
+	   		var sourcein = document.getElementById("sourin1");
+	   		var sourceout = document.getElementById("sourout1");
+	   		var followin = document.getElementById("follin1");
+	   		var followout = document.getElementById("follout1");
+	   		var inrelation = document.getElementById("inrel1");
+	   		var outrelation = document.getElementById("outrel1");
+			if(mrname.innerText.length<=6){
+	    		//内容为空
+	    	document.getElementById("mrn1").style.display="none";	    	
+			}
+			if(desc.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("descript1").style.display="none";
+			document.getElementById("des1").style.display="none";	    	
+			} 
+	   		if(text.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("name1").style.display="none";
+			document.getElementById("con1").style.display="none";	    	
+			} 
+			if(pattern.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("tex1").style.display="none";
+			document.getElementById("pan1").style.display="none";	    	
+			}
+			if(sourcein.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("sourin1").style.display="none";
+			document.getElementById("sour1").style.display="none";	    	
+			}
+			if(sourceout.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("sourout1").style.display="none";
+			document.getElementById("sourc1").style.display="none";	    	
+			}
+			if(followin.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("follin1").style.display="none";
+			document.getElementById("foll1").style.display="none";	    	
+			}
+			if(followout.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("follout1").style.display="none";
+			document.getElementById("follo1").style.display="none";	    	
+			}
+			if(inrelation.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("inrel1").style.display="none";
+			document.getElementById("inr1").style.display="none";	    	
+			}
+			if(outrelation.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("outrel1").style.display="none";
+			document.getElementById("outr1").style.display="none";	    	
+			}
+		</script>
+        
+            
+            <h4 class="attr3">MR2<font id="mrn2" style="display: none;">------</font></h4>
+            <div class="format"><code class="attr2" id="des2" style="display: none;">Description:</code><font face="Arial" size="3" class="lala" id="descript2" style="display: none;"> </font></div>
+           	<div class="format"><code class="attr2" id="con2">Property:</code><font face="Arial" size="3" class="lala" id="name2"> Create a playlist. Then, create another playlist with a different name. Both output playlist resources should only differ in the value of the property name.</font></div>
+            
+                <div class="format"><code class="attr2" id="sour2">Source input:</code> <font face="Arial" size="3" class="lala" id="sourin2">  <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-8-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-90" style="width: 8.909em; display: inline-block;"><span style="display: inline-block; position: relative; width: 7.398em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.826em, 1000em, 3.128em, -0.518em); top: -2.706em; left: 0.003em;"><span class="mrow" id="MathJax-Span-91"><span class="mi" id="MathJax-Span-92" style="font-family: MathJax_Math; font-style: italic;">p</span><span class="mi" id="MathJax-Span-93" style="font-family: MathJax_Math; font-style: italic;">u</span><span class="mi" id="MathJax-Span-94" style="font-family: MathJax_Math; font-style: italic;">b</span><span class="mi" id="MathJax-Span-95" style="font-family: MathJax_Math; font-style: italic;">l</span><span class="mi" id="MathJax-Span-96" style="font-family: MathJax_Math; font-style: italic;">i</span><span class="mi" id="MathJax-Span-97" style="font-family: MathJax_Math; font-style: italic;">c</span><span class="mi" id="MathJax-Span-98" style="font-family: MathJax_Math; font-style: italic;">C<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.055em;"></span></span><span class="mi" id="MathJax-Span-99" style="font-family: MathJax_Math; font-style: italic;">r</span><span class="mi" id="MathJax-Span-100" style="font-family: MathJax_Math; font-style: italic;">e</span><span class="mi" id="MathJax-Span-101" style="font-family: MathJax_Math; font-style: italic;">a</span><span class="mi" id="MathJax-Span-102" style="font-family: MathJax_Math; font-style: italic;">t</span><span class="mo" id="MathJax-Span-103" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-104" style="font-family: MathJax_Math; font-style: italic;">l</span><span class="mi" id="MathJax-Span-105" style="font-family: MathJax_Math; font-style: italic;">i</span><span class="mi" id="MathJax-Span-106" style="font-family: MathJax_Math; font-style: italic;">s</span><span class="mi" id="MathJax-Span-107" style="font-family: MathJax_Math; font-style: italic;">t</span><span class="mo" id="MathJax-Span-108" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 2.711em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.316em; vertical-align: -0.372em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-8">publicCreat(list)</script> </font></div> 
+                <div class="format"><code class="attr2" id="sourc2">Source output:</code> <font face="Arial" size="3" class="lala" id="sourout2"> <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-9-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-109" style="width: 0.836em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.68em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mrow" id="MathJax-Span-110"><span class="mi" id="MathJax-Span-111" style="font-family: MathJax_Math; font-style: italic;">L</span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.941em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-9">L</script> </font></div>
+            
+            
+                <div class="format"><code class="attr2" id="foll2">Follow-up input:</code> <font face="Arial" size="3" class="lala" id="follin2"> 
+        <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-10-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-112" style="width: 9.586em; display: inline-block;"><span style="display: inline-block; position: relative; width: 7.971em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.826em, 1000em, 3.128em, -0.518em); top: -2.706em; left: 0.003em;"><span class="mrow" id="MathJax-Span-113"><span class="mi" id="MathJax-Span-114" style="font-family: MathJax_Math; font-style: italic;">p</span><span class="mi" id="MathJax-Span-115" style="font-family: MathJax_Math; font-style: italic;">r</span><span class="mi" id="MathJax-Span-116" style="font-family: MathJax_Math; font-style: italic;">i</span><span class="mi" id="MathJax-Span-117" style="font-family: MathJax_Math; font-style: italic;">v</span><span class="mi" id="MathJax-Span-118" style="font-family: MathJax_Math; font-style: italic;">a</span><span class="mi" id="MathJax-Span-119" style="font-family: MathJax_Math; font-style: italic;">t</span><span class="mi" id="MathJax-Span-120" style="font-family: MathJax_Math; font-style: italic;">e</span><span class="mi" id="MathJax-Span-121" style="font-family: MathJax_Math; font-style: italic;">C<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.055em;"></span></span><span class="mi" id="MathJax-Span-122" style="font-family: MathJax_Math; font-style: italic;">r</span><span class="mi" id="MathJax-Span-123" style="font-family: MathJax_Math; font-style: italic;">e</span><span class="mi" id="MathJax-Span-124" style="font-family: MathJax_Math; font-style: italic;">a</span><span class="mi" id="MathJax-Span-125" style="font-family: MathJax_Math; font-style: italic;">t</span><span class="mo" id="MathJax-Span-126" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-127" style="font-family: MathJax_Math; font-style: italic;">l</span><span class="mi" id="MathJax-Span-128" style="font-family: MathJax_Math; font-style: italic;">i</span><span class="mi" id="MathJax-Span-129" style="font-family: MathJax_Math; font-style: italic;">s</span><span class="mi" id="MathJax-Span-130" style="font-family: MathJax_Math; font-style: italic;">t</span><span class="mo" id="MathJax-Span-131" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 2.711em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.316em; vertical-align: -0.372em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-10">privateCreat(list)</script>
+    </font></div>
+                <div class="format"><code class="attr2" id="follo2">Follow-up output:</code> <font face="Arial" size="3" class="lala" id="follout2"> another meme created <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-11-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-132" style="width: 1.148em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.253em, 1000em, 2.346em, -0.414em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-133"><span class="msup" id="MathJax-Span-134"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-135" style="font-family: MathJax_Math; font-style: italic;">L</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.706em; left: 0.68em;"><span class="mo" id="MathJax-Span-136" style="font-size: 70.7%; font-family: MathJax_Main;">′</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.066em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-11">L'</script>  </font></div>
+            
+            <div class="format"><code class="attr2" id="inr2">Input relation:</code> <font face="Arial" size="3" class="lala" id="inrel2"> 
+        The playlists are only different in the property name.
+&nbsp;&nbsp;&nbsp;&nbsp;</font></div>
+            <div class="format"><code class="attr2" id="outr2">Output relation:</code> <font face="Arial" size="3" class="lala" id="outrel2">
+        Both output playlist resources should only differ in the value of the property name.
+    </font></div>
+            <div class="format"><code class="attr2" id="pan2">Pattern:</code><font face="Arial" size="3" id="tex2"> asymmetry</font></div>
+        <script>
+	   		var mrname = document.getElementById("mrn2");
+	   		var desc = document.getElementById("descript2");
+	   		var text = document.getElementById("name2");
+	   		var pattern = document.getElementById("tex2");
+	   		var sourcein = document.getElementById("sourin2");
+	   		var sourceout = document.getElementById("sourout2");
+	   		var followin = document.getElementById("follin2");
+	   		var followout = document.getElementById("follout2");
+	   		var inrelation = document.getElementById("inrel2");
+	   		var outrelation = document.getElementById("outrel2");
+			if(mrname.innerText.length<=6){
+	    		//内容为空
+	    	document.getElementById("mrn2").style.display="none";	    	
+			}
+			if(desc.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("descript2").style.display="none";
+			document.getElementById("des2").style.display="none";	    	
+			} 
+	   		if(text.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("name2").style.display="none";
+			document.getElementById("con2").style.display="none";	    	
+			} 
+			if(pattern.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("tex2").style.display="none";
+			document.getElementById("pan2").style.display="none";	    	
+			}
+			if(sourcein.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("sourin2").style.display="none";
+			document.getElementById("sour2").style.display="none";	    	
+			}
+			if(sourceout.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("sourout2").style.display="none";
+			document.getElementById("sourc2").style.display="none";	    	
+			}
+			if(followin.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("follin2").style.display="none";
+			document.getElementById("foll2").style.display="none";	    	
+			}
+			if(followout.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("follout2").style.display="none";
+			document.getElementById("follo2").style.display="none";	    	
+			}
+			if(inrelation.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("inrel2").style.display="none";
+			document.getElementById("inr2").style.display="none";	    	
+			}
+			if(outrelation.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("outrel2").style.display="none";
+			document.getElementById("outr2").style.display="none";	    	
+			}
+		</script>
+        
+
+    	</div>
+</div>
+ <!-- <div class="relate">
+	<h3>Related</h3> 
+		<div class="related_one">
+			<div class="word">
+				<a href="viewProgramDetail?index=&type=view" style="color: white"></a><br>
+			</div>
+		</div>
+		<div class="related_two">
+			<div class="word2">
+				<a href="viewProgramDetail?index=&type=view" style="color: white"></a><br>
+			</div>
+		</div>
+		<div class="related_three">
+			<div class="word3">
+				<a href="viewProgramDetail?index=&type=view" style="color: white"></a>
+			</div>
+		</div> 
+</div>  -->
+</div>
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="./ViewDetail_files/footer.css">
+<title>Insert title here</title>
+     
+
+	<div class="footer">
+		<div class="left">
+			© 2018 Cstar <a>Terms</a> <a>Privacy</a> <a href="http://www.metwiki.net/MetWiki/download/Database.zip">LatestMTLibrary</a>
+      <a href="https://beian.miit.gov.cn/">鄂ICP备18020834号</a>
+		</div>
+		<div class="right">
+			<a>Links</a> <a>Emails</a> <a>About</a>
+		</div>
+	</div>
+
+
+
+<script>
+	var summary = document.getElementById("summa");
+	if(summary.innerText.length<=0){
+		//内容为空
+	document.getElementById("summa").style.display="none";
+	document.getElementById("sum").style.display="none";	    	
+	}
+
+</script>
+
+<div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_AMS, monospace;">MATHJAX AMS ˆ </div></body></html>
