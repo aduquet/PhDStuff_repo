@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)http://www.metwiki.net/viewProgramDetail?index=406&userId=&type=view -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<base href="http://www.metwiki.net:80/">--><base href=".">
+    <title>ViewDetail</title>
+
+	<!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+	<script type="text/javascript" async="" src="./ViewDetail_files/ga.js"></script><script src="./ViewDetail_files/ie-emulation-modes-warning.js"></script>
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+  	<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  	<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+	
+    <script type="text/javascript" src="./ViewDetail_files/jquery.min.js"></script>
+    <script type="text/javascript" src="./ViewDetail_files/dialog-min.js"></script>
+
+    <!-- Favicons -->
+	
+	
+        <script src="./ViewDetail_files/behavior_legacy.js"></script>
+        <script>$(function(){ $("img.lazy").jail({effect: "fadeIn", speed: 500, placeholder: "//d85wutc1n854v.cloudfront.net/live/imgs/placeholder.gif"}); });</script>
+        <script type="text/javascript">
+        	var _hmt = _hmt || [];
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-28871117-1']);
+            _gaq.push(['_setDomainName', 'wrapbootstrap.com']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    
+    <script type="text/javascript" src="./ViewDetail_files/MathJax.js">
+    </script>
+    <script type="text/x-mathjax-config;executed=true">
+		MathJax.Hub.Config({
+  		tex2jax: {
+			inlineMath: [['$','$'], ['\\(','\\)']],
+			displayMath: [["$$", "$$"],["\\[", "\\]"]],
+			processEscapes: true
+		},
+		"HTML-CSS": { availableFonts: ["TeX"] }
+		});
+    </script>
+    <script>
+//        收藏程序
+     
+        function star(userId,programId){
+        	 var flag=-1;
+        var data = {
+            "userId" : userId,
+            "programId" : programId
+        };
+       
+
+        $.post(
+            "starProgram",//请求的action相对路径
+            data,
+                function () {
+                    var tip2 = dialog({
+                        content: '<p>Star Success<p>',
+                        quickClose: true});
+                    tip2.show();
+                },
+            "text"
+            );
+        document.execCommand('Refresh') ;
+      //  location.reload() ;
+    	// location=location ;
+    //	 location.assign(location) ;
+    //	 document.execCommand('Refresh') ;
+    //	 window.navigate(location) ;
+    //	 location.replace(location) ;
+     //   window.location.reload(true);
+    }
+    $(document).ready(function(){
+    	setTimeout(function () {
+       	 
+    	
+    	var flag=-1;
+    	 var imgstar=document.getElementById("star");
+     	if(flag!=-1){
+ 		imgstar.setAttribute("src","img/stared.png");
+     	}else{
+     		imgstar.setAttribute("src","img/star.png");
+     	}
+     //	window.confirm(flag);
+    	},2000);
+    });
+
+    </script>    
+    <script>
+function DeleteProgram(){
+if(confirm("你是否要删除此项目？")){
+window.location.href="deleteProgram?programid=406&index=406";
+}
+}
+
+</script>
+<link rel="stylesheet" type="text/css" href="./ViewDetail_files/viewDetail.css"> 
+
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Hover_Arrow {position: absolute; width: 15px; height: 11px; cursor: pointer}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; color: #666666}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_Menu_Close {position: absolute; width: 31px; height: 31px; top: -15px; left: -15px}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; border: 0; padding: 0; margin: 0}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0 !important; padding: 0 !important; margin: 0 !important; vertical-align: 0 !important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap ! important}
+.MathJax img {display: inline ! important; float: none ! important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block; overflow: hidden; width: 1px; height: 60ex}
+.MathJax .MathJax_EmBox {display: block; overflow: hidden; width: 1px; height: 60em}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff') format('woff'), url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Main; src: url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff') format('woff'), url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf') format('opentype'); font-weight: bold}
+@font-face {font-family: MathJax_Main; src: url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff') format('woff'), url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Math; src: url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff') format('woff'), url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf') format('opentype'); font-style: italic}
+@font-face {font-family: MathJax_Caligraphic; src: url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff') format('woff'), url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff') format('woff'), url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff') format('woff'), url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff') format('woff'), url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff') format('woff'), url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><script type="text/javascript" data-name="TokenSigning" data-by="Web-eID extension">(function pageScript() {
+        let hasDeprecationWarningDisplayed = false;
+        const eidPromises = {};
+        window.addEventListener("message", function (event) {
+            if (event.source !== window)
+                return;
+            if (event.data.src && (event.data.src === "background.js")) {
+                console.log("Page received: ");
+                console.log(event.data);
+                if (event.data.nonce) {
+                    const p = eidPromises[event.data.nonce];
+                    if (event.data.result === "ok") {
+                        if (event.data.signature !== undefined) {
+                            p.resolve({ hex: event.data.signature });
+                        }
+                        else if (event.data.version !== undefined) {
+                            p.resolve(event.data.extension + "/" + event.data.version);
+                        }
+                        else if (event.data.cert !== undefined) {
+                            p.resolve({ hex: event.data.cert });
+                        }
+                        else {
+                            console.log("No idea how to handle message");
+                            console.log(event.data);
+                        }
+                    }
+                    else {
+                        p.reject(new Error(event.data.result));
+                    }
+                    delete eidPromises[event.data.nonce];
+                }
+                else {
+                    console.log("No nonce in event msg");
+                }
+            }
+        }, false);
+        function nonce() {
+            let val = "";
+            const hex = "abcdefghijklmnopqrstuvwxyz0123456789";
+            for (let i = 0; i < 16; i++)
+                val += hex.charAt(Math.floor(Math.random() * hex.length));
+            return val;
+        }
+        function messagePromise(msg) {
+            if (!hasDeprecationWarningDisplayed) {
+                console.warn("TokenSigning API is deprecated. Please consider switching to the new Web-eID library.");
+                hasDeprecationWarningDisplayed = true;
+            }
+            return new Promise(function (resolve, reject) {
+                window.postMessage(msg, "*");
+                eidPromises[msg.nonce] = { resolve, reject };
+            });
+        }
+        window.TokenSigning = class TokenSigning {
+            getCertificate(options) {
+                const msg = {
+                    src: "page.js",
+                    nonce: nonce(),
+                    type: "CERT",
+                    lang: options.lang,
+                    filter: options.filter,
+                };
+                console.log("getCertificate()");
+                return messagePromise(msg);
+            }
+            sign(cert, hash, options) {
+                const msg = {
+                    src: "page.js",
+                    nonce: nonce(),
+                    type: "SIGN",
+                    cert: cert.hex,
+                    hash: hash.hex,
+                    hashtype: hash.type,
+                    lang: options.lang,
+                    info: options.info,
+                };
+                console.log("sign()");
+                return messagePromise(msg);
+            }
+            getVersion() {
+                const msg = {
+                    src: "page.js",
+                    nonce: nonce(),
+                    type: "VERSION",
+                };
+                console.log("getVersion()");
+                return messagePromise(msg);
+            }
+        };
+    })();</script><style type="text/css">@font-face {font-family: MathJax_AMS; src: url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/woff/MathJax_AMS-Regular.woff') format('woff'), url('http://www.metwiki.net/mathjax/fonts/HTML-CSS/TeX/otf/MathJax_AMS-Regular.otf') format('opentype')}
+</style></head>
+<body><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="./ViewDetail_files/header.css">
+<title>header</title>
+
+
+	<div class="site-header">
+		<div class="site-pic">
+			<a style="text-decoration: none;" href="http://www.metwiki.net/viewTop8Domain"><img src="./ViewDetail_files/word.png" class="img"></a>		
+		</div>
+		<div class="site-search">
+            <form id="form1" accept-charset="UTF-8" action="http://www.metwiki.net/searchProgram" method="get" class="parent">
+            	<input type="text" class="chromeless-input" name="q" value="Search MetWiki" style="padding-left: 20px; position:absolute; outline:none; border:1.5px solid gray;color:gray;width:300px;height:35px;border-radius:18px;" onfocus="if(this.value==&#39;Search MetWiki&#39;){this.value=&#39;&#39;;}" onblur="if(this.value==&#39;&#39;){this.value=&#39;Search MetWiki&#39;}">
+            	<input type="button" class="button" onclick="document.getElementById(&#39;form1&#39;).submit();">
+            </form>
+        </div>
+        <div class="header-client">
+        	Hi!  MY Friend     
+        </div>  
+        <div class="header-zi">
+          <ul>
+ 			<li><a target="_blank" style="text-decoration: none;" href="http://cstar.whu.edu.cn/">CSTAR</a></li>
+			<li class="login">
+				<a style="text-decoration: none;" class="dropbtn" id="butt">Login</a>
+				<div class="loginitem" id="layer">
+					<p><a href="http://www.metwiki.net/PAGE/user/login.jsp" id="signin">Sign In</a></p>
+					<p><a href="http://www.metwiki.net/logOut?userId=">Sign Out</a></p>
+					<p><a href="http://www.metwiki.net/PAGE/user/register.jsp" id="register">Register</a></p>	
+					<input type="hidden" id="userstate" name="userstate" value="MY Friend">	
+				</div>			
+			</li>
+			<li><a style="text-decoration: none;" href="http://www.metwiki.net/getProfile?userId=">Profile</a></li>
+		  </ul>
+		</div>          
+    </div>
+    <script src="./ViewDetail_files/script.js"></script>
+
+
+<!-- 
+<div align="center" class="pagehead repohead instapaper_ignore readability-menu experiment-repo-nav">
+    <h3>
+        <b>  Binary Space Partitioning Algorithm  : Deals with the surface visibility using the BSP tree named BSP tree visible surface (abbreviated as &ldquo;BSP-treeVS&rdquo;) algorithm.  </b>
+        <br>
+
+        <small>
+            <br>
+            Tag:
+
+            
+                <a class="post-tag" href="viewProgramByTag?tagName=binary space partitioning">
+                    binary space partitioning</a>
+            
+                <a class="post-tag" href="viewProgramByTag?tagName=BSP">
+                    BSP</a>
+            
+                <a class="post-tag" href="viewProgramByTag?tagName=&nbsp; surface visibility problem">
+                    &nbsp; surface visibility problem</a>
+            
+
+            <a href="viewProgramDetail?index=406&type=update">
+                <img src="img/edit.gif" height="42" width="42" alt="edit"/>
+            </a>
+        </small>
+    </h3>
+</div>
+ -->
+ 
+ <div align="center" id="page_home" style="background-image: url(&quot;data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzODQiIGhlaWdodD0iNDQzIj48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJyZ2IoNTYsIDIwNCwgMTQxKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xMDY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQyLjY2NjY2NjY2NjY2NjY2NCwgLTM2Ljk1MDQxNzIyODEzNjA1KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xMDY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzQxLjMzMzMzMzMzMzMzMzMsIC0zNi45NTA0MTcyMjgxMzYwNSkiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMTA2NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00Mi42NjY2NjY2NjY2NjY2NjQsIDQwNi40NTQ1ODk1MDk0OTY1KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xMDY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzQxLjMzMzMzMzMzMzMzMzMsIDQwNi40NTQ1ODk1MDk0OTY1KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4wMiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjEuMzMzMzMzMzMzMzMzMzM2LCAwLjApIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIwLjAyIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMS4zMzMzMzMzMzMzMzMzMzYsIDQ0My40MDUwMDY3Mzc2MzI1NikiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMTI0MDAwMDAwMDAwMDAwMDEiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDg1LjMzMzMzMzMzMzMzMzM0LCAtMzYuOTUwNDE3MjI4MTM2MDUpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIwLjEyNDAwMDAwMDAwMDAwMDAxIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4NS4zMzMzMzMzMzMzMzMzNCwgNDA2LjQ1NDU4OTUwOTQ5NjUpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iIzIyMiIgZmlsbC1vcGFjaXR5PSIwLjA0NiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQ5LjMzMzMzMzMzMzMzMzM0LCAwLjApIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iIzIyMiIgZmlsbC1vcGFjaXR5PSIwLjA0NiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQ5LjMzMzMzMzMzMzMzMzM0LCA0NDMuNDA1MDA2NzM3NjMyNTYpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIwLjA4OTMzMzMzMzMzMzMzMzMzIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMTMuMzMzMzMzMzMzMzMzMzQsIC0zNi45NTA0MTcyMjgxMzYwNSkiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMDg5MzMzMzMzMzMzMzMzMzMiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIxMy4zMzMzMzMzMzMzMzMzNCwgNDA2LjQ1NDU4OTUwOTQ5NjUpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIwLjE0MTMzMzMzMzMzMzMzMzM0IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNzcuMzMzMzMzMzMzMzMzMywgMC4wKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xNDEzMzMzMzMzMzMzMzMzNCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjc3LjMzMzMzMzMzMzMzMzMsIDQ0My40MDUwMDY3Mzc2MzI1NikiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMTI0MDAwMDAwMDAwMDAwMDEiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00Mi42NjY2NjY2NjY2NjY2NjQsIDM2Ljk1MDQxNzIyODEzNjA1KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xMjQwMDAwMDAwMDAwMDAwMSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzQxLjMzMzMzMzMzMzMzMzMsIDM2Ljk1MDQxNzIyODEzNjA1KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC4xNSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjEuMzMzMzMzMzMzMzMzMzM2LCA3My45MDA4MzQ0NTYyNzIxKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xMDY2NjY2NjY2NjY2NjY2NyIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODUuMzMzMzMzMzMzMzMzMzQsIDM2Ljk1MDQxNzIyODEzNjA1KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC4wODA2NjY2NjY2NjY2NjY2NiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQ5LjMzMzMzMzMzMzMzMzM0LCA3My45MDA4MzQ0NTYyNzIxKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4wMiIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjEzLjMzMzMzMzMzMzMzMzM0LCAzNi45NTA0MTcyMjgxMzYwNSkiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjMjIyIiBmaWxsLW9wYWNpdHk9IjAuMTUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI3Ny4zMzMzMzMzMzMzMzMzLCA3My45MDA4MzQ0NTYyNzIxKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xNDEzMzMzMzMzMzMzMzMzNCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQyLjY2NjY2NjY2NjY2NjY2NCwgMTEwLjg1MTI1MTY4NDQwODE0KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xNDEzMzMzMzMzMzMzMzMzNCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMzQxLjMzMzMzMzMzMzMzMzMsIDExMC44NTEyNTE2ODQ0MDgxNCkiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjMjIyIiBmaWxsLW9wYWNpdHk9IjAuMDI4NjY2NjY2NjY2NjY2NjY3IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMS4zMzMzMzMzMzMzMzMzMzYsIDE0Ny44MDE2Njg5MTI1NDQyKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC4wOTgiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDg1LjMzMzMzMzMzMzMzMzM0LCAxMTAuODUxMjUxNjg0NDA4MTQpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIwLjAzNzMzMzMzMzMzMzMzMzMzIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNDkuMzMzMzMzMzMzMzMzMzQsIDE0Ny44MDE2Njg5MTI1NDQyKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4wODkzMzMzMzMzMzMzMzMzMyIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjEzLjMzMzMzMzMzMzMzMzM0LCAxMTAuODUxMjUxNjg0NDA4MTQpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIwLjA3MjAwMDAwMDAwMDAwMDAxIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyNzcuMzMzMzMzMzMzMzMzMywgMTQ3LjgwMTY2ODkxMjU0NDIpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iIzIyMiIgZmlsbC1vcGFjaXR5PSIwLjEzMjY2NjY2NjY2NjY2NjY1IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNDIuNjY2NjY2NjY2NjY2NjY0LCAxODQuNzUyMDg2MTQwNjgwMjMpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iIzIyMiIgZmlsbC1vcGFjaXR5PSIwLjEzMjY2NjY2NjY2NjY2NjY1IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzNDEuMzMzMzMzMzMzMzMzMywgMTg0Ljc1MjA4NjE0MDY4MDIzKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4xNDEzMzMzMzMzMzMzMzMzNCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjEuMzMzMzMzMzMzMzMzMzM2LCAyMjEuNzAyNTAzMzY4ODE2MjUpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iIzIyMiIgZmlsbC1vcGFjaXR5PSIwLjA2MzMzMzMzMzMzMzMzMzM0IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4NS4zMzMzMzMzMzMzMzMzNCwgMTg0Ljc1MjA4NjE0MDY4MDIzKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC4wMjg2NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE0OS4zMzMzMzMzMzMzMzMzNCwgMjIxLjcwMjUwMzM2ODgxNjI1KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC4wOTgiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIxMy4zMzMzMzMzMzMzMzMzNCwgMTg0Ljc1MjA4NjE0MDY4MDIzKSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC4wNDYiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI3Ny4zMzMzMzMzMzMzMzMzLCAyMjEuNzAyNTAzMzY4ODE2MjUpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIwLjEyNDAwMDAwMDAwMDAwMDAxIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNDIuNjY2NjY2NjY2NjY2NjY0LCAyNTguNjUyOTIwNTk2OTUyMykiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMTI0MDAwMDAwMDAwMDAwMDEiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM0MS4zMzMzMzMzMzMzMzMzLCAyNTguNjUyOTIwNTk2OTUyMykiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMTA2NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIxLjMzMzMzMzMzMzMzMzMzNiwgMjk1LjYwMzMzNzgyNTA4ODQpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iIzIyMiIgZmlsbC1vcGFjaXR5PSIwLjExNTMzMzMzMzMzMzMzMzM0IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg4NS4zMzMzMzMzMzMzMzMzNCwgMjU4LjY1MjkyMDU5Njk1MjMpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iIzIyMiIgZmlsbC1vcGFjaXR5PSIwLjA4MDY2NjY2NjY2NjY2NjY2IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNDkuMzMzMzMzMzMzMzMzMzQsIDI5NS42MDMzMzc4MjUwODg0KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiNkZGQiIGZpbGwtb3BhY2l0eT0iMC4wNzIwMDAwMDAwMDAwMDAwMSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjEzLjMzMzMzMzMzMzMzMzM0LCAyNTguNjUyOTIwNTk2OTUyMykiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMDg5MzMzMzMzMzMzMzMzMzMiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI3Ny4zMzMzMzMzMzMzMzMzLCAyOTUuNjAzMzM3ODI1MDg4NCkiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMDU0NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00Mi42NjY2NjY2NjY2NjY2NjQsIDMzMi41NTM3NTUwNTMyMjQ0NSkiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMDU0NjY2NjY2NjY2NjY2NjciIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM0MS4zMzMzMzMzMzMzMzMzLCAzMzIuNTUzNzU1MDUzMjI0NDUpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iI2RkZCIgZmlsbC1vcGFjaXR5PSIwLjEwNjY2NjY2NjY2NjY2NjY3IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMS4zMzMzMzMzMzMzMzMzMzYsIDM2OS41MDQxNzIyODEzNjA0KSIgIC8+PHBvbHlsaW5lIHBvaW50cz0iMCwzNi45NTA0MTcyMjgxMzYwNSwyMS4zMzMzMzMzMzMzMzMzMzIsMCw2NC4wLDAsODUuMzMzMzMzMzMzMzMzMzMsMzYuOTUwNDE3MjI4MTM2MDUsNjQuMCw3My45MDA4MzQ0NTYyNzIxLDIxLjMzMzMzMzMzMzMzMzMzMiw3My45MDA4MzQ0NTYyNzIxLDAsMzYuOTUwNDE3MjI4MTM2MDUiIGZpbGw9IiMyMjIiIGZpbGwtb3BhY2l0eT0iMC4wNjMzMzMzMzMzMzMzMzMzNCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utb3BhY2l0eT0iMC4wMiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoODUuMzMzMzMzMzMzMzMzMzQsIDMzMi41NTM3NTUwNTMyMjQ0NSkiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMTQxMzMzMzMzMzMzMzMzMzQiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE0OS4zMzMzMzMzMzMzMzMzNCwgMzY5LjUwNDE3MjI4MTM2MDQpIiAgLz48cG9seWxpbmUgcG9pbnRzPSIwLDM2Ljk1MDQxNzIyODEzNjA1LDIxLjMzMzMzMzMzMzMzMzMzMiwwLDY0LjAsMCw4NS4zMzMzMzMzMzMzMzMzMywzNi45NTA0MTcyMjgxMzYwNSw2NC4wLDczLjkwMDgzNDQ1NjI3MjEsMjEuMzMzMzMzMzMzMzMzMzMyLDczLjkwMDgzNDQ1NjI3MjEsMCwzNi45NTA0MTcyMjgxMzYwNSIgZmlsbD0iIzIyMiIgZmlsbC1vcGFjaXR5PSIwLjEzMjY2NjY2NjY2NjY2NjY1IiBzdHJva2U9IiMwMDAiIHN0cm9rZS1vcGFjaXR5PSIwLjAyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMTMuMzMzMzMzMzMzMzMzMzQsIDMzMi41NTM3NTUwNTMyMjQ0NSkiICAvPjxwb2x5bGluZSBwb2ludHM9IjAsMzYuOTUwNDE3MjI4MTM2MDUsMjEuMzMzMzMzMzMzMzMzMzMyLDAsNjQuMCwwLDg1LjMzMzMzMzMzMzMzMzMzLDM2Ljk1MDQxNzIyODEzNjA1LDY0LjAsNzMuOTAwODM0NDU2MjcyMSwyMS4zMzMzMzMzMzMzMzMzMzIsNzMuOTAwODM0NDU2MjcyMSwwLDM2Ljk1MDQxNzIyODEzNjA1IiBmaWxsPSIjZGRkIiBmaWxsLW9wYWNpdHk9IjAuMTQxMzMzMzMzMzMzMzMzMzQiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9IjAuMDIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDI3Ny4zMzMzMzMzMzMzMzMzLCAzNjkuNTA0MTcyMjgxMzYwNCkiICAvPjwvc3ZnPg==&quot;);">&gt;
+    <div class="container">
+        <div class="hero-unit1" style="margin-bottom: 25px;">
+          <span class="title"> <strong>   Binary Space Partitioning Algorithm </strong></span>  
+		<br>
+		<h3>
+        <small>
+            Tag:
+
+            
+                <a class="post-tag" href="http://www.metwiki.net/viewProgramByTag?tagName=binary%20space%20partitioning">
+                    binary space partitioning</a>
+            
+                <a class="post-tag" href="http://www.metwiki.net/viewProgramByTag?tagName=BSP">
+                    BSP</a>
+            
+                <a class="post-tag" href="http://www.metwiki.net/viewProgramByTag?tagName=%C2%A0%20surface%20visibility%20problem">
+                    &nbsp; surface visibility problem</a>
+            
+            <br>
+            
+
+            <a href="http://www.metwiki.net/viewProgramDetailBeforeUpdate?index=406">
+                Edit  <img src="./ViewDetail_files/edit.gif" height="18" width="18" alt="edit">
+            </a>
+            &nbsp;
+            <a style="cursor: pointer;" onclick="star(,406);">
+                Star<img src="./ViewDetail_files/star.png" id="star" height="18" width="18" alt="star"> </a>
+            &nbsp;
+            <a style="cursor: pointer;" onclick="DeleteProgram();">Delete</a>
+               &nbsp; 
+             <a href="http://www.metwiki.net/FileUploadRequest?index=406">Add Picture</a>
+        </small>
+            </h3>
+         </div>
+    </div>
+</div>
+<div class="all">
+<div class="hero-unit">
+		<input type="hidden" name="dbIndex" value="406">
+    	<div id="editor" contenteditable="false" align="left">
+        <h3 class="attr1">Program Information</h3>
+        <code class="attr2">Name:</code> 
+        <font face="Arial" size="3"> Binary Space Partitioning Algorithm </font><br>
+        <code class="attr2">Domain:</code>
+        <font face="Arial" size="3">Algorithm </font><br>
+        <code class="attr2">Functionality:</code>
+            <font face="Arial" size="3" style="white-space:pre-line;">Deals with the surface visibility using the BSP tree named BSP tree visible surface (abbreviated as “BSP-treeVS”) algorithm. </font><br>
+        <code class="attr2">Input:</code>
+        
+            <font face="Arial" size="3" style="white-space:pre-line;"> The inputs to the BSP-treeVS algorithm include a set of surfaces <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-1-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-1" style="width: 1.826em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.513em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.826em, 1000em, 3.128em, -0.362em); top: -2.706em; left: 0.003em;"><span class="mrow" id="MathJax-Span-2"><span class="mo" id="MathJax-Span-3" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-4" style="font-family: MathJax_Math; font-style: italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.107em;"></span></span><span class="mo" id="MathJax-Span-5" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 2.711em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.316em; vertical-align: -0.372em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-1">(P)</script> and the viewer’s coordinate in the space. We will use <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-2-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-6" style="width: 7.711em; display: inline-block;"><span style="display: inline-block; position: relative; width: 6.409em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.826em, 1000em, 3.18em, -0.414em); top: -2.706em; left: 0.003em;"><span class="mrow" id="MathJax-Span-7"><span class="mi" id="MathJax-Span-8" style="font-family: MathJax_Math; font-style: italic;">V<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.211em;"></span></span><span class="mo" id="MathJax-Span-9" style="font-family: MathJax_Main; padding-left: 0.263em;">=</span><span class="mo" id="MathJax-Span-10" style="font-family: MathJax_Main; padding-left: 0.263em;">(</span><span class="msubsup" id="MathJax-Span-11"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px;"><span style="position: absolute; clip: rect(1.826em, 1000em, 2.607em, -0.466em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-12" style="font-family: MathJax_Math; font-style: italic;">v</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.133em; left: 0.471em;"><span class="mi" id="MathJax-Span-13" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">x</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span><span class="mo" id="MathJax-Span-14" style="font-family: MathJax_Main;">,</span><span class="msubsup" id="MathJax-Span-15" style="padding-left: 0.159em;"><span style="display: inline-block; position: relative; width: 0.888em; height: 0px;"><span style="position: absolute; clip: rect(1.826em, 1000em, 2.607em, -0.466em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-16" style="font-family: MathJax_Math; font-style: italic;">v</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.133em; left: 0.471em;"><span class="mi" id="MathJax-Span-17" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span><span class="mo" id="MathJax-Span-18" style="font-family: MathJax_Main;">,</span><span class="msubsup" id="MathJax-Span-19" style="padding-left: 0.159em;"><span style="display: inline-block; position: relative; width: 0.836em; height: 0px;"><span style="position: absolute; clip: rect(1.826em, 1000em, 2.607em, -0.466em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-20" style="font-family: MathJax_Math; font-style: italic;">v</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.133em; left: 0.471em;"><span class="mi" id="MathJax-Span-21" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">z<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span><span class="mo" id="MathJax-Span-22" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 2.711em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.378em; vertical-align: -0.434em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-2">V=(v_x ,v_y ,v_z)</script> to denote the viewer’s coordinate.
+The subtree’s nodes on the same side are denoted as frontN(<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-3-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-23" style="width: 0.784em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.628em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.607em, -0.466em); top: -2.445em; left: 0.003em;"><span class="mrow" id="MathJax-Span-24"><span class="mi" id="MathJax-Span-25" style="font-family: MathJax_Math; font-style: italic;">n</span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.691em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-3">n</script>), while those on the opposite side are denoted as backN(<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-4-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-26" style="width: 0.784em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.628em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.607em, -0.466em); top: -2.445em; left: 0.003em;"><span class="mrow" id="MathJax-Span-27"><span class="mi" id="MathJax-Span-28" style="font-family: MathJax_Math; font-style: italic;">n</span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.691em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-4">n</script>).
+Equation 1 shows how to obtain each vertex of each resultant surface:
+<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-5-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-29" style="width: 20.211em; display: inline-block;"><span style="display: inline-block; position: relative; width: 16.826em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.773em, 1000em, 3.18em, -0.518em); top: -2.706em; left: 0.003em;"><span class="mrow" id="MathJax-Span-30"><span class="msup" id="MathJax-Span-31"><span style="display: inline-block; position: relative; width: 0.784em; height: 0px;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.815em, -0.518em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-32" style="font-family: MathJax_Math; font-style: italic;">p</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.654em; left: 0.523em;"><span class="mo" id="MathJax-Span-33" style="font-size: 70.7%; font-family: MathJax_Main;">′</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span><span class="mo" id="MathJax-Span-34" style="font-family: MathJax_Main; padding-left: 0.211em;">⋅</span><span class="mi" id="MathJax-Span-35" style="font-family: MathJax_Math; font-style: italic; padding-left: 0.211em;">v</span><span class="mi" id="MathJax-Span-36" style="font-family: MathJax_Math; font-style: italic;">e</span><span class="mi" id="MathJax-Span-37" style="font-family: MathJax_Math; font-style: italic;">r</span><span class="mi" id="MathJax-Span-38" style="font-family: MathJax_Math; font-style: italic;">t</span><span class="mi" id="MathJax-Span-39" style="font-family: MathJax_Math; font-style: italic;">e</span><span class="msubsup" id="MathJax-Span-40"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-41" style="font-family: MathJax_Math; font-style: italic;">x</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.133em; left: 0.576em;"><span class="mi" id="MathJax-Span-42" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">j</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span><span class="mo" id="MathJax-Span-43" style="font-family: MathJax_Main; padding-left: 0.263em;">=</span><span class="mo" id="MathJax-Span-44" style="font-family: MathJax_Main; padding-left: 0.263em;">(</span><span class="mi" id="MathJax-Span-45" style="font-family: MathJax_Math; font-style: italic;">p</span><span class="mo" id="MathJax-Span-46" style="font-family: MathJax_Main; padding-left: 0.211em;">⋅</span><span class="mi" id="MathJax-Span-47" style="font-family: MathJax_Math; font-style: italic; padding-left: 0.211em;">v</span><span class="mi" id="MathJax-Span-48" style="font-family: MathJax_Math; font-style: italic;">e</span><span class="mi" id="MathJax-Span-49" style="font-family: MathJax_Math; font-style: italic;">r</span><span class="mi" id="MathJax-Span-50" style="font-family: MathJax_Math; font-style: italic;">t</span><span class="mi" id="MathJax-Span-51" style="font-family: MathJax_Math; font-style: italic;">e</span><span class="msubsup" id="MathJax-Span-52"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-53" style="font-family: MathJax_Math; font-style: italic;">x</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.133em; left: 0.576em;"><span class="mi" id="MathJax-Span-54" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">j</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span><span class="mo" id="MathJax-Span-55" style="font-family: MathJax_Main; padding-left: 0.211em;">−</span><span class="mi" id="MathJax-Span-56" style="font-family: MathJax_Math; font-style: italic; padding-left: 0.211em;">V<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.211em;"></span></span><span class="mo" id="MathJax-Span-57" style="font-family: MathJax_Main;">)</span><span class="mo" id="MathJax-Span-58" style="font-family: MathJax_Main; padding-left: 0.211em;">×</span><span class="mi" id="MathJax-Span-59" style="font-family: MathJax_Math; font-style: italic; padding-left: 0.211em;">k</span><span class="mo" id="MathJax-Span-60" style="font-family: MathJax_Main; padding-left: 0.211em;">+</span><span class="mi" id="MathJax-Span-61" style="font-family: MathJax_Math; font-style: italic; padding-left: 0.211em;">V<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.211em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.711em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.378em; vertical-align: -0.434em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-5"> \begin{equation}
+p'\cdot vertex_j = (p\cdot vertex_j - V)\times k + V
+\end{equation}</script>&nbsp; </font><br>
+        
+        <code class="attr2">Output:</code>
+        
+            <font face="Arial" size="3" style="white-space:pre-line;"> The outputs are a list of tree nodes printed in the back-to-front order </font>
+        
+        <hr>
+
+        <h4 class="attr4">Reference</h4>
+        
+            <pre><font face="Arial" size="3"> Testing a Binary Space Partitioning Algorithm with Metamorphic Testing https://doi.org/10.1145/1982185.1982502 <br></font></pre>
+        
+        <hr>
+        
+ 		
+        <hr> 
+
+         <h3 class="attr1">
+                MR Information
+        </h3>
+		<div class="format"><font face="Arial" size="3" class="lala" id="summa" style="display: none;"> </font></div>
+        
+            
+            <h4 class="attr3">MR1<font id="mrn1" style="display: none;">------ </font></h4>
+            <div class="format"><code class="attr2" id="des1" style="display: none;">Description:</code><font face="Arial" size="3" class="lala" id="descript1" style="display: none;">  </font></div>
+           	<div class="format"><code class="attr2" id="con1">Property:</code><font face="Arial" size="3" class="lala" id="name1">  Given any list of surfaces as the source test input <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-6-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-62" style="width: 1.826em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.513em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.826em, 1000em, 3.128em, -0.362em); top: -2.706em; left: 0.003em;"><span class="mrow" id="MathJax-Span-63"><span class="mo" id="MathJax-Span-64" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-65" style="font-family: MathJax_Math; font-style: italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.107em;"></span></span><span class="mo" id="MathJax-Span-66" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 2.711em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.316em; vertical-align: -0.372em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-6">(P)</script>,the follow-up test input <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-7-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-67" style="width: 1.357em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.253em, 1000em, 2.346em, -0.414em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-68"><span class="msup" id="MathJax-Span-69"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-70" style="font-family: MathJax_Math; font-style: italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.107em;"></span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.706em; left: 0.836em;"><span class="mo" id="MathJax-Span-71" style="font-size: 70.7%; font-family: MathJax_Main;">′</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.066em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-7">P'</script> is generated by uniformly scaling all the surfaces of <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-8-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-72" style="width: 0.888em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.732em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mrow" id="MathJax-Span-73"><span class="mi" id="MathJax-Span-74" style="font-family: MathJax_Math; font-style: italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.107em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.941em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-8">P</script> with the scaling factor <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-9-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-75" style="width: 2.815em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.346em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.867em, -0.414em); top: -2.706em; left: 0.003em;"><span class="mrow" id="MathJax-Span-76"><span class="mi" id="MathJax-Span-77" style="font-family: MathJax_Math; font-style: italic;">k</span><span class="mo" id="MathJax-Span-78" style="font-family: MathJax_Main; padding-left: 0.263em;">=</span><span class="mn" id="MathJax-Span-79" style="font-family: MathJax_Main; padding-left: 0.263em;">2</span></span><span style="display: inline-block; width: 0px; height: 2.711em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.003em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-9">k = 2</script>. The source and follow-up tests are expected to produce the same output, provided that the viewer’s coordinate is unchanged (as a reminder, the viewer’s coordinate is hard-coded in the BSP-treeVS software, so this setting will definitely remain the same throughout our testing.). </font></div>
+            
+                <div class="format"><code class="attr2" id="sour1" style="display: none;">Source input:</code> <font face="Arial" size="3" class="lala" id="sourin1" style="display: none;">  </font></div> 
+                <div class="format"><code class="attr2" id="sourc1" style="display: none;">Source output:</code> <font face="Arial" size="3" class="lala" id="sourout1" style="display: none;"> </font></div>
+            
+            
+                <div class="format"><code class="attr2" id="foll1" style="display: none;">Follow-up input:</code> <font face="Arial" size="3" class="lala" id="follin1" style="display: none;"> </font></div>
+                <div class="format"><code class="attr2" id="follo1" style="display: none;">Follow-up output:</code> <font face="Arial" size="3" class="lala" id="follout1" style="display: none;">  </font></div>
+            
+            <div class="format"><code class="attr2" id="inr1" style="display: none;">Input relation:</code> <font face="Arial" size="3" class="lala" id="inrel1" style="display: none;"> </font></div>
+            <div class="format"><code class="attr2" id="outr1" style="display: none;">Output relation:</code> <font face="Arial" size="3" class="lala" id="outrel1" style="display: none;"> </font></div>
+            <div class="format"><code class="attr2" id="pan1" style="display: none;">Pattern:</code><font face="Arial" size="3" id="tex1" style="display: none;">  </font></div>
+        <script>
+	   		var mrname = document.getElementById("mrn1");
+	   		var desc = document.getElementById("descript1");
+	   		var text = document.getElementById("name1");
+	   		var pattern = document.getElementById("tex1");
+	   		var sourcein = document.getElementById("sourin1");
+	   		var sourceout = document.getElementById("sourout1");
+	   		var followin = document.getElementById("follin1");
+	   		var followout = document.getElementById("follout1");
+	   		var inrelation = document.getElementById("inrel1");
+	   		var outrelation = document.getElementById("outrel1");
+			if(mrname.innerText.length<=6){
+	    		//内容为空
+	    	document.getElementById("mrn1").style.display="none";	    	
+			}
+			if(desc.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("descript1").style.display="none";
+			document.getElementById("des1").style.display="none";	    	
+			} 
+	   		if(text.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("name1").style.display="none";
+			document.getElementById("con1").style.display="none";	    	
+			} 
+			if(pattern.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("tex1").style.display="none";
+			document.getElementById("pan1").style.display="none";	    	
+			}
+			if(sourcein.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("sourin1").style.display="none";
+			document.getElementById("sour1").style.display="none";	    	
+			}
+			if(sourceout.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("sourout1").style.display="none";
+			document.getElementById("sourc1").style.display="none";	    	
+			}
+			if(followin.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("follin1").style.display="none";
+			document.getElementById("foll1").style.display="none";	    	
+			}
+			if(followout.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("follout1").style.display="none";
+			document.getElementById("follo1").style.display="none";	    	
+			}
+			if(inrelation.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("inrel1").style.display="none";
+			document.getElementById("inr1").style.display="none";	    	
+			}
+			if(outrelation.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("outrel1").style.display="none";
+			document.getElementById("outr1").style.display="none";	    	
+			}
+		</script>
+        
+            
+            <h4 class="attr3">MR2<font id="mrn2" style="display: none;">------ </font></h4>
+            <div class="format"><code class="attr2" id="des2" style="display: none;">Description:</code><font face="Arial" size="3" class="lala" id="descript2" style="display: none;">  </font></div>
+           	<div class="format"><code class="attr2" id="con2">Property:</code><font face="Arial" size="3" class="lala" id="name2">  Randomly select one surface <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-10-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-80" style="width: 1.096em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.888em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.711em, -0.518em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-81"><span class="msubsup" id="MathJax-Span-82"><span style="display: inline-block; position: relative; width: 0.888em; height: 0px;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.815em, -0.518em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-83" style="font-family: MathJax_Math; font-style: italic;">p</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.081em; left: 0.523em;"><span class="mi" id="MathJax-Span-84" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">q<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.128em; vertical-align: -0.497em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-10">p_q</script> from the source test input <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-11-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-85" style="width: 0.888em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.732em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mrow" id="MathJax-Span-86"><span class="mi" id="MathJax-Span-87" style="font-family: MathJax_Math; font-style: italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.107em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.941em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-11">P</script>, such that <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-12-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-88" style="width: 8.388em; display: inline-block;"><span style="display: inline-block; position: relative; width: 6.982em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.826em, 1000em, 3.232em, -0.414em); top: -2.706em; left: 0.003em;"><span class="mrow" id="MathJax-Span-89"><span class="msubsup" id="MathJax-Span-90"><span style="display: inline-block; position: relative; width: 0.836em; height: 0px;"><span style="position: absolute; clip: rect(1.565em, 1000em, 2.815em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-91" style="font-family: MathJax_Math; font-style: italic;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.055em;"></span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.029em; left: 0.471em;"><span class="mi" id="MathJax-Span-92" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">q<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span><span class="mo" id="MathJax-Span-93" style="font-family: MathJax_Main;">(</span><span class="msubsup" id="MathJax-Span-94"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px;"><span style="position: absolute; clip: rect(1.826em, 1000em, 2.607em, -0.466em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-95" style="font-family: MathJax_Math; font-style: italic;">v</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.133em; left: 0.471em;"><span class="mi" id="MathJax-Span-96" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">x</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span><span class="mo" id="MathJax-Span-97" style="font-family: MathJax_Main;">,</span><span class="msubsup" id="MathJax-Span-98" style="padding-left: 0.159em;"><span style="display: inline-block; position: relative; width: 0.888em; height: 0px;"><span style="position: absolute; clip: rect(1.826em, 1000em, 2.607em, -0.466em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-99" style="font-family: MathJax_Math; font-style: italic;">v</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.133em; left: 0.471em;"><span class="mi" id="MathJax-Span-100" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span><span class="mo" id="MathJax-Span-101" style="font-family: MathJax_Main;">,</span><span class="msubsup" id="MathJax-Span-102" style="padding-left: 0.159em;"><span style="display: inline-block; position: relative; width: 0.836em; height: 0px;"><span style="position: absolute; clip: rect(1.826em, 1000em, 2.607em, -0.466em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-103" style="font-family: MathJax_Math; font-style: italic;">v</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.133em; left: 0.471em;"><span class="mi" id="MathJax-Span-104" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">z<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span><span class="mo" id="MathJax-Span-105" style="font-family: MathJax_Main;">)</span><span class="mo" id="MathJax-Span-106" style="font-family: MathJax_Main; padding-left: 0.263em;">≠</span><span class="mn" id="MathJax-Span-107" style="font-family: MathJax_Main; padding-left: 0.263em;">0</span></span><span style="display: inline-block; width: 0px; height: 2.711em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.503em; vertical-align: -0.497em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-12">f_q(v_x,v_y,v_z)\neq 0</script> (so the viewer is not a point in <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-13-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-108" style="width: 1.096em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.888em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.711em, -0.518em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-109"><span class="msubsup" id="MathJax-Span-110"><span style="display: inline-block; position: relative; width: 0.888em; height: 0px;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.815em, -0.518em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-111" style="font-family: MathJax_Math; font-style: italic;">p</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.081em; left: 0.523em;"><span class="mi" id="MathJax-Span-112" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">q<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.128em; vertical-align: -0.497em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-13">p_q</script>). Construct the follow-up test input <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-14-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-113" style="width: 1.357em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.253em, 1000em, 2.346em, -0.414em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-114"><span class="msup" id="MathJax-Span-115"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-116" style="font-family: MathJax_Math; font-style: italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.107em;"></span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.706em; left: 0.836em;"><span class="mo" id="MathJax-Span-117" style="font-size: 70.7%; font-family: MathJax_Main;">′</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.066em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-14">P'</script> by appending one additional surface <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-15-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-118" style="width: 0.94em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.784em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.253em, 1000em, 2.555em, -0.518em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-119"><span class="msup" id="MathJax-Span-120"><span style="display: inline-block; position: relative; width: 0.784em; height: 0px;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.815em, -0.518em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-121" style="font-family: MathJax_Math; font-style: italic;">p</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.654em; left: 0.523em;"><span class="mo" id="MathJax-Span-122" style="font-size: 70.7%; font-family: MathJax_Main;">′</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.253em; vertical-align: -0.309em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-15">p'</script> to <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-16-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-123" style="width: 0.888em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.732em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mrow" id="MathJax-Span-124"><span class="mi" id="MathJax-Span-125" style="font-family: MathJax_Math; font-style: italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.107em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.941em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-16">P</script>, where <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-17-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-126" style="width: 0.94em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.784em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.253em, 1000em, 2.555em, -0.518em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-127"><span class="msup" id="MathJax-Span-128"><span style="display: inline-block; position: relative; width: 0.784em; height: 0px;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.815em, -0.518em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-129" style="font-family: MathJax_Math; font-style: italic;">p</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.654em; left: 0.523em;"><span class="mo" id="MathJax-Span-130" style="font-size: 70.7%; font-family: MathJax_Main;">′</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.253em; vertical-align: -0.309em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-17">p'</script> is constructed from <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-18-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-131" style="width: 1.096em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.888em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.711em, -0.518em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-132"><span class="msubsup" id="MathJax-Span-133"><span style="display: inline-block; position: relative; width: 0.888em; height: 0px;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.815em, -0.518em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-134" style="font-family: MathJax_Math; font-style: italic;">p</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.081em; left: 0.523em;"><span class="mi" id="MathJax-Span-135" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">q<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.128em; vertical-align: -0.497em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-18">p_q</script> using Equation 1 and <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-19-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-136" style="width: 3.753em; display: inline-block;"><span style="display: inline-block; position: relative; width: 3.128em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.867em, -0.414em); top: -2.706em; left: 0.003em;"><span class="mrow" id="MathJax-Span-137"><span class="mi" id="MathJax-Span-138" style="font-family: MathJax_Math; font-style: italic;">k</span><span class="mo" id="MathJax-Span-139" style="font-family: MathJax_Main; padding-left: 0.263em;">=</span><span class="mn" id="MathJax-Span-140" style="font-family: MathJax_Main; padding-left: 0.263em;">1.5</span></span><span style="display: inline-block; width: 0px; height: 2.711em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.003em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-19">k = 1.5</script>. The follow-up test is expected to output at least one section of <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-20-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-141" style="width: 0.94em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.784em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.253em, 1000em, 2.555em, -0.518em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-142"><span class="msup" id="MathJax-Span-143"><span style="display: inline-block; position: relative; width: 0.784em; height: 0px;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.815em, -0.518em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-144" style="font-family: MathJax_Math; font-style: italic;">p</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.654em; left: 0.523em;"><span class="mo" id="MathJax-Span-145" style="font-size: 70.7%; font-family: MathJax_Main;">′</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.253em; vertical-align: -0.309em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-20">p'</script> before all sections of <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-21-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-146" style="width: 1.096em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.888em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.711em, -0.518em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-147"><span class="msubsup" id="MathJax-Span-148"><span style="display: inline-block; position: relative; width: 0.888em; height: 0px;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.815em, -0.518em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-149" style="font-family: MathJax_Math; font-style: italic;">p</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.081em; left: 0.523em;"><span class="mi" id="MathJax-Span-150" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">q<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.128em; vertical-align: -0.497em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-21">p_q</script> . </font></div>
+            
+                <div class="format"><code class="attr2" id="sour2" style="display: none;">Source input:</code> <font face="Arial" size="3" class="lala" id="sourin2" style="display: none;">  </font></div> 
+                <div class="format"><code class="attr2" id="sourc2" style="display: none;">Source output:</code> <font face="Arial" size="3" class="lala" id="sourout2" style="display: none;"> </font></div>
+            
+            
+                <div class="format"><code class="attr2" id="foll2" style="display: none;">Follow-up input:</code> <font face="Arial" size="3" class="lala" id="follin2" style="display: none;"> </font></div>
+                <div class="format"><code class="attr2" id="follo2" style="display: none;">Follow-up output:</code> <font face="Arial" size="3" class="lala" id="follout2" style="display: none;">  </font></div>
+            
+            <div class="format"><code class="attr2" id="inr2" style="display: none;">Input relation:</code> <font face="Arial" size="3" class="lala" id="inrel2" style="display: none;"> </font></div>
+            <div class="format"><code class="attr2" id="outr2" style="display: none;">Output relation:</code> <font face="Arial" size="3" class="lala" id="outrel2" style="display: none;"> </font></div>
+            <div class="format"><code class="attr2" id="pan2" style="display: none;">Pattern:</code><font face="Arial" size="3" id="tex2" style="display: none;">  </font></div>
+        <script>
+	   		var mrname = document.getElementById("mrn2");
+	   		var desc = document.getElementById("descript2");
+	   		var text = document.getElementById("name2");
+	   		var pattern = document.getElementById("tex2");
+	   		var sourcein = document.getElementById("sourin2");
+	   		var sourceout = document.getElementById("sourout2");
+	   		var followin = document.getElementById("follin2");
+	   		var followout = document.getElementById("follout2");
+	   		var inrelation = document.getElementById("inrel2");
+	   		var outrelation = document.getElementById("outrel2");
+			if(mrname.innerText.length<=6){
+	    		//内容为空
+	    	document.getElementById("mrn2").style.display="none";	    	
+			}
+			if(desc.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("descript2").style.display="none";
+			document.getElementById("des2").style.display="none";	    	
+			} 
+	   		if(text.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("name2").style.display="none";
+			document.getElementById("con2").style.display="none";	    	
+			} 
+			if(pattern.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("tex2").style.display="none";
+			document.getElementById("pan2").style.display="none";	    	
+			}
+			if(sourcein.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("sourin2").style.display="none";
+			document.getElementById("sour2").style.display="none";	    	
+			}
+			if(sourceout.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("sourout2").style.display="none";
+			document.getElementById("sourc2").style.display="none";	    	
+			}
+			if(followin.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("follin2").style.display="none";
+			document.getElementById("foll2").style.display="none";	    	
+			}
+			if(followout.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("follout2").style.display="none";
+			document.getElementById("follo2").style.display="none";	    	
+			}
+			if(inrelation.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("inrel2").style.display="none";
+			document.getElementById("inr2").style.display="none";	    	
+			}
+			if(outrelation.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("outrel2").style.display="none";
+			document.getElementById("outr2").style.display="none";	    	
+			}
+		</script>
+        
+            
+            <h4 class="attr3">MR3<font id="mrn3" style="display: none;">------ </font></h4>
+            <div class="format"><code class="attr2" id="des3" style="display: none;">Description:</code><font face="Arial" size="3" class="lala" id="descript3" style="display: none;">  </font></div>
+           	<div class="format"><code class="attr2" id="con3">Property:</code><font face="Arial" size="3" class="lala" id="name3">  Given a source test input <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-22-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-151" style="width: 0.888em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.732em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mrow" id="MathJax-Span-152"><span class="mi" id="MathJax-Span-153" style="font-family: MathJax_Math; font-style: italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.107em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.941em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-22">P</script>, where no input surfaces contain <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-23-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-154" style="width: 0.94em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.784em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mrow" id="MathJax-Span-155"><span class="mi" id="MathJax-Span-156" style="font-family: MathJax_Math; font-style: italic;">V<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.211em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.003em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-23">V</script> as a point, construct the follow-up test input <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-24-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-157" style="width: 1.357em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.253em, 1000em, 2.346em, -0.414em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-158"><span class="msup" id="MathJax-Span-159"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-160" style="font-family: MathJax_Math; font-style: italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.107em;"></span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.706em; left: 0.836em;"><span class="mo" id="MathJax-Span-161" style="font-size: 70.7%; font-family: MathJax_Main;">′</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.066em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-24">P'</script> by projecting each surface <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-25-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-162" style="width: 0.628em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.523em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.815em, -0.518em); top: -2.445em; left: 0.003em;"><span class="mrow" id="MathJax-Span-163"><span class="mi" id="MathJax-Span-164" style="font-family: MathJax_Math; font-style: italic;">p</span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.878em; vertical-align: -0.309em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-25">p</script> of <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-26-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-165" style="width: 0.888em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.732em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mrow" id="MathJax-Span-166"><span class="mi" id="MathJax-Span-167" style="font-family: MathJax_Math; font-style: italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.107em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.941em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-26">P</script> to the other side of <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-27-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-168" style="width: 0.94em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.784em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mrow" id="MathJax-Span-169"><span class="mi" id="MathJax-Span-170" style="font-family: MathJax_Math; font-style: italic;">V<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.211em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.003em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-27">V</script> . The source and follow-up tests are expected to produce the same output.&nbsp; </font></div>
+            
+                <div class="format"><code class="attr2" id="sour3">Source input:</code> <font face="Arial" size="3" class="lala" id="sourin3">  &nbsp; </font></div> 
+                <div class="format"><code class="attr2" id="sourc3">Source output:</code> <font face="Arial" size="3" class="lala" id="sourout3"> &nbsp; </font></div>
+            
+            
+                <div class="format"><code class="attr2" id="foll3">Follow-up input:</code> <font face="Arial" size="3" class="lala" id="follin3"> &nbsp; </font></div>
+                <div class="format"><code class="attr2" id="follo3">Follow-up output:</code> <font face="Arial" size="3" class="lala" id="follout3"> &nbsp;  </font></div>
+            
+            <div class="format"><code class="attr2" id="inr3">Input relation:</code> <font face="Arial" size="3" class="lala" id="inrel3"> &nbsp; </font></div>
+            <div class="format"><code class="attr2" id="outr3">Output relation:</code> <font face="Arial" size="3" class="lala" id="outrel3"> &nbsp; </font></div>
+            <div class="format"><code class="attr2" id="pan3" style="display: none;">Pattern:</code><font face="Arial" size="3" id="tex3" style="display: none;"> </font></div>
+        <script>
+	   		var mrname = document.getElementById("mrn3");
+	   		var desc = document.getElementById("descript3");
+	   		var text = document.getElementById("name3");
+	   		var pattern = document.getElementById("tex3");
+	   		var sourcein = document.getElementById("sourin3");
+	   		var sourceout = document.getElementById("sourout3");
+	   		var followin = document.getElementById("follin3");
+	   		var followout = document.getElementById("follout3");
+	   		var inrelation = document.getElementById("inrel3");
+	   		var outrelation = document.getElementById("outrel3");
+			if(mrname.innerText.length<=6){
+	    		//内容为空
+	    	document.getElementById("mrn3").style.display="none";	    	
+			}
+			if(desc.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("descript3").style.display="none";
+			document.getElementById("des3").style.display="none";	    	
+			} 
+	   		if(text.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("name3").style.display="none";
+			document.getElementById("con3").style.display="none";	    	
+			} 
+			if(pattern.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("tex3").style.display="none";
+			document.getElementById("pan3").style.display="none";	    	
+			}
+			if(sourcein.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("sourin3").style.display="none";
+			document.getElementById("sour3").style.display="none";	    	
+			}
+			if(sourceout.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("sourout3").style.display="none";
+			document.getElementById("sourc3").style.display="none";	    	
+			}
+			if(followin.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("follin3").style.display="none";
+			document.getElementById("foll3").style.display="none";	    	
+			}
+			if(followout.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("follout3").style.display="none";
+			document.getElementById("follo3").style.display="none";	    	
+			}
+			if(inrelation.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("inrel3").style.display="none";
+			document.getElementById("inr3").style.display="none";	    	
+			}
+			if(outrelation.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("outrel3").style.display="none";
+			document.getElementById("outr3").style.display="none";	    	
+			}
+		</script>
+        
+            
+            <h4 class="attr3">MR4<font id="mrn4" style="display: none;">------ </font></h4>
+            <div class="format"><code class="attr2" id="des4" style="display: none;">Description:</code><font face="Arial" size="3" class="lala" id="descript4" style="display: none;">  </font></div>
+           	<div class="format"><code class="attr2" id="con4">Property:</code><font face="Arial" size="3" class="lala" id="name4">  Use the Figure.1's <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-28-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-171" style="width: 0.888em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.732em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mrow" id="MathJax-Span-172"><span class="mi" id="MathJax-Span-173" style="font-family: MathJax_Math; font-style: italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.107em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.941em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-28">P</script> as the source test input to run the software. Construct the follow-up test input (<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-29-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-174" style="width: 1.357em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.253em, 1000em, 2.346em, -0.414em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-175"><span class="msup" id="MathJax-Span-176"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-177" style="font-family: MathJax_Math; font-style: italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.107em;"></span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.706em; left: 0.836em;"><span class="mo" id="MathJax-Span-178" style="font-size: 70.7%; font-family: MathJax_Main;">′</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.066em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-29">P'</script>) by having <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-30-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-179" style="width: 1.148em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.555em, -0.518em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-180"><span class="msubsup" id="MathJax-Span-181"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.815em, -0.518em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-182" style="font-family: MathJax_Math; font-style: italic;">p</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.081em; left: 0.523em;"><span class="mn" id="MathJax-Span-183" style="font-size: 70.7%; font-family: MathJax_Main;">1</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.941em; vertical-align: -0.309em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-30">p_1</script> as its first listed surface, followed by <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-31-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-184" style="width: 2.919em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.398em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.357em, 1000em, 2.659em, -0.414em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-185"><span class="msubsup" id="MathJax-Span-186"><span style="display: inline-block; position: relative; width: 2.398em; height: 0px;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-187" style="font-family: MathJax_Math; font-style: italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.107em;"></span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.133em; left: 0.628em;"><span class="texatom" id="MathJax-Span-188"><span class="mrow" id="MathJax-Span-189"><span class="mi" id="MathJax-Span-190" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">f<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.055em;"></span></span><span class="mi" id="MathJax-Span-191" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">r</span><span class="mi" id="MathJax-Span-192" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">o</span><span class="mi" id="MathJax-Span-193" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">n</span><span class="mi" id="MathJax-Span-194" style="font-size: 70.7%; font-family: MathJax_Math; font-style: italic;">t</span></span></span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.316em; vertical-align: -0.434em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-31">P_{front}</script> . This setting is to prune the backN(<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-32-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-195" style="width: 1.148em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.555em, -0.518em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-196"><span class="msubsup" id="MathJax-Span-197"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.815em, -0.518em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-198" style="font-family: MathJax_Math; font-style: italic;">p</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.081em; left: 0.523em;"><span class="mn" id="MathJax-Span-199" style="font-size: 70.7%; font-family: MathJax_Main;">1</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.941em; vertical-align: -0.309em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-32">p_1</script>) in the BSP tree of the follow-up test. Consequently, the follow-up test output will exclude backN(<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-33-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-200" style="width: 1.148em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.555em, -0.518em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-201"><span class="msubsup" id="MathJax-Span-202"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.815em, -0.518em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-203" style="font-family: MathJax_Math; font-style: italic;">p</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.081em; left: 0.523em;"><span class="mn" id="MathJax-Span-204" style="font-size: 70.7%; font-family: MathJax_Main;">1</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.941em; vertical-align: -0.309em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-33">p_1</script>), but retain the same output sequence for <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-34-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-205" style="width: 1.148em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.555em, -0.518em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-206"><span class="msubsup" id="MathJax-Span-207"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.815em, -0.518em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-208" style="font-family: MathJax_Math; font-style: italic;">p</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.081em; left: 0.523em;"><span class="mn" id="MathJax-Span-209" style="font-size: 70.7%; font-family: MathJax_Main;">1</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.941em; vertical-align: -0.309em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-34">p_1</script> and frontN(<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-35-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-210" style="width: 1.148em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.555em, -0.518em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-211"><span class="msubsup" id="MathJax-Span-212"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.815em, -0.518em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-213" style="font-family: MathJax_Math; font-style: italic;">p</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.081em; left: 0.523em;"><span class="mn" id="MathJax-Span-214" style="font-size: 70.7%; font-family: MathJax_Main;">1</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.941em; vertical-align: -0.309em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-35">p_1</script> ).&nbsp; </font></div>
+            
+                <div class="format"><code class="attr2" id="sour4">Source input:</code> <font face="Arial" size="3" class="lala" id="sourin4">  &nbsp; </font></div> 
+                <div class="format"><code class="attr2" id="sourc4">Source output:</code> <font face="Arial" size="3" class="lala" id="sourout4"> &nbsp; </font></div>
+            
+            
+                <div class="format"><code class="attr2" id="foll4">Follow-up input:</code> <font face="Arial" size="3" class="lala" id="follin4"> &nbsp; </font></div>
+                <div class="format"><code class="attr2" id="follo4">Follow-up output:</code> <font face="Arial" size="3" class="lala" id="follout4"> &nbsp;  </font></div>
+            
+            <div class="format"><code class="attr2" id="inr4">Input relation:</code> <font face="Arial" size="3" class="lala" id="inrel4"> &nbsp; </font></div>
+            <div class="format"><code class="attr2" id="outr4">Output relation:</code> <font face="Arial" size="3" class="lala" id="outrel4"> &nbsp; </font></div>
+            <div class="format"><code class="attr2" id="pan4" style="display: none;">Pattern:</code><font face="Arial" size="3" id="tex4" style="display: none;"> </font></div>
+        <script>
+	   		var mrname = document.getElementById("mrn4");
+	   		var desc = document.getElementById("descript4");
+	   		var text = document.getElementById("name4");
+	   		var pattern = document.getElementById("tex4");
+	   		var sourcein = document.getElementById("sourin4");
+	   		var sourceout = document.getElementById("sourout4");
+	   		var followin = document.getElementById("follin4");
+	   		var followout = document.getElementById("follout4");
+	   		var inrelation = document.getElementById("inrel4");
+	   		var outrelation = document.getElementById("outrel4");
+			if(mrname.innerText.length<=6){
+	    		//内容为空
+	    	document.getElementById("mrn4").style.display="none";	    	
+			}
+			if(desc.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("descript4").style.display="none";
+			document.getElementById("des4").style.display="none";	    	
+			} 
+	   		if(text.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("name4").style.display="none";
+			document.getElementById("con4").style.display="none";	    	
+			} 
+			if(pattern.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("tex4").style.display="none";
+			document.getElementById("pan4").style.display="none";	    	
+			}
+			if(sourcein.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("sourin4").style.display="none";
+			document.getElementById("sour4").style.display="none";	    	
+			}
+			if(sourceout.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("sourout4").style.display="none";
+			document.getElementById("sourc4").style.display="none";	    	
+			}
+			if(followin.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("follin4").style.display="none";
+			document.getElementById("foll4").style.display="none";	    	
+			}
+			if(followout.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("follout4").style.display="none";
+			document.getElementById("follo4").style.display="none";	    	
+			}
+			if(inrelation.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("inrel4").style.display="none";
+			document.getElementById("inr4").style.display="none";	    	
+			}
+			if(outrelation.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("outrel4").style.display="none";
+			document.getElementById("outr4").style.display="none";	    	
+			}
+		</script>
+        
+            
+            <h4 class="attr3">MR5<font id="mrn5" style="display: none;">------ </font></h4>
+            <div class="format"><code class="attr2" id="des5" style="display: none;">Description:</code><font face="Arial" size="3" class="lala" id="descript5" style="display: none;">  </font></div>
+           	<div class="format"><code class="attr2" id="con5">Property:</code><font face="Arial" size="3" class="lala" id="name5">  Use the above <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-36-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-215" style="width: 0.888em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.732em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mrow" id="MathJax-Span-216"><span class="mi" id="MathJax-Span-217" style="font-family: MathJax_Math; font-style: italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.107em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.941em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-36">P</script> as the source test input to run the software. Construct the follow-up test input <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-37-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-218" style="width: 1.357em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.253em, 1000em, 2.346em, -0.414em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-219"><span class="msup" id="MathJax-Span-220"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-221" style="font-family: MathJax_Math; font-style: italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.107em;"></span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.706em; left: 0.836em;"><span class="mo" id="MathJax-Span-222" style="font-size: 70.7%; font-family: MathJax_Main;">′</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.066em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-37">P'</script> by appending another surface <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-38-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-223" style="width: 0.94em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.784em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.253em, 1000em, 2.555em, -0.518em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-224"><span class="msup" id="MathJax-Span-225"><span style="display: inline-block; position: relative; width: 0.784em; height: 0px;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.815em, -0.518em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-226" style="font-family: MathJax_Math; font-style: italic;">p</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.654em; left: 0.523em;"><span class="mo" id="MathJax-Span-227" style="font-size: 70.7%; font-family: MathJax_Main;">′</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.253em; vertical-align: -0.309em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-38">p'</script> to <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-39-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-228" style="width: 0.888em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.732em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mrow" id="MathJax-Span-229"><span class="mi" id="MathJax-Span-230" style="font-family: MathJax_Math; font-style: italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.107em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.941em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-39">P</script>, where <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-40-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-231" style="width: 0.94em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.784em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.253em, 1000em, 2.555em, -0.518em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-232"><span class="msup" id="MathJax-Span-233"><span style="display: inline-block; position: relative; width: 0.784em; height: 0px;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.815em, -0.518em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-234" style="font-family: MathJax_Math; font-style: italic;">p</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.654em; left: 0.523em;"><span class="mo" id="MathJax-Span-235" style="font-size: 70.7%; font-family: MathJax_Main;">′</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.253em; vertical-align: -0.309em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-40">p'</script> is on the same side as <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-41-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-236" style="width: 0.888em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.732em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mrow" id="MathJax-Span-237"><span class="mi" id="MathJax-Span-238" style="font-family: MathJax_Math; font-style: italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.107em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.941em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-41">P</script> back with respect to <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-42-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-239" style="width: 1.148em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.555em, -0.518em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-240"><span class="msubsup" id="MathJax-Span-241"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.815em, -0.518em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-242" style="font-family: MathJax_Math; font-style: italic;">p</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.081em; left: 0.523em;"><span class="mn" id="MathJax-Span-243" style="font-size: 70.7%; font-family: MathJax_Main;">1</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.941em; vertical-align: -0.309em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-42">p_1</script> (so <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-43-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-244" style="width: 0.94em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.784em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.253em, 1000em, 2.555em, -0.518em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-245"><span class="msup" id="MathJax-Span-246"><span style="display: inline-block; position: relative; width: 0.784em; height: 0px;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.815em, -0.518em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-247" style="font-family: MathJax_Math; font-style: italic;">p</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.654em; left: 0.523em;"><span class="mo" id="MathJax-Span-248" style="font-size: 70.7%; font-family: MathJax_Main;">′</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.253em; vertical-align: -0.309em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-43">p'</script> or its sections will be part of backN(<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-44-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-249" style="width: 1.148em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.555em, -0.518em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-250"><span class="msubsup" id="MathJax-Span-251"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.815em, -0.518em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-252" style="font-family: MathJax_Math; font-style: italic;">p</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.081em; left: 0.523em;"><span class="mn" id="MathJax-Span-253" style="font-size: 70.7%; font-family: MathJax_Main;">1</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.941em; vertical-align: -0.309em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-44">p_1</script>)). This setting is to increase the size of backN(<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-45-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-254" style="width: 1.148em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.555em, -0.518em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-255"><span class="msubsup" id="MathJax-Span-256"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.815em, -0.518em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-257" style="font-family: MathJax_Math; font-style: italic;">p</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.081em; left: 0.523em;"><span class="mn" id="MathJax-Span-258" style="font-size: 70.7%; font-family: MathJax_Main;">1</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.941em; vertical-align: -0.309em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-45">p_1</script>) in the BSP tree of the follow-up test. The source and follow-up tests are expected to print the same nodes in the same order after <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-46-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-259" style="width: 1.148em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.555em, -0.518em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-260"><span class="msubsup" id="MathJax-Span-261"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.815em, -0.518em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-262" style="font-family: MathJax_Math; font-style: italic;">p</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.081em; left: 0.523em;"><span class="mn" id="MathJax-Span-263" style="font-size: 70.7%; font-family: MathJax_Main;">1</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.941em; vertical-align: -0.309em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-46">p_1</script> (because the change made in <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-47-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-264" style="width: 1.357em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.253em, 1000em, 2.346em, -0.414em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-265"><span class="msup" id="MathJax-Span-266"><span style="display: inline-block; position: relative; width: 1.096em; height: 0px;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.607em, -0.414em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-267" style="font-family: MathJax_Math; font-style: italic;">P<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.107em;"></span></span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.706em; left: 0.836em;"><span class="mo" id="MathJax-Span-268" style="font-size: 70.7%; font-family: MathJax_Main;">′</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 1.066em; vertical-align: -0.059em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-47">P'</script> should not affect the frontN(<span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-48-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-269" style="width: 1.148em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.555em, -0.518em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-270"><span class="msubsup" id="MathJax-Span-271"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.815em, -0.518em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-272" style="font-family: MathJax_Math; font-style: italic;">p</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.081em; left: 0.523em;"><span class="mn" id="MathJax-Span-273" style="font-size: 70.7%; font-family: MathJax_Main;">1</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.941em; vertical-align: -0.309em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-48">p_1</script>)), whereas they may print different nodes in different orders before <span class="MathJax_Preview"></span><span class="MathJax" id="MathJax-Element-49-Frame" role="textbox" aria-readonly="true" style=""><nobr><span class="math" id="MathJax-Span-274" style="width: 1.148em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.617em, 1000em, 2.555em, -0.518em); top: -2.185em; left: 0.003em;"><span class="mrow" id="MathJax-Span-275"><span class="msubsup" id="MathJax-Span-276"><span style="display: inline-block; position: relative; width: 0.94em; height: 0px;"><span style="position: absolute; clip: rect(1.878em, 1000em, 2.815em, -0.518em); top: -2.445em; left: 0.003em;"><span class="mi" id="MathJax-Span-277" style="font-family: MathJax_Math; font-style: italic;">p</span><span style="display: inline-block; width: 0px; height: 2.451em;"></span></span><span style="position: absolute; top: -2.081em; left: 0.523em;"><span class="mn" id="MathJax-Span-278" style="font-size: 70.7%; font-family: MathJax_Main;">1</span><span style="display: inline-block; width: 0px; height: 2.294em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.19em;"></span></span></span><span style="border-left: 0.003em solid; display: inline-block; overflow: hidden; width: 0px; height: 0.941em; vertical-align: -0.309em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-49">p_1</script>.&nbsp;&nbsp; </font></div>
+            
+                <div class="format"><code class="attr2" id="sour5">Source input:</code> <font face="Arial" size="3" class="lala" id="sourin5">  &nbsp; </font></div> 
+                <div class="format"><code class="attr2" id="sourc5">Source output:</code> <font face="Arial" size="3" class="lala" id="sourout5"> &nbsp; </font></div>
+            
+            
+                <div class="format"><code class="attr2" id="foll5">Follow-up input:</code> <font face="Arial" size="3" class="lala" id="follin5"> &nbsp; </font></div>
+                <div class="format"><code class="attr2" id="follo5">Follow-up output:</code> <font face="Arial" size="3" class="lala" id="follout5"> &nbsp;  </font></div>
+            
+            <div class="format"><code class="attr2" id="inr5">Input relation:</code> <font face="Arial" size="3" class="lala" id="inrel5"> &nbsp; </font></div>
+            <div class="format"><code class="attr2" id="outr5">Output relation:</code> <font face="Arial" size="3" class="lala" id="outrel5"> &nbsp; </font></div>
+            <div class="format"><code class="attr2" id="pan5" style="display: none;">Pattern:</code><font face="Arial" size="3" id="tex5" style="display: none;"> </font></div>
+        <script>
+	   		var mrname = document.getElementById("mrn5");
+	   		var desc = document.getElementById("descript5");
+	   		var text = document.getElementById("name5");
+	   		var pattern = document.getElementById("tex5");
+	   		var sourcein = document.getElementById("sourin5");
+	   		var sourceout = document.getElementById("sourout5");
+	   		var followin = document.getElementById("follin5");
+	   		var followout = document.getElementById("follout5");
+	   		var inrelation = document.getElementById("inrel5");
+	   		var outrelation = document.getElementById("outrel5");
+			if(mrname.innerText.length<=6){
+	    		//内容为空
+	    	document.getElementById("mrn5").style.display="none";	    	
+			}
+			if(desc.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("descript5").style.display="none";
+			document.getElementById("des5").style.display="none";	    	
+			} 
+	   		if(text.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("name5").style.display="none";
+			document.getElementById("con5").style.display="none";	    	
+			} 
+			if(pattern.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("tex5").style.display="none";
+			document.getElementById("pan5").style.display="none";	    	
+			}
+			if(sourcein.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("sourin5").style.display="none";
+			document.getElementById("sour5").style.display="none";	    	
+			}
+			if(sourceout.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("sourout5").style.display="none";
+			document.getElementById("sourc5").style.display="none";	    	
+			}
+			if(followin.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("follin5").style.display="none";
+			document.getElementById("foll5").style.display="none";	    	
+			}
+			if(followout.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("follout5").style.display="none";
+			document.getElementById("follo5").style.display="none";	    	
+			}
+			if(inrelation.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("inrel5").style.display="none";
+			document.getElementById("inr5").style.display="none";	    	
+			}
+			if(outrelation.innerText.length<=0){
+	    		//内容为空
+	    	document.getElementById("outrel5").style.display="none";
+			document.getElementById("outr5").style.display="none";	    	
+			}
+		</script>
+        
+
+    	</div>
+</div>
+ <!-- <div class="relate">
+	<h3>Related</h3> 
+		<div class="related_one">
+			<div class="word">
+				<a href="viewProgramDetail?index=&type=view" style="color: white"></a><br>
+			</div>
+		</div>
+		<div class="related_two">
+			<div class="word2">
+				<a href="viewProgramDetail?index=&type=view" style="color: white"></a><br>
+			</div>
+		</div>
+		<div class="related_three">
+			<div class="word3">
+				<a href="viewProgramDetail?index=&type=view" style="color: white"></a>
+			</div>
+		</div> 
+</div>  -->
+</div>
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="./ViewDetail_files/footer.css">
+<title>Insert title here</title>
+     
+
+	<div class="footer">
+		<div class="left">
+			© 2018 Cstar <a>Terms</a> <a>Privacy</a> <a href="http://www.metwiki.net/MetWiki/download/Database.zip">LatestMTLibrary</a>
+      <a href="https://beian.miit.gov.cn/">鄂ICP备18020834号</a>
+		</div>
+		<div class="right">
+			<a>Links</a> <a>Emails</a> <a>About</a>
+		</div>
+	</div>
+
+
+
+<script>
+	var summary = document.getElementById("summa");
+	if(summary.innerText.length<=0){
+		//内容为空
+	document.getElementById("summa").style.display="none";
+	document.getElementById("sum").style.display="none";	    	
+	}
+
+</script>
+
+<div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_AMS, monospace;">MATHJAX AMS ˆ </div></body></html>

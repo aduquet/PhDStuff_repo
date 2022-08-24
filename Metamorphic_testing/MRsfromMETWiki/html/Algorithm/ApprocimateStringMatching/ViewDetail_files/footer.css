@@ -1,0 +1,34 @@
+*{
+	margin:0;
+	padding:0;
+	list-style:none;
+	text-decoration:none;
+}
+
+body,html{
+	width:100%;
+	height:100%;
+}
+.footer{
+	width:100%;
+	height:70px;
+	border-top:1px solid black;
+	float:left;
+	background-color:white;
+}
+
+.footer .left{
+	float:left;
+	font-size:12px;
+	word-spacing:10px;
+	line-height:70px;
+	font-color:gray;
+}
+
+.footer .right{
+	float:right;
+	word-spacing:10px;
+	font-size:12px;
+	line-height:70px;
+	font-color:gray;
+}
