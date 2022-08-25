@@ -20,20 +20,6 @@ def InitWebDriver():
 
     return driver
 
-# driver.find_element(By.LINK_TEXT, 'Sign In').click()
-# driver.find_element(By.LINK_TEXT, 'GetMid').click()
-# driver.find_element(By.LINK_TEXT, 'Login').click()
-
-# htmlPath = str(pathlib.Path().absolute()) + '/html'
-# htmlCategoryDir = htmlPath + '/*'
-# htmlCategoryDir = gl.glob(htmlCategoryDir)
-
-# for categoryDir in htmlCategoryDir:
-#     programCateg = categoryDir + '/*'
-#     programCategPath = gl.glob(programCateg)
-#     print(programCategPath)
-# print(htmlPath)
-# print(htmlProgDir)
 
 mainDic = dict()
 
@@ -45,6 +31,8 @@ driver.get('file:///Users/alduck/Documents/PhDStuff_repo/Metamorphic_testing/MRs
 infoEditor = driver.find_elements('xpath','//div[@class="all"]/div[@class="hero-unit"]/div[@id="editor"]')
 infoEditorList = []
 for i in infoEditor:
+    print(i.text)
+    print('\n\n')
     infoEditorList.append(i.text)
 
 infoEditorList = infoEditorList[0].split('\n')
@@ -56,7 +44,7 @@ mainDic = {'ref': 'NaN', 'MRs': 'NaN'}
 
 # get Positions
 indexMRpositions = []
-
+indexRef = []
 for i in infoEditorList:
     if(i.find('Name: ') != -1 ):
         indexName = infoEditorList.index(i)
@@ -71,8 +59,8 @@ for i in infoEditorList:
     if(i.find('Reference') != -1 ):
         indexReference = infoEditorList.index(i)
     if(i.find('MR') != -1 ):
-        indexMRpositions.append(infoEditorList.index(i))
-
+        if(i.find('MR Information') == -1):
+            indexMRpositions.append(infoEditorList.index(i))
 
 print(indexName, indexDomain, indexFunctionality, indexInput, indexOutput, indexReference, indexMRpositions)
 
@@ -89,28 +77,28 @@ for i in infoEditorList:
         domain = i.replace('Domain: ', '')
 
         auxDic = {'domain': domain}
-        mainDic['name'][name].update(auxDic)
+        mainDic.update(auxDic)
 
     if(i.find('Functionality: ') !=-1):
 
         functionality = i.replace('Functionality: ', '')
 
         auxDic = {'functionality': functionality}
-        mainDic['name'][name].update(auxDic)
+        mainDic.update(auxDic)
 
     if(i.find('Domain: ') !=-1):
 
         domain = i.replace('Domain: ', '')
 
         auxDic = {'domain': domain}
-        mainDic['name'][name].update(auxDic)
+        mainDic.update(auxDic)
 
     if(i.find('Domain: ') !=-1):
 
         domain = i.replace('Domain: ', '')
 
         auxDic = {'domain': domain}
-        mainDic['name'][name].update(auxDic)
+        mainDic.update(auxDic)
 
 
 print(mainDic)
