@@ -24,8 +24,8 @@ def InitWebDriver():
 mainDic = dict()
 
 driver = InitWebDriver()
-# driver.get('file:///Users/alduck/Documents/PhDStuff_repo/Metamorphic_testing/MRsfromMETWiki/html/Numerical_program/GetMid/ViewDetail.html')
-driver.get('file:///Users/alduck/Documents/PhDStuff_repo/Metamorphic_testing/MRsfromMETWiki/html/Numerical_program/DeterminantComputations/ViewDetail.html')
+driver.get('file:///Users/alduck/Documents/PhDStuff_repo/Metamorphic_testing/MRsfromMETWiki/html/Numerical_program/GetMid/ViewDetail.html')
+# driver.get('file:///Users/alduck/Documents/PhDStuff_repo/Metamorphic_testing/MRsfromMETWiki/html/Numerical_program/DeterminantComputations/ViewDetail.html')
 # aux = driver.find_elements('xpath','//div[@class="all"]/div[@class="hero-unit"]/div[@id="editor"]/h3[@class="attr1"]')
 # aux = driver.find_elements('xpath','//div[@class="all"]/div[@class="hero-unit"]/div[@id="editor"]/code[@class="attr2"]')
 infoEditor = driver.find_elements('xpath','//div[@class="all"]/div[@class="hero-unit"]/div[@id="editor"]')
