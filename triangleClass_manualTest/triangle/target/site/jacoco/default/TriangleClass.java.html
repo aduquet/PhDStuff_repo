@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TriangleClass.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">triangle</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">TriangleClass.java</span></div><h1>TriangleClass.java</h1><pre class="source lang-java linenums">import java.util.Scanner;
+
+<span class="nc" id="L3">public class TriangleClass {</span>
+    public static void main(String[] args) {
+<span class="nc" id="L5">        Scanner sc = new Scanner(System.in);</span>
+<span class="nc" id="L6">        System.out.println(&quot;Provide three side lengths&quot;);</span>
+<span class="nc" id="L7">        int a = sc.nextInt();</span>
+<span class="nc" id="L8">        int b = sc.nextInt();</span>
+<span class="nc" id="L9">        int c = sc.nextInt();</span>
+
+<span class="nc bnc" id="L11" title="All 2 branches missed.">        if (possible(a, b, c)) {</span>
+<span class="nc" id="L12">            System.out.println(&quot;Triangle sides: &quot; + a + &quot; &quot; + b + &quot; &quot; + c);</span>
+<span class="nc" id="L13">            System.out.println(&quot;Type based on sides: &quot; + sideClass(a, b, c));</span>
+<span class="nc" id="L14">            System.out.println(&quot;Type based on angles: &quot; + angleClass(a, b, c));</span>
+<span class="nc" id="L15">            System.out.println(&quot;Area: &quot; + area(a, b, c));</span>
+//            System.out.println(&quot;Area: &quot;+ );
+        } else {
+<span class="nc" id="L18">            System.out.println(a + &quot; &quot; + b + &quot; &quot; + c + &quot; &quot; + &quot;Impossible&quot;);</span>
+        }
+<span class="nc" id="L20">        sc.close();</span>
+<span class="nc" id="L21">    }</span>
+
+    //checks the triangles angle classification
+    public static String sideClass(int a, int b, int c) {
+
+<span class="pc bpc" id="L26" title="1 of 2 branches missed.">        if (!possible(a, b, c)) {</span>
+<span class="pc bpc" id="L27" title="5 of 6 branches missed.">            if (a == b &amp;&amp; a == c &amp;&amp; b == c) {</span>
+<span class="nc" id="L28">                return &quot;equilateral&quot;;</span>
+<span class="pc bpc" id="L29" title="2 of 6 branches missed.">            } else if (a != b &amp;&amp; a != c &amp;&amp; b != c) {</span>
+<span class="fc" id="L30">                return &quot;scalene&quot;;</span>
+            } else {
+<span class="fc" id="L32">                return &quot;isosceles&quot;;</span>
+            }
+        }
+
+<span class="nc" id="L36">        return null;</span>
+    }
+
+    //checks the triangles angle classification
+    public static String angleClass(int a, int b, int c) {
+        //If the sum of square of the two sides is equal to the square of the third side, the triangle will be a right-angle triangle.
+        //If the sum of squares of the smaller sides is less than the square of the largest side, the triangle will be an obtuse angle triangle.
+        //If the sum of the squares of the two sides of a triangle is greater than the square of the largest side, the triangle will be an acute angle triangle.
+<span class="nc" id="L44">        int x = a * a;</span>
+<span class="nc" id="L45">        int y = b * b;</span>
+<span class="nc" id="L46">        int z = c * c;</span>
+
+<span class="nc bnc" id="L48" title="All 2 branches missed.">        if (possible(a, b, c)) {</span>
+<span class="nc bnc" id="L49" title="All 4 branches missed.">            if (a &gt; b &amp;&amp; a &gt; c) { // here, the largest side is 'a'</span>
+<span class="nc bnc" id="L50" title="All 2 branches missed.">                if (x == y + z)</span>
+<span class="nc" id="L51">                    return &quot; right-angle&quot;;</span>
+<span class="nc bnc" id="L52" title="All 2 branches missed.">                else if (x &lt; y + z)</span>
+<span class="nc" id="L53">                    return &quot;acute-angle&quot;;</span>
+                else
+<span class="nc" id="L55">                    return &quot;obtuse-angle&quot;;</span>
+
+<span class="nc bnc" id="L57" title="All 4 branches missed.">            } else if (b &gt; a &amp;&amp; b &gt; c) { // here, the largest side is 'b'</span>
+
+<span class="nc bnc" id="L59" title="All 2 branches missed.">                if (y == x + z)</span>
+<span class="nc" id="L60">                    return &quot;right-angle&quot;;</span>
+<span class="nc bnc" id="L61" title="All 2 branches missed.">                else if (y &lt; x + z)</span>
+<span class="nc" id="L62">                    return &quot;acute-angle&quot;;</span>
+                else
+<span class="nc" id="L64">                    return &quot;obtuse-angle&quot;;</span>
+
+            } else //here, the largest side is 'c'
+            {
+<span class="nc bnc" id="L68" title="All 2 branches missed.">                if (z == x + y)</span>
+<span class="nc" id="L69">                    return &quot;right-angle&quot;;</span>
+<span class="nc bnc" id="L70" title="All 2 branches missed.">                else if (z &lt; x + y)</span>
+<span class="nc" id="L71">                    return &quot;acute-angle&quot;;</span>
+                else
+<span class="nc" id="L73">                    return &quot;obtuse-angle&quot;;</span>
+            }
+        }
+<span class="nc" id="L76">        return null;</span>
+    }
+
+    //computing  the triangle area
+    public static Double area(int a, int b, int c) {
+<span class="fc" id="L81">        double s = (double) (a + b + c) / 2;</span>
+<span class="pc bpc" id="L82" title="1 of 2 branches missed.">        if (possible(a, b, c)) {</span>
+<span class="nc" id="L83">            return (Math.sqrt(s * (s - a) * (s + b) * (s + c)));</span>
+        }
+<span class="fc" id="L85">        return null;</span>
+    }
+
+    //checks whether the triangle is possible
+    public static Boolean possible(int a, int b, int c) {
+<span class="pc bpc" id="L90" title="3 of 4 branches missed.">        return a + b &gt; c &amp;&amp; a + c &gt; b ;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

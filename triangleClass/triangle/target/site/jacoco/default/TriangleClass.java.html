@@ -25,9 +25,9 @@
 <span class="pc bpc" id="L25" title="1 of 6 branches missed.">        if (a == b &amp;&amp; a == c &amp;&amp; b == c) {</span>
 <span class="fc" id="L26">            return &quot;equilateral&quot;;</span>
 <span class="fc bfc" id="L27" title="All 6 branches covered.">        } else if (a != b &amp;&amp; a != c &amp;&amp; b != c) {</span>
-<span class="fc" id="L28">            return &quot;scalene and&quot;;</span>
+<span class="fc" id="L28">            return &quot;scalene&quot;;</span>
         } else {
-<span class="fc" id="L30">            return &quot;isosceles and&quot;;</span>
+<span class="fc" id="L30">            return &quot;isosceles&quot;;</span>
         }
     }
 
@@ -76,7 +76,7 @@
 
     //checks whether the triangle is possible
     public static Boolean possible(int a, int b, int c) {
-<span class="fc bfc" id="L79" title="All 6 branches covered.">        return a + b &gt; c &amp;&amp; a + c &gt; b &amp;&amp; b + c &gt; a;</span>
+<span class="fc bfc" id="L79" title="All 4 branches covered.">        return a + b &gt; c &amp;&amp; a + c &gt; b ;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.6.202009150832</span></div></body></html>

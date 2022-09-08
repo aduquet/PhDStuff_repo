@@ -1,0 +1,846 @@
+Last login: Wed Sep  7 16:18:15 on ttys001
+alduck@Alejas-MacBook-Air ~ % ls
+2022-08-30T09:01:54_2356	Public
+Applications			StudioProjects
+Desktop				development
+Documents			get-pip.py
+Downloads			print('Hello, World!').py
+Library				prueba.py
+Movies				quiz-flutter
+Music				testproject
+Pictures
+alduck@Alejas-MacBook-Air ~ % cd Documents/PhDStuff_repo 
+alduck@Alejas-MacBook-Air PhDStuff_repo % ls
+AlejaPlan.pptx			Fuzzing				triangleClass
+Automatic_test_generation	Metamorphic_testing
+alduck@Alejas-MacBook-Air PhDStuff_repo % cd triangleClass 
+alduck@Alejas-MacBook-Air triangleClass % ls
+randoop-all-4.3.1.jar	triangle		triangle.jar
+alduck@Alejas-MacBook-Air triangleClass % java -cp "/Users/alduck/Documents/PhDStuff_repo/triangleClass/randoop-all-4.3.1.jar" randoop.mainMain gentests --testclass="/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes/TriangleClass"
+Error: Could not find or load main class randoop.mainMain
+Caused by: java.lang.ClassNotFoundException: randoop.mainMain
+alduck@Alejas-MacBook-Air triangleClass % java -cp "/Users/alduck/Documents/PhDStuff_repo/triangleClass/randoop-all-4.3.1.jar" randoop.main.Main gentests --testclass="/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes/TriangleClass"
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Illegal argument --testclass=/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes/TriangleClass, should be a class name
+alduck@Alejas-MacBook-Air triangleClass % java -cp "/Users/alduck/Documents/PhDStuff_repo/triangleClass/randoop-all-4.3.1.jar;/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes/TriangleClass" randoop.main.Main gentests --testclass="/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes/TriangleClass"
+Error: Could not find or load main class randoop.main.Main
+Caused by: java.lang.ClassNotFoundException: randoop.main.Main
+alduck@Alejas-MacBook-Air triangleClass % java -cp "/Users/alduck/Documents/PhDStuff_repo/triangleClass/randoop-all-4.3.1.jar;/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes/TriangleClass" randoop.main.Main gentests --testclass="/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes/TriangleClass"
+Error: Could not find or load main class randoop.main.Main
+Caused by: java.lang.ClassNotFoundException: randoop.main.Main
+alduck@Alejas-MacBook-Air triangleClass % java -cp "/Users/alduck/Documents/PhDStuff_repo/triangleClass/randoop-all-4.3.1.jar;/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes/TriangleClass" randoop.main.Main gentests                                                        
+Error: Could not find or load main class randoop.main.Main
+Caused by: java.lang.ClassNotFoundException: randoop.main.Main
+alduck@Alejas-MacBook-Air triangleClass % java -cp "/Users/alduck/Documents/PhDStuff_repo/triangleClass/randoop-all-4.3.1.jar;/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes/TriangleClass" randoop.main.Main gentests --testclass="TriangleClass" 
+Error: Could not find or load main class randoop.main.Main
+Caused by: java.lang.ClassNotFoundException: randoop.main.Main
+alduck@Alejas-MacBook-Air triangleClass % java -cp "/Users/alduck/Documents/PhDStuff_repo/triangleClass/randoop-all-4.3.1.jar;/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes/TriangleClass" randoop.main.Main gentests --testclass="/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes/TriangleClass"
+Error: Could not find or load main class randoop.main.Main
+Caused by: java.lang.ClassNotFoundException: randoop.main.Main
+alduck@Alejas-MacBook-Air triangleClass % java -cp "/Users/alduck/Documents/PhDStuff_repo/triangleClass/randoop-all-4.3.1.jar;/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes/TriangleClass" randoop.main.Main gentests --testclass="/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes/TriangleClass" --junit-output-dir=“C:\path\to\test\folder”
+Error: Could not find or load main class randoop.main.Main
+Caused by: java.lang.ClassNotFoundException: randoop.main.Main
+alduck@Alejas-MacBook-Air triangleClass % java -cp "randoop-all-4.3.1.jar;/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes/TriangleClass" randoop.main.Main gentests --testclass="/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes/TriangleClass" 
+Error: Could not find or load main class randoop.main.Main
+Caused by: java.lang.ClassNotFoundException: randoop.main.Main
+alduck@Alejas-MacBook-Air triangleClass % java -cp "randoop-all-4.3.1.jar;/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes/TriangleClass" randoop.main.Main gentests --testclass=""                                                                                         
+Error: Could not find or load main class randoop.main.Main
+Caused by: java.lang.ClassNotFoundException: randoop.main.Main
+alduck@Alejas-MacBook-Air triangleClass % 
+alduck@Alejas-MacBook-Air triangleClass % java -cp "randoop-all-4.3.1.jar;/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes/TriangleClass" randoop.main.Main gentests --testclass=TriangleClass
+Error: Could not find or load main class randoop.main.Main
+Caused by: java.lang.ClassNotFoundException: randoop.main.Main
+alduck@Alejas-MacBook-Air triangleClass % java -cp "randoop-all-4.3.1.jar" randoop.main.Main gentests --testclass=TriangleClass
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Could not load class TriangleClass: Unable to load class "TriangleClass" due to exception: java.lang.ClassNotFoundException: TriangleClass
+Classpath:
+randoop-all-4.3.1.jar
+alduck@Alejas-MacBook-Air triangleClass % java -cp "randoop-all-4.3.1.jar" randoop.main.Main gentests                         
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+You must specify some classes or methods to test.
+Use --testjar, --test-package, --classlist, --testclass, or --methodlist.
+alduck@Alejas-MacBook-Air triangleClass % java -cp "randoop-all-4.3.1.jar" randoop.main.Main help gentests
+
+COMMAND: gentests
+Usage: gentests OPTIONS
+Where: At least one of `--testjar', `--classlist', `--testclass', or
+        `--methodlist' is specified.
+Summary: Uses feedback-directed random test generation to generate
+        error-revealing tests and regression tests. 
+Input: One or more names of classes to test. A class to test can be
+        specified via the `--testjar', `--classlist', or `--testclass'
+        options.
+Output: Two JUnit test suites (each as one or more Java source files):
+        an error-revealing test suite and a regression test suite.
+Example: java randoop.main.Main gentests
+        --testclass=java.util.Collections
+        --testclass=java.util.TreeSet
+Notes:
+
+1. See the Randoop manual for guidance.  Here are a few tips.
+2. Randoop executes the code under test, with no mechanisms to protect
+        your system from harm resulting from arbitrary code execution.
+        If random execution of your code could have undesirable
+        effects (e.g., deletion of files, opening network connections,
+        etc.), execute Randoop in a sandbox.
+3. Randoop will only use methods from the classes that you specify for
+        testing. If Randoop is not generating tests for a particular
+        method, make sure that you include classes for the types that
+        the method requires.
+4. Randoop can be deterministic when the code under test is itself
+        deterministic. This means that two runs of Randoop may
+        generate the same tests. To produce different tests across
+        runs, use the --randomseed option.
+
+OPTIONS:
+
+
+Code under test:  which classes and members may be used by a test:
+  --testjar=<filename> [+]                       - A jarfile, all of whose classes should be tested
+  --test-package=<string> [+]                    - Package whose classes to test. Does not include classes in inner packages
+  --classlist=<filename>                         - File that lists classes under test
+  --testclass=<string> [+]                       - The binary name of a class under test
+  --methodlist=<filename>                        - File that lists methods under test
+  --omit-classes=<regex> [+]                     - Do not test classes that match regular expression <string>
+  --omit-classes-file=<filename> [+]             - File containing regular expressions for methods to omit
+  --omit-methods=<regex> [+]                     - Do not call methods that match regular expression <string>
+  --omit-methods-file=<filename> [+]             - File containing regular expressions for methods to omit
+  --omit-field=<string> [+]                      - Omit field from generated tests
+  --omit-field-file=<filename>                   - File containing field names to omit from generated tests
+  --only-test-public-members=<boolean>           - Only use public members in tests [default false]
+  --silently-ignore-bad-class-names=<boolean>    - Ignore class names specified by user that cannot be found [default false]
+  --flaky-test-behavior=<enum>                   - What to do if a flaky test is generated [default OUTPUT]
+  --nondeterministic-methods-to-output=<int>     - Number of suspected nondeterministic methods to print [default 10]
+
+Which tests to output:
+  --no-error-revealing-tests=<boolean>           - Whether to output error-revealing tests [default false]
+  --no-regression-tests=<boolean>                - Whether to output regression tests [default false]
+  --no-regression-assertions=<boolean>           - Whether to include assertions in regression tests [default false]
+  --check-compilable=<boolean>                   - Whether to check if test sequences are compilable [default true]
+  --require-classname-in-test=<regex>            - Classes that must occur in a test
+  --require-covered-classes=<filename>           - File containing class names that tests must cover
+  --minimize-error-test=<boolean>                - to indicate automatic minimization of error-revealing tests [default false]
+
+Test classification:
+  --checked-exception=<enum>                     - Whether checked exception is an ERROR, EXPECTED or INVALID [default EXPECTED]
+  --unchecked-exception=<enum>                   - Whether unchecked exception is an ERROR, EXPECTED or INVALID [default EXPECTED]
+  --cm-exception=<enum>                          - Whether ConcurrentModificationException is an ERROR, EXPECTED or INVALID [default INVALID]
+  --ncdf-exception=<enum>                        - Whether NoClassDefFoundError is an ERROR, EXPECTED or INVALID [default INVALID]
+  --npe-on-null-input=<enum>                     - Whether NullPointerException on null inputs is an ERROR, EXPECTED or INVALID [default EXPECTED]
+  --npe-on-non-null-input=<enum>                 - Whether NullPointerException on non-null inputs is an ERROR, EXPECTED or INVALID [default ERROR]
+  --oom-exception=<enum>                         - Whether OutOfMemoryError is an ERROR, EXPECTED or INVALID [default INVALID]
+  --sof-exception=<enum>                         - Whether StackOverflowError is an ERROR, EXPECTED or INVALID [default INVALID]
+  --specifications=<filename> [+]                - JSON specifications for methods/constructors
+  --use-jdk-specifications=<boolean>             - Use specifications for JDK classes to classify behaviors for methods/constructors [default true]
+  --ignore-condition-compilation-error=<boolean> - Terminate Randoop if specification condition is uncompilable [default false]
+  --ignore-condition-exception=<boolean>         - Terminate Randoop if specification condition throws an exception [default false]
+
+Side-effect-free methods:
+  --side-effect-free-methods=<filename>          - File containing side-effect-free methods
+
+Limiting test generation:
+  --time-limit=<int>                             - Maximum number of seconds to spend generating tests [default 100]
+  --attempted-limit=<int>                        - Maximum number of attempts to generate a candidate test [default 100000000]
+  --generated-limit=<int>                        - Maximum number of candidate tests generated [default 100000000]
+  --output-limit=<int>                           - Maximum number of tests to ouput [default 100000000]
+  --maxsize=<int>                                - Do not generate tests with more than this many statements [default 100]
+  --stop-on-error-test=<boolean>                 - Stop after generating any error-revealing test [default false]
+
+Values used in tests:
+  --null-ratio=<double>                          - Use null as an input with the given frequency [default 0.05]
+  --forbid-null=<boolean>                        - Never use null as input to methods or constructors [default false]
+  --literals-file=<string> [+]                   - A file containing literal values to be used as inputs to methods under test
+  --literals-level=<enum>                        - How to use literal values specified via --literals-file: ALL, PACKAGE, CLASS, or NONE [default CLASS]
+  --method-selection=<enum>                      - How to choose the next method to test [default UNIFORM]
+  --string-maxlen=<int>                          - Maximum length of Strings in generated tests [default 1000]
+
+Varying the nature of generated tests:
+  --alias-ratio=<double>                         - Reuse values with the given frequency [default 0.0]
+  --input-selection=<enum>                       - How to choose tests for Randoop to extend [default UNIFORM]
+  --clear=<int>                                  - Clear the component set when it gets this big [default 100000000]
+  --clear-memory=<long>                          - Clear the component set when Randoop uses this much memory [default 4000000000]
+
+Outputting the JUnit tests:
+  --testsperfile=<int>                           - Maximum number of tests to write to each JUnit file [default 500]
+  --error-test-basename=<string>                 - Base name of the JUnit file(s) containing error-revealing tests [default ErrorTest]
+  --regression-test-basename=<string>            - Base name of the JUnit file(s) containing regression tests [default RegressionTest]
+  --junit-package-name=<string>                  - Name of the package for the generated JUnit files (optional)
+  --junit-before-each=<string>                   - Filename for code to include in Before-annotated method of test classes
+  --junit-after-each=<string>                    - Filename for code to include in After-annotated method of test classes
+  --junit-before-all=<string>                    - Filename for code to include in BeforeClass-annotated method of test classes
+  --junit-after-all=<string>                     - Filename for code to include in AfterClass-annotated method of test classes
+  --junit-output-dir=<string>                    - Name of the directory to which JUnit files should be written
+  --dont-output-tests=<boolean>                  - Run Randoop but do not output JUnit tests [default false]
+  --junit-reflection-allowed=<boolean>           - If true, use JUnit's reflective invocation; if false, use direct method calls [default true]
+
+Runtime environment:
+  -D --system-props=<string> [+]                 - Specify system properties to be set; similar to <code>java -Dx=y</code>.
+  --jvm-max-memory=<string>                      - Maximum memory for JVM; will be passed with <code>-Xmx</code>. [default 3000m]
+
+Controlling randomness:
+  --randomseed=<int>                             - The random seed to use in the generation process [default 0]
+  --deterministic=<boolean>                      - If true, Randoop is deterministic [default false]
+
+Logging, notifications, and troubleshooting Randoop:
+  --progressdisplay=<boolean>                    - Run noisily: display information such as progress updates. [default true]
+  --progressintervalmillis=<long>                - Display progress message every <int> milliseconds. -1 means no display. [default 60000]
+  --progressintervalsteps=<long>                 - Display progress message every <int> attempts to create a test; -1 means none [default 1000]
+  --debug-checks=<boolean>                       - Perform expensive internal checks (for Randoop debugging) [default false]
+  --log=<filename>                               - Log lots of information to this file
+  --selection-log=<filename>                     - Log each random selection to this file
+  --operation-history-log=<filename>             - Write operation usage counts to this file
+  --print-non-compiling-file=<boolean>           - Display source if a generated test contains a compilation error. [default false]
+
+Advanced extension points:
+  --visitor=<string> [+]                         - Install the given runtime visitor
+
+Threading:
+  --usethreads=<boolean>                         - Execute each test in a separate thread, with timeout [default false]
+  --call-timeout=<int>                           - Maximum number of milliseconds a test may run. Only meaningful with --usethreads [default 5000]
+alduck@Alejas-MacBook-Air triangleClass % java -cp "randoop-all-4.3.1.jar;/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes/TriangleClass" randoop.main.Main gentests --testclass="/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes/TriangleClass/"
+Error: Could not find or load main class randoop.main.Main
+Caused by: java.lang.ClassNotFoundException: randoop.main.Main
+alduck@Alejas-MacBook-Air triangleClass % java -cp randoop-all-4.3.1.jar; randoop.main.Main gentets --testclass="/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes/TriangleClass"
+Usage: java [options] <mainclass> [args...]
+           (to execute a class)
+   or  java [options] -jar <jarfile> [args...]
+           (to execute a jar file)
+   or  java [options] -m <module>[/<mainclass>] [args...]
+       java [options] --module <module>[/<mainclass>] [args...]
+           (to execute the main class in a module)
+   or  java [options] <sourcefile> [args]
+           (to execute a single source-file program)
+
+ Arguments following the main class, source file, -jar <jarfile>,
+ -m or --module <module>/<mainclass> are passed as the arguments to
+ main class.
+
+ where options include:
+
+    -cp <class search path of directories and zip/jar files>
+    -classpath <class search path of directories and zip/jar files>
+    --class-path <class search path of directories and zip/jar files>
+                  A : separated list of directories, JAR archives,
+                  and ZIP archives to search for class files.
+    -p <module path>
+    --module-path <module path>...
+                  A : separated list of directories, each directory
+                  is a directory of modules.
+    --upgrade-module-path <module path>...
+                  A : separated list of directories, each directory
+                  is a directory of modules that replace upgradeable
+                  modules in the runtime image
+    --add-modules <module name>[,<module name>...]
+                  root modules to resolve in addition to the initial module.
+                  <module name> can also be ALL-DEFAULT, ALL-SYSTEM,
+                  ALL-MODULE-PATH.
+    --enable-native-access <module name>[,<module name>...]
+                  modules that are permitted to perform restricted native operations.
+                  <module name> can also be ALL-UNNAMED.
+    --list-modules
+                  list observable modules and exit
+    -d <module name>
+    --describe-module <module name>
+                  describe a module and exit
+    --dry-run     create VM and load main class but do not execute main method.
+                  The --dry-run option may be useful for validating the
+                  command-line options such as the module system configuration.
+    --validate-modules
+                  validate all modules and exit
+                  The --validate-modules option may be useful for finding
+                  conflicts and other errors with modules on the module path.
+    -D<name>=<value>
+                  set a system property
+    -verbose:[class|module|gc|jni]
+                  enable verbose output for the given subsystem
+    -version      print product version to the error stream and exit
+    --version     print product version to the output stream and exit
+    -showversion  print product version to the error stream and continue
+    --show-version
+                  print product version to the output stream and continue
+    --show-module-resolution
+                  show module resolution output during startup
+    -? -h -help
+                  print this help message to the error stream
+    --help        print this help message to the output stream
+    -X            print help on extra options to the error stream
+    --help-extra  print help on extra options to the output stream
+    -ea[:<packagename>...|:<classname>]
+    -enableassertions[:<packagename>...|:<classname>]
+                  enable assertions with specified granularity
+    -da[:<packagename>...|:<classname>]
+    -disableassertions[:<packagename>...|:<classname>]
+                  disable assertions with specified granularity
+    -esa | -enablesystemassertions
+                  enable system assertions
+    -dsa | -disablesystemassertions
+                  disable system assertions
+    -agentlib:<libname>[=<options>]
+                  load native agent library <libname>, e.g. -agentlib:jdwp
+                  see also -agentlib:jdwp=help
+    -agentpath:<pathname>[=<options>]
+                  load native agent library by full pathname
+    -javaagent:<jarpath>[=<options>]
+                  load Java programming language agent, see java.lang.instrument
+    -splash:<imagepath>
+                  show splash screen with specified image
+                  HiDPI scaled images are automatically supported and used
+                  if available. The unscaled image filename, e.g. image.ext,
+                  should always be passed as the argument to the -splash option.
+                  The most appropriate scaled image provided will be picked up
+                  automatically.
+                  See the SplashScreen API documentation for more information
+    @argument files
+                  one or more argument files containing options
+    -disable-@files
+                  prevent further argument file expansion
+    --enable-preview
+                  allow classes to depend on preview features of this release
+To specify an argument for a long option, you can use --<name>=<value> or
+--<name> <value>.
+
+zsh: command not found: randoop.main.Main
+alduck@Alejas-MacBook-Air triangleClass % java -cp randoop-all-4.3.1.jar randoop.main.Main gentets --testclass="/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes/TriangleClass" 
+Unrecognized command: gentets.
+For more help, invoke Randoop with "help" as its sole argument.
+alduck@Alejas-MacBook-Air triangleClass % java -cp randoop-all-4.3.1.jar randoop.main.Main gentests --testclass="/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes/TriangleClass"
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Illegal argument --testclass=/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes/TriangleClass, should be a class name
+alduck@Alejas-MacBook-Air triangleClass % java -cp randoop-all-4.3.1.jar randoop.main.Main gentests --testclass=TriangleClass 
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Could not load class TriangleClass: Unable to load class "TriangleClass" due to exception: java.lang.ClassNotFoundException: TriangleClass
+Classpath:
+randoop-all-4.3.1.jar
+alduck@Alejas-MacBook-Air triangleClass % java -cp randoop-all-4.3.1.jar randoop.main.Main gentests --testclass="\Users\alduck\Documents\PhDStuff_repo\triangleClass\triangle\target\classes\TriangleClass"
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Illegal argument --testclass=\Users\alduck\Documents\PhDStuff_repo\triangleClass\triangle\target\classes\TriangleClass, should be a class name
+alduck@Alejas-MacBook-Air triangleClass % java -cp randoop-all-4.3.1.jar randoop.main.Main gentests --testclass="/triangleClass/triangle/target/classes/TriangleClass" 
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Illegal argument --testclass=/triangleClass/triangle/target/classes/TriangleClass, should be a class name
+alduck@Alejas-MacBook-Air triangleClass % java -cp randoop-all-4.3.1.jar randoop.main.Main gentests --testclass="/triangleClass/triangle/target/classes/TriangleClass"
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Illegal argument --testclass=/triangleClass/triangle/target/classes/TriangleClass, should be a class name
+alduck@Alejas-MacBook-Air triangleClass % java -version
+java version "18.0.2" 2022-07-19
+Java(TM) SE Runtime Environment (build 18.0.2+9-61)
+Java HotSpot(TM) 64-Bit Server VM (build 18.0.2+9-61, mixed mode, sharing)
+alduck@Alejas-MacBook-Air triangleClass % ls           
+randoop-all-4.3.1.jar	triangle		triangle.jar
+alduck@Alejas-MacBook-Air triangleClass % java -cp "randoop-all-4.3.1.jar;/Users/alduck/Documents/PhDStuff_repo/NextDate-2/target/classes" randoop.main.Main gentests --testsclass="ee.ut.cs.swt.nextdate.NextDate" --junit-output-dir="/Users/alduck/Documents/PhDStuff_repo/NextDate-2/src/test/java/ee/ut/cs/swt/nextdate"
+Error: Could not find or load main class randoop.main.Main
+Caused by: java.lang.ClassNotFoundException: randoop.main.Main
+alduck@Alejas-MacBook-Air triangleClass % java -cp "randoop-all-4.3.1.jar;/Users/alduck/Documents/PhDStuff_repo/NextDate-2/target/classes" randoop.main.Main gentests --testclass='ee.ut.cs.swt.nextdate.NextDate' --junit-output-dir='/Users/alduck/Documents/PhDStuff_repo/NextDate-2/src/test/java/ee/ut/cs/swt/nextdate' 
+Error: Could not find or load main class randoop.main.Main
+Caused by: java.lang.ClassNotFoundException: randoop.main.Main
+alduck@Alejas-MacBook-Air triangleClass % ls
+randoop-all-4.3.1.jar	triangle		triangle.jar
+alduck@Alejas-MacBook-Air triangleClass % java -cp 'randoop-all-4.3.1.jar;/Users/alduck/Documents/PhDStuff_repo/NextDate-2/target/classes' randoop.main.Main gentests --testclass='ee.ut.cs.swt.nextdate.NextDate' --junit-output-dir='/Users/alduck/Documents/PhDStuff_repo/NextDate-2/src/test/java/ee/ut/cs/swt/nextdate'
+Error: Could not find or load main class randoop.main.Main
+Caused by: java.lang.ClassNotFoundException: randoop.main.Main
+alduck@Alejas-MacBook-Air triangleClass % java -cp './randoop-all-4.3.1.jar;/Users/alduck/Documents/PhDStuff_repo/NextDate-2/target/classes' randoop.main.Main gentests --testclass='ee.ut.cs.swt.nextdate.NextDate' --junit-output-dir='/Users/alduck/Documents/PhDStuff_repo/NextDate-2/src/test/java/ee/ut/cs/swt/nextdate'
+Error: Could not find or load main class randoop.main.Main
+Caused by: java.lang.ClassNotFoundException: randoop.main.Main
+alduck@Alejas-MacBook-Air triangleClass % java -cp './randoop-all-4.3.1.jar:/Users/alduck/Documents/PhDStuff_repo/NextDate-2/target/classes' randoop.main.Main gentests --testclass='ee.ut.cs.swt.nextdate.NextDate' --junit-output-dir='/Users/alduck/Documents/PhDStuff_repo/NextDate-2/src/test/java/ee/ut/cs/swt/nextdate'
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Will try to generate tests for 1 classes.
+PUBLIC MEMBERS=4
+Explorer = ForwardGenerator(steps: 0, null steps: 0, num_sequences_generated: 0;
+    allSequences: 0, regresson seqs: 0, error seqs: 0=0=0, invalid seqs: 0, subsumed_sequences: 0, num_failed_output_test: 0;
+    sideEffectFreeMethods: 1113, runtimePrimitivesSeen: 38)
+
+Progress update: steps=1, test inputs generated=0, failing inputs=0      (2022-09-07T21:01:47.921971Z     24.5M used)
+Progress update: steps=1000, test inputs generated=868, failing inputs=0      (2022-09-07T21:02:14.201237Z     137M used)
+Progress update: steps=2000, test inputs generated=1732, failing inputs=0      (2022-09-07T21:02:31.412107Z     47.8M used)
+Progress update: steps=3000, test inputs generated=2567, failing inputs=0      (2022-09-07T21:02:44.790421Z     107M used)
+Progress update: steps=3226, test inputs generated=2751, failing inputs=0      (2022-09-07T21:02:48.046784Z     159M used)
+Progress update: steps=4000, test inputs generated=3406, failing inputs=0      (2022-09-07T21:02:58.767623Z     188M used)
+Progress update: steps=5000, test inputs generated=4215, failing inputs=0      (2022-09-07T21:03:13.019362Z     203M used)
+Progress update: steps=5969, test inputs generated=5008, failing inputs=0      (2022-09-07T21:03:27.927918Z     181M used)
+Normal method executions: 51193
+Exceptional method executions: 0
+
+Average method execution time (normal termination):      0.00354
+Average method execution time (exceptional termination): NaN
+Approximate memory usage 181M
+Explorer = ForwardGenerator(steps: 5969, null steps: 961, num_sequences_generated: 5008;
+    allSequences: 5008, regresson seqs: 5007, error seqs: 0=0=0, invalid seqs: 0, subsumed_sequences: 0, num_failed_output_test: 1;
+    sideEffectFreeMethods: 1113, runtimePrimitivesSeen: 39)
+
+No error-revealing tests to output.
+
+About to look for failing assertions in 3054 regression sequences.
+
+Regression test output:
+Regression test count: 3054
+Writing regression JUnit tests...
+Created file /Users/alduck/Documents/PhDStuff_repo/NextDate-2/src/test/java/ee/ut/cs/swt/nextdate/RegressionTest0.java
+Created file /Users/alduck/Documents/PhDStuff_repo/NextDate-2/src/test/java/ee/ut/cs/swt/nextdate/RegressionTest1.java
+Created file /Users/alduck/Documents/PhDStuff_repo/NextDate-2/src/test/java/ee/ut/cs/swt/nextdate/RegressionTest2.java
+Created file /Users/alduck/Documents/PhDStuff_repo/NextDate-2/src/test/java/ee/ut/cs/swt/nextdate/RegressionTest3.java
+Created file /Users/alduck/Documents/PhDStuff_repo/NextDate-2/src/test/java/ee/ut/cs/swt/nextdate/RegressionTest4.java
+Created file /Users/alduck/Documents/PhDStuff_repo/NextDate-2/src/test/java/ee/ut/cs/swt/nextdate/RegressionTest5.java
+Created file /Users/alduck/Documents/PhDStuff_repo/NextDate-2/src/test/java/ee/ut/cs/swt/nextdate/RegressionTest6.java
+Created file /Users/alduck/Documents/PhDStuff_repo/NextDate-2/src/test/java/ee/ut/cs/swt/nextdate/RegressionTest.java
+Wrote regression JUnit tests.
+About to look for flaky methods.
+
+Invalid tests generated: 0
+alduck@Alejas-MacBook-Air triangleClass % java -cp './randoop-all-4.3.1.jar;/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes' randoop.main.Main gentests --testclass='TriangleClass' --junit-output-dir='/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/triangleClass'
+Error: Could not find or load main class randoop.main.Main
+Caused by: java.lang.ClassNotFoundException: randoop.main.Main
+alduck@Alejas-MacBook-Air triangleClass % java -cp 'randoop-all-4.3.1.jar:/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes' randoop.main.Main gentests --testclass='TriangleClass' --junit-output-dir='/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/triangleClass'
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Will try to generate tests for 1 classes.
+PUBLIC MEMBERS=7
+Explorer = ForwardGenerator(steps: 0, null steps: 0, num_sequences_generated: 0;
+    allSequences: 0, regresson seqs: 0, error seqs: 0=0=0, invalid seqs: 0, subsumed_sequences: 0, num_failed_output_test: 0;
+    sideEffectFreeMethods: 1113, runtimePrimitivesSeen: 38)
+
+Progress update: steps=1, test inputs generated=0, failing inputs=0      (2022-09-07T21:09:19.102715Z     24.5M used)
+Progress update: steps=1000, test inputs generated=792, failing inputs=0      (2022-09-07T21:09:41.628246Z     21.9M used)
+Progress update: steps=2000, test inputs generated=1562, failing inputs=0      (2022-09-07T21:09:55.245966Z     62.8M used)
+Progress update: steps=3000, test inputs generated=2305, failing inputs=0      (2022-09-07T21:10:07.148013Z     82.3M used)
+Progress update: steps=4000, test inputs generated=3028, failing inputs=0      (2022-09-07T21:10:17.903175Z     170M used)
+Progress update: steps=4111, test inputs generated=3107, failing inputs=0      (2022-09-07T21:10:19.143863Z     73.5M used)
+Progress update: steps=5000, test inputs generated=3710, failing inputs=0      (2022-09-07T21:10:28.069806Z     30.5M used)
+Progress update: steps=6000, test inputs generated=4398, failing inputs=0      (2022-09-07T21:10:38.761369Z     101M used)
+Progress update: steps=7000, test inputs generated=5031, failing inputs=0      (2022-09-07T21:10:48.126590Z     174M used)
+Progress update: steps=7895, test inputs generated=5604, failing inputs=0      (2022-09-07T21:10:59.110930Z     178M used)
+Normal method executions: 16744
+Exceptional method executions: 0
+
+Average method execution time (normal termination):      0.00880
+Average method execution time (exceptional termination): NaN
+Approximate memory usage 179M
+Explorer = ForwardGenerator(steps: 7895, null steps: 2291, num_sequences_generated: 5604;
+    allSequences: 5604, regresson seqs: 5285, error seqs: 0=0=0, invalid seqs: 0, subsumed_sequences: 0, num_failed_output_test: 319;
+    sideEffectFreeMethods: 1113, runtimePrimitivesSeen: 78)
+
+No error-revealing tests to output.
+
+About to look for failing assertions in 5284 regression sequences.
+
+Regression test output:
+Regression test count: 5284
+Writing regression JUnit tests...
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/triangleClass/RegressionTest0.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/triangleClass/RegressionTest1.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/triangleClass/RegressionTest2.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/triangleClass/RegressionTest3.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/triangleClass/RegressionTest4.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/triangleClass/RegressionTest5.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/triangleClass/RegressionTest6.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/triangleClass/RegressionTest7.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/triangleClass/RegressionTest8.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/triangleClass/RegressionTest9.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/triangleClass/RegressionTest10.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/triangleClass/RegressionTest.java
+Wrote regression JUnit tests.
+About to look for flaky methods.
+
+Invalid tests generated: 0
+
+Uncompilable sequences generated (count: 318).
+Please report uncompilable sequences at https://github.com/randoop/randoop/issues ,
+providing the information requested at https://randoop.github.io/randoop/manual/index.html#bug-reporting .
+alduck@Alejas-MacBook-Air triangleClass % java -cp 'randoop-all-4.3.1.jar:/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes' randoop.main.Main gentests --testclass='TriangleClass' --junit-output-dir='/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java'              
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Could not load class TriangleClass: Unable to load class "TriangleClass" due to exception: java.lang.ClassNotFoundException: TriangleClass
+Classpath:
+randoop-all-4.3.1.jar
+/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes
+alduck@Alejas-MacBook-Air triangleClass % java -cp 'randoop-all-4.3.1.jar:/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes' randoop.main.Main gentests --testclass='TriangleClass' --junit-output-dir='/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java'
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Will try to generate tests for 1 classes.
+PUBLIC MEMBERS=7
+Explorer = ForwardGenerator(steps: 0, null steps: 0, num_sequences_generated: 0;
+    allSequences: 0, regresson seqs: 0, error seqs: 0=0=0, invalid seqs: 0, subsumed_sequences: 0, num_failed_output_test: 0;
+    sideEffectFreeMethods: 1113, runtimePrimitivesSeen: 38)
+
+Progress update: steps=1, test inputs generated=0, failing inputs=0      (2022-09-07T21:26:05.394373Z     24.5M used)
+Progress update: steps=1000, test inputs generated=792, failing inputs=0      (2022-09-07T21:26:27.560382Z     63.9M used)
+Progress update: steps=2000, test inputs generated=1562, failing inputs=0      (2022-09-07T21:26:40.531122Z     48.2M used)
+Progress update: steps=3000, test inputs generated=2305, failing inputs=0      (2022-09-07T21:26:52.708871Z     78.8M used)
+Progress update: steps=4000, test inputs generated=3028, failing inputs=0      (2022-09-07T21:27:03.135081Z     69.4M used)
+Progress update: steps=4208, test inputs generated=3179, failing inputs=0      (2022-09-07T21:27:05.440172Z     106M used)
+Progress update: steps=5000, test inputs generated=3710, failing inputs=0      (2022-09-07T21:27:13.237708Z     105M used)
+Progress update: steps=6000, test inputs generated=4398, failing inputs=0      (2022-09-07T21:27:23.692152Z     42.8M used)
+Progress update: steps=7000, test inputs generated=5031, failing inputs=0      (2022-09-07T21:27:32.945004Z     170M used)
+Progress update: steps=8000, test inputs generated=5672, failing inputs=0      (2022-09-07T21:27:42.275390Z     47.2M used)
+Progress update: steps=8325, test inputs generated=5880, failing inputs=0      (2022-09-07T21:27:45.395514Z     144M used)
+Normal method executions: 17576
+Exceptional method executions: 0
+
+Average method execution time (normal termination):      0.00768
+Average method execution time (exceptional termination): NaN
+Approximate memory usage 144M
+Explorer = ForwardGenerator(steps: 8325, null steps: 2445, num_sequences_generated: 5880;
+    allSequences: 5880, regresson seqs: 5543, error seqs: 0=0=0, invalid seqs: 0, subsumed_sequences: 0, num_failed_output_test: 337;
+    sideEffectFreeMethods: 1113, runtimePrimitivesSeen: 78)
+
+No error-revealing tests to output.
+
+About to look for failing assertions in 5542 regression sequences.
+
+Regression test output:
+Regression test count: 5542
+Writing regression JUnit tests...
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest0.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest1.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest2.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest3.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest4.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest5.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest6.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest7.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest8.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest9.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest10.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest11.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest.java
+Wrote regression JUnit tests.
+About to look for flaky methods.
+
+Invalid tests generated: 0
+
+Uncompilable sequences generated (count: 336).
+Please report uncompilable sequences at https://github.com/randoop/randoop/issues ,
+providing the information requested at https://randoop.github.io/randoop/manual/index.html#bug-reporting .
+alduck@Alejas-MacBook-Air triangleClass % /usr/libexec/java_home -v 11 --exec javac -version
+javac 18.0.2
+alduck@Alejas-MacBook-Air triangleClass % /usr/libexec/java_home -v 11 --exec javac -version
+javac 11.0.16
+alduck@Alejas-MacBook-Air triangleClass % java -version                                     
+java version "18.0.2" 2022-07-19
+Java(TM) SE Runtime Environment (build 18.0.2+9-61)
+Java HotSpot(TM) 64-Bit Server VM (build 18.0.2+9-61, mixed mode, sharing)
+alduck@Alejas-MacBook-Air triangleClass % '/Library/Java/JavaVirtualMachines/jdk-11.0.16.jdk/Contents/Home/bin/java' -cp 'randoop-all-4.3.1.jar:/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes' randoop.main.Main gentests --testclass='TriangleClass' --junit-output-dir='/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java'
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Could not load class TriangleClass: Unable to load class "TriangleClass" due to exception: java.lang.UnsupportedClassVersionError: TriangleClass has been compiled by a more recent version of the Java Runtime (class file version 62.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+Classpath:
+randoop-all-4.3.1.jar
+/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes
+alduck@Alejas-MacBook-Air triangleClass % '/Library/Java/JavaVirtualMachines/jdk-11.0.16.jdk/Contents/Home/bin/java' -cp 'randoop-all-4.3.1.jar:/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes' randoop.main.Main gentests --testclass='TriangleClass' --junit-output-dir='/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java'
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Could not load class TriangleClass: Unable to load class "TriangleClass" due to exception: java.lang.UnsupportedClassVersionError: TriangleClass has been compiled by a more recent version of the Java Runtime (class file version 62.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+Classpath:
+randoop-all-4.3.1.jar
+/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes
+alduck@Alejas-MacBook-Air triangleClass % '/Library/Java/JavaVirtualMachines/jdk-11.0.16.jdk/Contents/Home/bin/java' -cp 'randoop-all-4.3.1.jar:/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes' randoop.main.Main gentests --testclass='TriangleClass' --junit-output-dir='/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java'
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Could not load class TriangleClass: Unable to load class "TriangleClass" due to exception: java.lang.UnsupportedClassVersionError: TriangleClass has been compiled by a more recent version of the Java Runtime (class file version 62.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+Classpath:
+randoop-all-4.3.1.jar
+/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes
+alduck@Alejas-MacBook-Air triangleClass % '/Library/Java/JavaVirtualMachines/jdk-11.0.16.jdk/Contents/Home/bin/java' -cp 'randoop-all-4.3.1.jar:/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes' randoop.main.Main gentests --testclass='TriangleClass' --junit-output-dir='/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java'
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Could not load class TriangleClass: Unable to load class "TriangleClass" due to exception: java.lang.UnsupportedClassVersionError: TriangleClass has been compiled by a more recent version of the Java Runtime (class file version 62.0), this version of the Java Runtime only recognizes class file versions up to 55.0
+Classpath:
+randoop-all-4.3.1.jar
+/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes
+alduck@Alejas-MacBook-Air triangleClass % ls
+randoop-all-4.3.1.jar	triangle		triangle.jar
+alduck@Alejas-MacBook-Air triangleClass % cd triangle 
+alduck@Alejas-MacBook-Air triangle % ls
+pom.xml	src	target
+alduck@Alejas-MacBook-Air triangle % '/Library/Java/JavaVirtualMachines/jdk-11.0.16.jdk/Contents/Home/bin/java' -cp 'randoop-all-4.3.1.jar:/Users/alduck/Documents/PhDStuff_repo/triangleclass/triangle/target/classes' randoop.main.Main gentests --testclass='triangleclass' --junit-output-dir='/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java'
+Error: Could not find or load main class randoop.main.Main
+Caused by: java.lang.ClassNotFoundException: randoop.main.Main
+alduck@Alejas-MacBook-Air triangle % '/Library/Java/JavaVirtualMachines/jdk-11.0.16.jdk/Contents/Home/bin/java' -cp 'randoop-all-4.3.1.jar:/Users/alduck/Documents/PhDStuff_repo/triangleclass/triangle/target/classes' randoop.main.Main gentests --testclass='triangleclass' --junit-output-dir='/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java'
+Error: Could not find or load main class randoop.main.Main
+Caused by: java.lang.ClassNotFoundException: randoop.main.Main
+alduck@Alejas-MacBook-Air triangle % ls
+pom.xml	src
+alduck@Alejas-MacBook-Air triangle % cd ..
+alduck@Alejas-MacBook-Air triangleClass % ls
+randoop-all-4.3.1.jar	treiangleV2		triangle		triangle.jar
+alduck@Alejas-MacBook-Air triangleClass % '/Library/Java/JavaVirtualMachines/jdk-11.0.16.jdk/Contents/Home/bin/java' -cp 'randoop-all-4.3.1.jar:/Users/alduck/Documents/PhDStuff_repo/triangleclass/triangle/target/classes' randoop.main.Main gentests --testclass='triangleclass' --junit-output-dir='/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java'
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Could not load class triangleclass: Unable to load class "triangleclass" due to exception: java.lang.ClassNotFoundException: triangleclass
+Classpath:
+randoop-all-4.3.1.jar
+/Users/alduck/Documents/PhDStuff_repo/triangleclass/triangle/target/classes
+alduck@Alejas-MacBook-Air triangleClass % '/Library/Java/JavaVirtualMachines/jdk-11.0.16.jdk/Contents/Home/bin/java' -cp 'randoop-all-4.3.1.jar:/Users/alduck/Documents/PhDStuff_repo/triangleclass/triangle/target/classes' randoop.main.Main gentests --testclass='triangleclass' --junit-output-dir='/Users/alduck/Documents/PhDStuff_repo/triangleclass/triangle/src/test/java'
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Could not load class triangleclass: Unable to load class "triangleclass" due to exception: java.lang.ClassNotFoundException: triangleclass
+Classpath:
+randoop-all-4.3.1.jar
+/Users/alduck/Documents/PhDStuff_repo/triangleclass/triangle/target/classes
+alduck@Alejas-MacBook-Air triangleClass % '/Library/Java/JavaVirtualMachines/jdk-11.0.16.jdk/Contents/Home/bin/java' -cp 'randoop-all-4.3.1.jar:/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes' randoop.main.Main gentests --testclass='TriangleClass' --junit-output-dir='/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java'
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Will try to generate tests for 1 classes.
+PUBLIC MEMBERS=7
+Explorer = ForwardGenerator(steps: 0, null steps: 0, num_sequences_generated: 0;
+    allSequences: 0, regresson seqs: 0, error seqs: 0=0=0, invalid seqs: 0, subsumed_sequences: 0, num_failed_output_test: 0;
+    sideEffectFreeMethods: 1115, runtimePrimitivesSeen: 38)
+
+Progress update: steps=1, test inputs generated=0, failing inputs=0      (2022-09-07T22:21:48.558769Z     7.36M used)
+Progress update: steps=1000, test inputs generated=792, failing inputs=0      (2022-09-07T22:21:56.068301Z     19.0M used)
+Progress update: steps=2000, test inputs generated=1562, failing inputs=0      (2022-09-07T22:22:01.509125Z     133M used)
+Progress update: steps=3000, test inputs generated=2305, failing inputs=0      (2022-09-07T22:22:06.719251Z     122M used)
+Progress update: steps=4000, test inputs generated=3028, failing inputs=0      (2022-09-07T22:22:11.854275Z     62.6M used)
+Progress update: steps=5000, test inputs generated=3710, failing inputs=0      (2022-09-07T22:22:16.025587Z     34.7M used)
+Progress update: steps=6000, test inputs generated=4398, failing inputs=0      (2022-09-07T22:22:20.292507Z     46.6M used)
+Progress update: steps=7000, test inputs generated=5031, failing inputs=0      (2022-09-07T22:22:24.236583Z     96.9M used)
+Progress update: steps=8000, test inputs generated=5672, failing inputs=0      (2022-09-07T22:22:28.245730Z     83.3M used)
+Progress update: steps=9000, test inputs generated=6300, failing inputs=0      (2022-09-07T22:22:31.920489Z     87.9M used)
+Progress update: steps=10000, test inputs generated=6899, failing inputs=0      (2022-09-07T22:22:35.406729Z     89.6M used)
+Progress update: steps=11000, test inputs generated=7488, failing inputs=0      (2022-09-07T22:22:38.765101Z     136M used)
+Progress update: steps=12000, test inputs generated=8024, failing inputs=0      (2022-09-07T22:22:41.917261Z     104M used)
+Progress update: steps=13000, test inputs generated=8550, failing inputs=0      (2022-09-07T22:22:44.920754Z     103M used)
+Progress update: steps=14000, test inputs generated=9072, failing inputs=0      (2022-09-07T22:22:47.885211Z     70.1M used)
+Progress update: steps=14323, test inputs generated=9219, failing inputs=0      (2022-09-07T22:22:48.706077Z     70.7M used)
+Progress update: steps=15000, test inputs generated=9585, failing inputs=0      (2022-09-07T22:22:50.781502Z     90.9M used)
+Progress update: steps=16000, test inputs generated=10062, failing inputs=0      (2022-09-07T22:22:53.454711Z     45.0M used)
+Progress update: steps=17000, test inputs generated=10508, failing inputs=0      (2022-09-07T22:22:55.931407Z     120M used)
+Progress update: steps=18000, test inputs generated=10968, failing inputs=0      (2022-09-07T22:22:59.086504Z     52.1M used)
+Progress update: steps=19000, test inputs generated=11392, failing inputs=0      (2022-09-07T22:23:01.549595Z     58.1M used)
+Progress update: steps=20000, test inputs generated=11828, failing inputs=0      (2022-09-07T22:23:03.988523Z     179M used)
+Progress update: steps=21000, test inputs generated=12247, failing inputs=0      (2022-09-07T22:23:06.290698Z     129M used)
+Progress update: steps=22000, test inputs generated=12675, failing inputs=0      (2022-09-07T22:23:08.687474Z     59.8M used)
+Progress update: steps=23000, test inputs generated=13095, failing inputs=0      (2022-09-07T22:23:10.989243Z     201M used)
+Progress update: steps=24000, test inputs generated=13454, failing inputs=0      (2022-09-07T22:23:12.943627Z     99.2M used)
+Progress update: steps=25000, test inputs generated=13837, failing inputs=0      (2022-09-07T22:23:15.061304Z     60.9M used)
+Progress update: steps=26000, test inputs generated=14217, failing inputs=0      (2022-09-07T22:23:17.499074Z     165M used)
+Progress update: steps=27000, test inputs generated=14547, failing inputs=0      (2022-09-07T22:23:19.516912Z     122M used)
+Progress update: steps=28000, test inputs generated=14841, failing inputs=0      (2022-09-07T22:23:21.198400Z     70.8M used)
+Progress update: steps=29000, test inputs generated=15175, failing inputs=0      (2022-09-07T22:23:23.008345Z     214M used)
+Progress update: steps=30000, test inputs generated=15496, failing inputs=0      (2022-09-07T22:23:24.776133Z     87.0M used)
+Progress update: steps=31000, test inputs generated=15783, failing inputs=0      (2022-09-07T22:23:26.356765Z     144M used)
+Progress update: steps=32000, test inputs generated=16087, failing inputs=0      (2022-09-07T22:23:28.030100Z     188M used)
+Progress update: steps=32277, test inputs generated=16184, failing inputs=0      (2022-09-07T22:23:28.560812Z     106M used)
+Normal method executions: 48600
+Exceptional method executions: 0
+
+Average method execution time (normal termination):      0.00118
+Average method execution time (exceptional termination): NaN
+Approximate memory usage 106M
+Explorer = ForwardGenerator(steps: 32277, null steps: 16093, num_sequences_generated: 16184;
+    allSequences: 16184, regresson seqs: 15240, error seqs: 0=0=0, invalid seqs: 0, subsumed_sequences: 0, num_failed_output_test: 944;
+    sideEffectFreeMethods: 1115, runtimePrimitivesSeen: 85)
+
+No error-revealing tests to output.
+
+About to look for failing assertions in 15239 regression sequences.
+
+Regression test output:
+Regression test count: 15239
+Writing regression JUnit tests...
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest0.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest1.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest2.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest3.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest4.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest5.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest6.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest7.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest8.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest9.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest10.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest11.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest12.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest13.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest14.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest15.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest16.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest17.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest18.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest19.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest20.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest21.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest22.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest23.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest24.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest25.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest26.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest27.java
+                                                                                                                                                              Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest28.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest29.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest30.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest.java
+Wrote regression JUnit tests.
+About to look for flaky methods.
+
+Invalid tests generated: 0
+
+Uncompilable sequences generated (count: 943).
+Please report uncompilable sequences at https://github.com/randoop/randoop/issues ,
+providing the information requested at https://randoop.github.io/randoop/manual/index.html#bug-reporting .
+alduck@Alejas-MacBook-Air triangleClass % 
+  [Restored 8/09/2022, 8:32:09 AM]
+Last login: Thu Sep  8 08:26:34 on console
+Restored session: Thu Sep  8 08:24:46 CEST 2022
+alduck@Alejas-MacBook-Air triangleClass % '/Library/Java/JavaVirtualMachines/jdk-11.0.16.jdk/Contents/Home/bin/java' -cp 'randoop-all-4.3.1.jar:/Users/alduck/Documents/PhDStuff_repo/triangleclass/triangle/target/classes' randoop.main.Main gentests --testclass='triangleclass' --junit-output-dir='/Users/alduck/Documents/PhDStuff_repo/triangleclass/triangle/src/test/java' 
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Could not load class triangleclass: Unable to load class "triangleclass" due to exception: java.lang.ClassNotFoundException: triangleclass
+Classpath:
+randoop-all-4.3.1.jar
+/Users/alduck/Documents/PhDStuff_repo/triangleclass/triangle/target/classes
+alduck@Alejas-MacBook-Air triangleClass % '/Library/Java/JavaVirtualMachines/jdk-11.0.16.jdk/Contents/Home/bin/java' -cp 'randoop-all-4.3.1.jar:/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes' randoop.main.Main gentests --testclass='TriangleClass' --junit-output-dir='/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java'
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Could not load class TriangleClass: Unable to load class "TriangleClass" due to exception: java.lang.ClassNotFoundException: TriangleClass
+Classpath:
+randoop-all-4.3.1.jar
+/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes
+alduck@Alejas-MacBook-Air triangleClass % '/Library/Java/JavaVirtualMachines/jdk-11.0.16.jdk/Contents/Home/bin/java' -cp 'randoop-all-4.3.1.jar:/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes' randoop.main.Main gentests --testclass='TriangleClass' --junit-output-dir='/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java'
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Could not load class TriangleClass: Unable to load class "TriangleClass" due to exception: java.lang.ClassNotFoundException: TriangleClass
+Classpath:
+randoop-all-4.3.1.jar
+/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes
+alduck@Alejas-MacBook-Air triangleClass % ls
+randoop-all-4.3.1.jar	treiangleV2		triangle		triangle.jar
+alduck@Alejas-MacBook-Air triangleClass % cd triangle 
+alduck@Alejas-MacBook-Air triangle % ls         
+pom.xml	src
+alduck@Alejas-MacBook-Air triangle % cd ..
+alduck@Alejas-MacBook-Air triangleClass % '/Library/Java/JavaVirtualMachines/jdk-11.0.16.jdk/Contents/Home/bin/java' -cp 'randoop-all-4.3.1.jar:/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes' randoop.main.Main gentests --testclass='TriangleClass' --junit-output-dir='/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java'
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Could not load class TriangleClass: Unable to load class "TriangleClass" due to exception: java.lang.ClassNotFoundException: TriangleClass
+Classpath:
+randoop-all-4.3.1.jar
+/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes
+alduck@Alejas-MacBook-Air triangleClass % '/Library/Java/JavaVirtualMachines/jdk-11.0.16.jdk/Contents/Home/bin/java' -cp 'randoop-all-4.3.1.jar:/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes' randoop.main.Main gentests --testclass='TriangleClass' --junit-output-dir='/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java'
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Could not load class TriangleClass: Unable to load class "TriangleClass" due to exception: java.lang.ClassNotFoundException: TriangleClass
+Classpath:
+randoop-all-4.3.1.jar
+/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes
+alduck@Alejas-MacBook-Air triangleClass % '/Library/Java/JavaVirtualMachines/jdk-11.0.16.jdk/Contents/Home/bin/java' -cp 'randoop-all-4.3.1.jar:/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes' randoop.main.Main gentests --testclass='TriangleClass' --junit-output-dir='/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java'
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Could not load class TriangleClass: Unable to load class "TriangleClass" due to exception: java.lang.ClassNotFoundException: TriangleClass
+Classpath:
+randoop-all-4.3.1.jar
+/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes
+alduck@Alejas-MacBook-Air triangleClass % '/Library/Java/JavaVirtualMachines/jdk-11.0.16.jdk/Contents/Home/bin/java' -cp 'randoop-all-4.3.1.jar:/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/target/classes' randoop.main.Main gentests --testclass='TriangleClass' --junit-output-dir='/Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java'
+Randoop for Java version "4.3.1, local changes, branch master, commit 434c559, 2022-07-13".
+
+Will try to generate tests for 1 classes.
+PUBLIC MEMBERS=7
+Explorer = ForwardGenerator(steps: 0, null steps: 0, num_sequences_generated: 0;
+    allSequences: 0, regresson seqs: 0, error seqs: 0=0=0, invalid seqs: 0, subsumed_sequences: 0, num_failed_output_test: 0;
+    sideEffectFreeMethods: 1115, runtimePrimitivesSeen: 38)
+
+Progress update: steps=1, test inputs generated=0, failing inputs=0      (2022-09-08T06:37:43.558840Z     7.04M used)
+Progress update: steps=1000, test inputs generated=792, failing inputs=0      (2022-09-08T06:37:49.991504Z     89.2M used)
+Progress update: steps=2000, test inputs generated=1562, failing inputs=0      (2022-09-08T06:37:54.965490Z     63.3M used)
+Progress update: steps=3000, test inputs generated=2305, failing inputs=0      (2022-09-08T06:37:59.443368Z     49.9M used)
+Progress update: steps=4000, test inputs generated=3028, failing inputs=0      (2022-09-08T06:38:04.039258Z     119M used)
+Progress update: steps=5000, test inputs generated=3710, failing inputs=0      (2022-09-08T06:38:09.053301Z     86.3M used)
+Progress update: steps=6000, test inputs generated=4398, failing inputs=0      (2022-09-08T06:38:13.090772Z     96.6M used)
+Progress update: steps=7000, test inputs generated=5031, failing inputs=0      (2022-09-08T06:38:16.865047Z     145M used)
+Progress update: steps=8000, test inputs generated=5672, failing inputs=0      (2022-09-08T06:38:20.675237Z     135M used)
+Progress update: steps=9000, test inputs generated=6300, failing inputs=0      (2022-09-08T06:38:24.293167Z     138M used)
+Progress update: steps=10000, test inputs generated=6899, failing inputs=0      (2022-09-08T06:38:27.700936Z     64.3M used)
+Progress update: steps=11000, test inputs generated=7488, failing inputs=0      (2022-09-08T06:38:30.871935Z     140M used)
+Progress update: steps=12000, test inputs generated=8024, failing inputs=0      (2022-09-08T06:38:33.706622Z     47.7M used)
+Progress update: steps=13000, test inputs generated=8550, failing inputs=0      (2022-09-08T06:38:36.526174Z     196M used)
+Progress update: steps=14000, test inputs generated=9072, failing inputs=0      (2022-09-08T06:38:39.319735Z     132M used)
+Progress update: steps=15000, test inputs generated=9585, failing inputs=0      (2022-09-08T06:38:42.040123Z     156M used)
+Progress update: steps=15605, test inputs generated=9882, failing inputs=0      (2022-09-08T06:38:43.641553Z     128M used)
+Progress update: steps=16000, test inputs generated=10062, failing inputs=0      (2022-09-08T06:38:44.593211Z     166M used)
+Progress update: steps=17000, test inputs generated=10508, failing inputs=0      (2022-09-08T06:38:47.000846Z     68.6M used)
+Progress update: steps=18000, test inputs generated=10968, failing inputs=0      (2022-09-08T06:38:50.316854Z     205M used)
+Progress update: steps=19000, test inputs generated=11392, failing inputs=0      (2022-09-08T06:38:52.767316Z     145M used)
+Progress update: steps=20000, test inputs generated=11828, failing inputs=0      (2022-09-08T06:38:55.122265Z     188M used)
+Progress update: steps=21000, test inputs generated=12247, failing inputs=0      (2022-09-08T06:38:57.329242Z     67.8M used)
+Progress update: steps=22000, test inputs generated=12675, failing inputs=0      (2022-09-08T06:38:59.677769Z     377M used)
+Progress update: steps=23000, test inputs generated=13095, failing inputs=0      (2022-09-08T06:39:02.240223Z     277M used)
+Progress update: steps=24000, test inputs generated=13454, failing inputs=0      (2022-09-08T06:39:04.226030Z     277M used)
+Progress update: steps=25000, test inputs generated=13837, failing inputs=0      (2022-09-08T06:39:06.343762Z     166M used)
+Progress update: steps=26000, test inputs generated=14217, failing inputs=0      (2022-09-08T06:39:08.421527Z     369M used)
+Progress update: steps=27000, test inputs generated=14547, failing inputs=0      (2022-09-08T06:39:10.216451Z     100.0M used)
+Progress update: steps=28000, test inputs generated=14841, failing inputs=0      (2022-09-08T06:39:11.766827Z     167M used)
+Progress update: steps=29000, test inputs generated=15175, failing inputs=0      (2022-09-08T06:39:13.522987Z     259M used)
+Progress update: steps=30000, test inputs generated=15496, failing inputs=0      (2022-09-08T06:39:15.168174Z     235M used)
+Progress update: steps=31000, test inputs generated=15783, failing inputs=0      (2022-09-08T06:39:16.634099Z     237M used)
+Progress update: steps=32000, test inputs generated=16087, failing inputs=0      (2022-09-08T06:39:18.188807Z     52.6M used)
+Progress update: steps=33000, test inputs generated=16391, failing inputs=0      (2022-09-08T06:39:19.755404Z     218M used)
+Progress update: steps=34000, test inputs generated=16717, failing inputs=0      (2022-09-08T06:39:21.433610Z     248M used)
+Progress update: steps=35000, test inputs generated=17012, failing inputs=0      (2022-09-08T06:39:22.950775Z     323M used)
+Progress update: steps=35417, test inputs generated=17130, failing inputs=0      (2022-09-08T06:39:23.560180Z     79.4M used)
+Normal method executions: 51334
+Exceptional method executions: 0
+
+Average method execution time (normal termination):      0.00113
+Average method execution time (exceptional termination): NaN
+Approximate memory usage 79.4M
+Explorer = ForwardGenerator(steps: 35417, null steps: 18287, num_sequences_generated: 17130;
+    allSequences: 17130, regresson seqs: 16133, error seqs: 0=0=0, invalid seqs: 0, subsumed_sequences: 0, num_failed_output_test: 997;
+    sideEffectFreeMethods: 1115, runtimePrimitivesSeen: 85)
+
+No error-revealing tests to output.
+
+About to look for failing assertions in 16132 regression sequences.
+
+Regression test output:
+Regression test count: 16132
+Writing regression JUnit tests...
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest0.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest1.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest2.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest3.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest4.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest5.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest6.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest7.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest8.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest9.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest10.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest11.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest12.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest13.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest14.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest15.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest16.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest17.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest18.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest19.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest20.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest21.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest22.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest23.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest24.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest25.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest26.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest27.java
+                                                                                                                                                        Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest28.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest29.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest30.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest31.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest32.java
+Created file /Users/alduck/Documents/PhDStuff_repo/triangleClass/triangle/src/test/java/RegressionTest.java
+Wrote regression JUnit tests.
+About to look for flaky methods.
+
+Invalid tests generated: 0
+
+Uncompilable sequences generated (count: 996).
+Please report uncompilable sequences at https://github.com/randoop/randoop/issues ,
+providing the information requested at https://randoop.github.io/randoop/manual/index.html#bug-reporting .
+alduck@Alejas-MacBook-Air triangleClass % 

@@ -25,9 +25,9 @@ public class TriangleClass {
         if (a == b && a == c && b == c) {
             return "equilateral";
         } else if (a != b && a != c && b != c) {
-            return "scalene and";
+            return "scalene";
         } else {
-            return "isosceles and";
+            return "isosceles";
         }
     }
 

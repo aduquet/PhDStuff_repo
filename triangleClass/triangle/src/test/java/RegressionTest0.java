@@ -12,7 +12,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00001");
         java.lang.String str3 = TriangleClass.sideClass((-1), (int) (short) -1, (int) 'a');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -29,7 +29,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00003");
         java.lang.String str3 = TriangleClass.sideClass(0, (int) 'a', (int) 'a');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -77,7 +77,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00009");
         java.lang.String str3 = TriangleClass.sideClass((int) '4', (int) (short) 0, (int) (short) -1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -117,7 +117,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00014");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 0, (int) ' ', 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -125,7 +125,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00015");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 0, (int) (short) -1, (int) (short) 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -133,7 +133,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00016");
         java.lang.String str3 = TriangleClass.sideClass((int) '#', 1, (int) (byte) 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -141,7 +141,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00017");
         java.lang.String str3 = TriangleClass.sideClass((int) ' ', (int) (byte) 1, (int) (byte) 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -149,7 +149,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00018");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) -1, (int) (byte) 0, (-1));
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -157,7 +157,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00019");
         java.lang.String str3 = TriangleClass.sideClass((int) '4', (int) (short) -1, (int) 'a');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -174,7 +174,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00021");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 0, (int) 'a', (int) (byte) 1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -206,7 +206,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00025");
         java.lang.String str3 = TriangleClass.sideClass(0, (int) ' ', (int) (short) 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -214,7 +214,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00026");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 0, 0, 10);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -230,7 +230,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00028");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 1, (int) ' ', (int) 'a');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -238,7 +238,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00029");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) -1, (int) (short) 1, 1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -278,7 +278,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00034");
         java.lang.String str3 = TriangleClass.sideClass(100, (int) '#', 10);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -286,7 +286,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00035");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 10, (int) (byte) 0, (-1));
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -318,7 +318,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00039");
         java.lang.String str3 = TriangleClass.sideClass((-1), (int) '4', (int) (short) 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -334,7 +334,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00041");
         java.lang.String str3 = TriangleClass.sideClass((int) ' ', 100, (int) (short) -1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -374,7 +374,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00046");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) -1, 10, (int) (short) 1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -390,7 +390,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00048");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 0, (-1), (int) '4');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -398,7 +398,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00049");
         java.lang.String str3 = TriangleClass.sideClass(1, (int) (short) 100, (int) (byte) 10);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -406,7 +406,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00050");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 100, 1, 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -430,7 +430,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00053");
         java.lang.String str3 = TriangleClass.sideClass((int) 'a', (int) (short) -1, 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -518,7 +518,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00064");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) -1, (int) (byte) 1, (int) (byte) 10);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -526,7 +526,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00065");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 1, 0, (int) '4');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -550,7 +550,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00068");
         java.lang.String str3 = TriangleClass.sideClass((int) ' ', 0, 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -566,7 +566,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00070");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 1, (int) (short) -1, (int) (short) 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -574,7 +574,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00071");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 100, (int) (short) 1, (int) (short) -1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -582,7 +582,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00072");
         java.lang.String str3 = TriangleClass.sideClass((int) '4', (int) (short) 100, (int) (short) 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -638,7 +638,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00079");
         java.lang.String str3 = TriangleClass.sideClass((int) '4', (int) (short) 10, (int) (short) 1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -654,7 +654,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00081");
         java.lang.String str3 = TriangleClass.sideClass(0, (int) (short) 0, (int) '#');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -662,7 +662,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00082");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 10, (int) (short) 0, (int) 'a');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -686,7 +686,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00085");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 10, (int) ' ', (int) (byte) 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -798,7 +798,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00099");
         java.lang.String str3 = TriangleClass.sideClass((int) ' ', (int) (byte) 1, 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -830,7 +830,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00103");
         java.lang.String str3 = TriangleClass.sideClass((int) '#', (int) (byte) 0, (int) (byte) -1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -854,7 +854,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00106");
         java.lang.String str3 = TriangleClass.sideClass((-1), (int) (short) 1, (-1));
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -894,7 +894,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00111");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 10, (int) (byte) 10, (int) ' ');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -958,7 +958,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00119");
         java.lang.String str3 = TriangleClass.sideClass(0, (int) (byte) -1, (int) (byte) 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -966,7 +966,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00120");
         java.lang.String str3 = TriangleClass.sideClass((-1), (int) (byte) 0, 1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -982,7 +982,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00122");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 10, (int) '4', (int) (short) 10);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -998,7 +998,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00124");
         java.lang.String str3 = TriangleClass.sideClass(10, 1, 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -1006,7 +1006,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00125");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 100, (int) (byte) 100, (int) (short) 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -1022,7 +1022,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00127");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 0, 100, 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -1086,7 +1086,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00135");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 1, 0, (int) (byte) 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -1190,7 +1190,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00148");
         java.lang.String str3 = TriangleClass.sideClass((int) '4', (int) (byte) 1, (int) (short) 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -1214,7 +1214,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00151");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 100, (int) (short) 1, (int) (short) 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -1262,7 +1262,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00157");
         java.lang.String str3 = TriangleClass.sideClass(100, 1, (int) (short) 10);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -1278,7 +1278,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00159");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) -1, 0, (int) (byte) 1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -1302,7 +1302,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00162");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 1, (int) (byte) 1, (int) (short) 10);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -1310,7 +1310,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00163");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 100, (int) (short) 100, (-1));
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -1318,7 +1318,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00164");
         java.lang.String str3 = TriangleClass.sideClass(10, 0, (int) '4');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -1350,7 +1350,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00168");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 100, 0, (int) (byte) 10);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -1422,7 +1422,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00177");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 1, (int) (byte) 10, (int) (byte) -1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -1430,7 +1430,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00178");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 1, 0, (int) (short) -1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -1438,7 +1438,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00179");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 1, 0, 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -1446,7 +1446,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00180");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 0, (int) (short) 0, (int) 'a');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -1454,7 +1454,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00181");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 10, (int) (byte) -1, (int) (byte) 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -1510,7 +1510,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00188");
         java.lang.String str3 = TriangleClass.sideClass((int) '#', (int) (short) 100, 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -1622,7 +1622,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00202");
         java.lang.String str3 = TriangleClass.sideClass((int) ' ', 10, (int) (short) 10);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -1654,7 +1654,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00206");
         java.lang.String str3 = TriangleClass.sideClass((int) '4', (int) (short) 0, (int) (byte) -1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -1694,7 +1694,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00211");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) -1, (int) (short) 0, (int) ' ');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -1726,7 +1726,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00215");
         java.lang.String str3 = TriangleClass.sideClass((int) 'a', (int) (short) 10, 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -1734,7 +1734,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00216");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 0, (int) (byte) 10, (int) ' ');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -1750,7 +1750,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00218");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 10, (int) (short) 100, (int) '#');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -1782,7 +1782,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00222");
         java.lang.String str3 = TriangleClass.sideClass(100, 1, 1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -1790,7 +1790,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00223");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) -1, (int) '#', 10);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -1822,7 +1822,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00227");
         java.lang.String str3 = TriangleClass.sideClass(0, (int) (byte) 10, (int) ' ');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -1950,7 +1950,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00243");
         java.lang.String str3 = TriangleClass.sideClass(0, 10, (int) (byte) 10);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -1966,7 +1966,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00245");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 100, (int) (byte) -1, (int) (short) 1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -1998,7 +1998,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00249");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) -1, (int) 'a', 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -2054,7 +2054,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00256");
         java.lang.String str3 = TriangleClass.sideClass(0, (int) (byte) 100, 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -2118,7 +2118,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00264");
         java.lang.String str3 = TriangleClass.sideClass((int) '#', 10, (int) (byte) 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -2182,7 +2182,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00272");
         java.lang.String str3 = TriangleClass.sideClass(0, 100, 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -2254,7 +2254,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00281");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 10, (-1), (int) (byte) 1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -2270,7 +2270,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00283");
         java.lang.String str3 = TriangleClass.sideClass(0, (int) (byte) 1, (int) (byte) 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -2294,7 +2294,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00286");
         java.lang.String str3 = TriangleClass.sideClass((int) ' ', (int) (short) 10, (int) (short) 10);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -2326,7 +2326,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00290");
         java.lang.String str3 = TriangleClass.sideClass((-1), 0, (int) 'a');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -2350,7 +2350,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00293");
         java.lang.String str3 = TriangleClass.sideClass(0, (int) '4', (int) (short) 10);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -2382,7 +2382,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00297");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) -1, 1, (int) (byte) 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -2430,7 +2430,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00303");
         java.lang.String str3 = TriangleClass.sideClass(100, (int) (short) 100, (-1));
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -2478,7 +2478,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00309");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 100, (int) (short) -1, 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -2486,7 +2486,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00310");
         java.lang.String str3 = TriangleClass.sideClass(10, (int) (short) 10, 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -2598,7 +2598,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00324");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 1, (int) (short) 1, (int) (short) 10);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -2614,7 +2614,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00326");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 100, 10, (int) (byte) 1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -2662,7 +2662,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00332");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 100, (int) (byte) 0, 1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -2670,7 +2670,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00333");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 10, (int) (short) -1, 1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -2742,7 +2742,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00342");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 1, (int) (byte) 0, (int) (byte) 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -2790,7 +2790,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00348");
         java.lang.String str3 = TriangleClass.sideClass((int) '4', 1, 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -2806,7 +2806,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00350");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 0, (int) (byte) 1, 1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -2822,7 +2822,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00352");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) -1, (int) ' ', 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -2918,7 +2918,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00364");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 0, 100, (-1));
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -2926,7 +2926,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00365");
         java.lang.String str3 = TriangleClass.sideClass(0, (int) (short) -1, (int) (byte) 1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -2998,7 +2998,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00374");
         java.lang.String str3 = TriangleClass.sideClass((int) ' ', (int) 'a', (int) (byte) 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3014,7 +3014,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00376");
         java.lang.String str3 = TriangleClass.sideClass((int) '#', 0, (-1));
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3030,7 +3030,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00378");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 0, (int) (short) 100, (int) (byte) 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -3046,7 +3046,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00380");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 10, (int) (byte) 10, (int) (byte) 1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -3078,7 +3078,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00384");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 10, (-1), (int) (byte) 10);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -3094,7 +3094,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00386");
         java.lang.String str3 = TriangleClass.sideClass(100, 1, (int) (short) 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3142,7 +3142,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00392");
         java.lang.String str3 = TriangleClass.sideClass((int) ' ', (int) (byte) 100, 1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3182,7 +3182,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00397");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 0, (int) 'a', (int) (short) 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -3222,7 +3222,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00402");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 1, (-1), 10);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3230,7 +3230,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00403");
         java.lang.String str3 = TriangleClass.sideClass(1, (int) (byte) 10, 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3262,7 +3262,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00407");
         java.lang.String str3 = TriangleClass.sideClass((int) '#', 10, (int) '4');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3302,7 +3302,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00412");
         java.lang.String str3 = TriangleClass.sideClass(10, 0, (int) (short) -1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3310,7 +3310,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00413");
         java.lang.String str3 = TriangleClass.sideClass((int) '#', 0, (int) (byte) 10);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3334,7 +3334,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00416");
         java.lang.String str3 = TriangleClass.sideClass((-1), 10, (int) '4');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3350,7 +3350,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00418");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 1, (int) (short) 100, 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3358,7 +3358,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00419");
         java.lang.String str3 = TriangleClass.sideClass(0, 100, (int) (byte) 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -3366,7 +3366,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00420");
         java.lang.String str3 = TriangleClass.sideClass((int) 'a', (int) (byte) 1, 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3374,7 +3374,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00421");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) -1, (int) ' ', (int) '#');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3398,7 +3398,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00424");
         java.lang.String str3 = TriangleClass.sideClass((int) '#', 100, 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3414,7 +3414,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00426");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 0, 0, (int) (byte) -1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -3446,7 +3446,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00430");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 100, 100, (int) (byte) 1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -3454,7 +3454,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00431");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) -1, (int) (byte) 0, (int) (short) 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -3486,7 +3486,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00435");
         java.lang.String str3 = TriangleClass.sideClass((-1), (int) '4', (int) '#');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3518,7 +3518,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00439");
         java.lang.String str3 = TriangleClass.sideClass(100, (int) '4', (int) '4');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -3534,7 +3534,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00441");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 10, 1, (int) '#');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3566,7 +3566,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00445");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) -1, (int) (byte) 100, (int) (byte) 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -3574,7 +3574,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00446");
         java.lang.String str3 = TriangleClass.sideClass((-1), (int) (short) -1, 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -3582,7 +3582,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00447");
         java.lang.String str3 = TriangleClass.sideClass((int) ' ', (int) 'a', 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3590,7 +3590,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00448");
         java.lang.String str3 = TriangleClass.sideClass((int) '#', (int) ' ', (int) (short) 0);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3598,7 +3598,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00449");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 10, 100, (int) (short) -1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3630,7 +3630,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00453");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 1, (int) 'a', (int) ' ');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3654,7 +3654,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00456");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 10, 1, (int) (short) 10);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -3694,7 +3694,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00461");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 1, (int) ' ', (int) ' ');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -3702,7 +3702,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00462");
         java.lang.String str3 = TriangleClass.sideClass((-1), (int) (byte) -1, 1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -3734,7 +3734,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00466");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 1, (int) '#', 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3742,7 +3742,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00467");
         java.lang.String str3 = TriangleClass.sideClass((int) (short) 1, (int) 'a', (int) (byte) -1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3782,7 +3782,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00472");
         java.lang.String str3 = TriangleClass.sideClass((int) ' ', (int) (byte) 10, 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3790,7 +3790,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00473");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) -1, (int) '#', (int) (short) 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3814,7 +3814,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00476");
         java.lang.String str3 = TriangleClass.sideClass((int) 'a', (int) (byte) 100, (int) (byte) 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -3854,7 +3854,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00481");
         java.lang.String str3 = TriangleClass.sideClass((-1), (int) (short) 10, (int) 'a');
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3894,7 +3894,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00486");
         java.lang.String str3 = TriangleClass.sideClass(0, (int) (short) -1, (int) (short) 1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3910,7 +3910,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00488");
         java.lang.String str3 = TriangleClass.sideClass(100, (int) (short) 10, (int) (byte) 1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3918,7 +3918,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00489");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) 10, (-1), (int) (short) 1);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene and" + "'", str3, "scalene and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "scalene" + "'", str3, "scalene");
     }
 
     @Test
@@ -3934,7 +3934,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00491");
         java.lang.String str3 = TriangleClass.sideClass(0, 100, (int) (short) 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test
@@ -3950,7 +3950,7 @@ public class RegressionTest0 {
         if (debug)
             System.out.format("%n%s%n", "RegressionTest0.test00493");
         java.lang.String str3 = TriangleClass.sideClass((int) (byte) -1, 100, (int) (short) 100);
-        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles and" + "'", str3, "isosceles and");
+        org.junit.Assert.assertEquals("'" + str3 + "' != '" + "isosceles" + "'", str3, "isosceles");
     }
 
     @Test

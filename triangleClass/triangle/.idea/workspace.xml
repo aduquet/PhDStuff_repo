@@ -5,15 +5,109 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44fabd51-b968-4d65-9ba4-c6492a15b334" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../NextDate-2/nextdate.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/intellij-javadocs-4.0.1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/TriangleClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../triangleClass_manualTest/triangle/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../triangleClass_manualTest/triangle/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../triangleClass_manualTest/triangle/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../triangleClass_manualTest/triangle/.idea/intellij-javadocs-4.0.1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../triangleClass_manualTest/triangle/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../triangleClass_manualTest/triangle/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../triangleClass_manualTest/triangle/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../triangleClass_manualTest/triangle/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../triangleClass_manualTest/triangle/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../triangleClass_manualTest/triangle/src/main/java/TriangleClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../triangleClass_manualTest/triangle/src/test/java/TriangleClassTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TriangleClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TriangleClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest0.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest10.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest11.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest12.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest13.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest14.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest15.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest16.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest17.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest18.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest19.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest20.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest21.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest22.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest23.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest24.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest25.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest26.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest27.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest28.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest29.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest30.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest31.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest32.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest6.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest7.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest8.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/RegressionTest9.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TriangleClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/TriangleClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/target/jacoco.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/report/202209080853/default/TriangleClass.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/report/202209080853/default/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/report/202209080853/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/report/202209080853/mutations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/report/202209080853/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/report/202209080920/default/TriangleClass.java.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/report/202209080920/default/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/report/202209080920/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/report/202209080920/mutations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/report/202209080920/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/default/TriangleClass.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/default/TriangleClass.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/default/TriangleClass.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/default/TriangleClass.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/default/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/default/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/default/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/default/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/jacoco/jacoco.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/RegressionTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/RegressionTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-RegressionTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-RegressionTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest0.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest0.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest12.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest13.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest13.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest14.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest14.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest15.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest15.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest16.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest16.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest17.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest17.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest18.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest18.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest19.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest19.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest20.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest20.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest21.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest21.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest22.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest22.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest23.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest23.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest24.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest24.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest25.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest25.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest26.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest26.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest27.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest27.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest28.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest28.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest29.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest29.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest30.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest30.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest31.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest31.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest32.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest32.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/RegressionTest9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/RegressionTest9.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,19 +137,35 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "project.structure.last.edited": "Facets",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "configurable.group.build"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.RegressionTest2.test01001">
+    <configuration name="RegressionTest2.test01001" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="triangle" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="RegressionTest2" />
+      <option name="METHOD_NAME" value="test01001" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PIT" type="PIT" factoryName="PIT Runner" REPORT_DIR="$PROJECT_DIR$/target/report" SOURCE_DIRS="$PROJECT_DIR$/src/main/java" TARGET_CLASSES="TriangleClass" TARGET_TESTS="$PROJECT_DIR$/src/test/java" otherParams="--outputFormats XML,HTML">
       <module name="triangle" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.RegressionTest2.test01001" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
