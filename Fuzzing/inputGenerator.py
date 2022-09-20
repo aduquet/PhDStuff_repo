@@ -17,3 +17,6 @@ def hundred_inputs(trials) -> List[str]:
     for i in range(trials):
         population.append(fuzzer())
     return population
+
+if __name__ == '__main__':
+    print(fuzzer())
