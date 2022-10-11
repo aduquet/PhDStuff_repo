@@ -9,40 +9,33 @@ def MRsChecker(df):
         
         ## MR_1 ##
         if row['output'] == row['MR1_output']:
-            finalLog.at[index, 'MR1_checker'] = 1
-            finalLog.at[index, 'MR1_checker_str'] = 'No-violated'
+            finalLog.at[index, 'MR1_checker'] = 'No-violated'
 
         if row['output'] != row['MR1_output']:
-            finalLog.at[index, 'MR1_checker'] = 0
-            finalLog.at[index, 'MR1_checker_str'] = 'Violated'
+            finalLog.at[index, 'MR1_checker'] = 'Violated'
 
         ## MR_2 ##
-        if row['output'] <= row['MR2_output']:
-            finalLog.at[index, 'MR2_checker'] = 1
-            finalLog.at[index, 'MR2_checker_str'] = 'No-violated'
+        # Must to be <
+        if row['output'] < row['MR2_output']:
+            finalLog.at[index, 'MR2_checker'] = 'No-violated'
 
-        if row['output'] > row['MR2_output']:
-            finalLog.at[index, 'MR2_checker'] = 0
-            finalLog.at[index, 'MR2_checker_str'] = 'Violated'
+        if row['output'] >= row['MR2_output']:
+            finalLog.at[index, 'MR2_checker'] = 'Violated'
 
         ## MR_3 ##
         if row['output'] == row['MR3_output']:
-            finalLog.at[index, 'MR3_checker'] = 1
-            finalLog.at[index, 'MR3_checker_str'] = 'No-violated'
+            finalLog.at[index, 'MR3_checker'] = 'No-violated'
 
         if row['output'] != row['MR3_output']:
-            finalLog.at[index, 'MR3_checker'] = 0
-            finalLog.at[index, 'MR3_checker_str'] = 'Violated'
+            finalLog.at[index, 'MR3_checker'] = 'Violated'
 
 
         ## MR_4 ##
         if row['output'] == row['MR4_output']:
-            finalLog.at[index, 'MR4_checker'] = 1
-            finalLog.at[index, 'MR4_checker_str'] = 'No-violated'
+            finalLog.at[index, 'MR4_checker'] = 'No-violated'
 
         if row['output'] != row['MR4_output']:
-            finalLog.at[index, 'MR4_checker'] = 0
-            finalLog.at[index, 'MR4_checker_str'] = 'Violated'
+            finalLog.at[index, 'MR4_checker'] = 'Violated'
 
 
 
@@ -59,7 +52,7 @@ if __name__ == '__main__':
 
     def main(file_in, file_out):
 
-        df = pd.read_csv(file_in, index_col= 0)
+        df = pd.read_csv(file_in, index_col=0)
 
         global finalLog
         finalLog = df.copy()
