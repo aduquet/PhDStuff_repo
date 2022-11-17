@@ -1,63 +1,71 @@
-import sys
-import zlib
-import atheris
-import coverage
-
-import ast
-
 from pathlib import Path
-
-from mutatest import run
-from mutatest import transformers
-from mutatest.api import Genome, GenomeGroup, MutationException
-from mutatest.filters import CoverageFilter, CategoryCodeFilter
-
-with atheris.instrument_imports():
-    from toy_example import calculator 
-
-	
-# @atheris.instrument_func
-def test_add(data): 
-    # cov.start()
-
-    # cov.start()
-
-    fdp = atheris.FuzzedDataProvider(data)
-    # input = fdp.ConsumeIntList(2,1)
-    input = fdp.ConsumeIntListInRange(2, 0, 9)
-    assert calculator(input[0], input[1]).multiplication() == calculator(input[1], input[0]).multiplication()
-    print('start')
-    print('Inputs: ', input )
-    print('Result: ', calculator(input[0], input[1]).multiplication())
-    print('end')
-    print('******')
-    # cov.stop()
-    # cov.save()
-    # try:
-    #     cov.html_report()
-    # except:
-    #     pass
-    # print('a: ', a)
-    # print('b: ', b)
-	# try:
-		# print(calculator(a,b).subtraction())
-	
-	# except zlib.error:
-  		# pass
-#.. call your code ..
-# cov = Coverage()
-# cov.stop()
-
-# cov.html_report(directory='covhtml')
+import subprocess
+import pandas as pd
+import os
+import sys
+import atheris
 
 
-# cov = cover/age.Coverage()
+# if __name__ == '__main__':
+#     args = sys.argv
 
-# .. call your code ..
-atheris.Setup(sys.argv,test_add)
-atheris.Fuzz()
-# cov.stop()
-# cov.save()
-# cov.html_report()
-print('**** Done ****')
+#     import click
+
+#     @click.command()
+#     @click.option('-o', '--out', 'file_out', help = 'name for savig the logs')
+
+#     def main(file_out):
+#         subp = 'python3 src_tests_fuzzer.py -atheris_runs=1000'
+#         subprocess.run(subp)
+#         print(file_out)
+
+
+# main()
+
+# subp = 'python "/Users/alduck/Documents/PhDStuff_repo/VST2023/firstPhase/src_tests_fuzzer.py" -atheris_runs=1000'
+# # subprocess.run(subp)
+# # subprocess.call['Python3 src_tests_fuzzer.py']
+# print(subprocess.check_call([sys.executable or 'python', 'src_tests_fuzzewr.py']))
+# # subprocess.call('python3 src_tests_fuzzer.py -atheris_runs=1000', shell=True)
+
+# print('DONE')
+
+## python3 -m coverage run your_fuzzer.py -atheris_runs=10000  # Times to run
+# python3 -m coverage html
+# (cd htmlcov && python3 -m http.server 8000)
+
+import subprocess
+# command = 'home/project/python_files/run_file.py {} {} {}'.format(
+#         arg1, arg2, arg3) # if you want to pass any arguments
+# command = 'python3 src_tests_fuzzer.py -atheris_runs=1000'
+command = 'python3 -m coverage run src_tests_fuzzer.py -atheris_runs=1000'
+p = subprocess.Popen(
+        [command],
+        shell=True,
+        stdin=None,
+        # stdout=subprocess.PIPE,
+        # stderr=subprocess.PIPE,
+        close_fds=True)
+out, err = p.communicate()
+
+command = 'python3 -m coverage html'
+p = subprocess.Popen(
+        [command],
+        shell=True,
+        stdin=None,
+        # stdout=subprocess.PIPE,
+        # stderr=subprocess.PIPE,
+        close_fds=True)
+out, err = p.communicate()
+
+# command = 'cd htmlcov && python3 -m http.server 8000'
+# p = subprocess.Popen(
+#         [command],
+#         shell=True,
+#         stdin=None,
+#         # stdout=subprocess.PIPE,
+#         # stderr=subprocess.PIPE,
+#         close_fds=True)
+# out, err = p.communicate()
+
 
