@@ -16,37 +16,32 @@ Random sample details
 
 Running time details
 --------------------
- - Clean trial 1 run time: 0:00:00.296387
- - Clean trial 2 run time: 0:00:00.260346
- - Mutation trials total run time: 0:00:03.687895
+ - Clean trial 1 run time: 0:00:00.557884
+ - Clean trial 2 run time: 0:00:00.440076
+ - Mutation trials total run time: 0:00:07.175293
 
 Overall mutation trial summary
 ==============================
- - DETECTED: 11
- - SURVIVED: 1
+ - DETECTED: 12
  - TOTAL RUNS: 12
- - RUN DATETIME: 2022-11-17 14:00:40.374530
+ - RUN DATETIME: 2022-11-17 16:33:01.763206
 
 
 Mutations by result status
 ==========================
 
 
-SURVIVED
---------
- - example/toy_example.py: (l: 8, c: 13) - mutation from <class 'ast.Add'> to <class 'ast.Mult'>
-
-
 DETECTED
 --------
- - example/toy_example.py: (l: 8, c: 13) - mutation from <class 'ast.Add'> to <class 'ast.Sub'>
- - example/toy_example.py: (l: 8, c: 13) - mutation from <class 'ast.Add'> to <class 'ast.Div'>
  - example/toy_example.py: (l: 8, c: 13) - mutation from <class 'ast.Add'> to <class 'ast.Pow'>
+ - example/toy_example.py: (l: 8, c: 13) - mutation from <class 'ast.Add'> to <class 'ast.Mult'>
  - example/toy_example.py: (l: 8, c: 13) - mutation from <class 'ast.Add'> to <class 'ast.FloorDiv'>
  - example/toy_example.py: (l: 8, c: 13) - mutation from <class 'ast.Add'> to <class 'ast.Mod'>
- - example/toy_example.py: (l: 11, c: 13) - mutation from <class 'ast.Sub'> to <class 'ast.Add'>
- - example/toy_example.py: (l: 11, c: 13) - mutation from <class 'ast.Sub'> to <class 'ast.Mult'>
- - example/toy_example.py: (l: 11, c: 13) - mutation from <class 'ast.Sub'> to <class 'ast.FloorDiv'>
+ - example/toy_example.py: (l: 8, c: 13) - mutation from <class 'ast.Add'> to <class 'ast.Sub'>
+ - example/toy_example.py: (l: 8, c: 13) - mutation from <class 'ast.Add'> to <class 'ast.Div'>
  - example/toy_example.py: (l: 11, c: 13) - mutation from <class 'ast.Sub'> to <class 'ast.Pow'>
+ - example/toy_example.py: (l: 11, c: 13) - mutation from <class 'ast.Sub'> to <class 'ast.Add'>
  - example/toy_example.py: (l: 11, c: 13) - mutation from <class 'ast.Sub'> to <class 'ast.Mod'>
+ - example/toy_example.py: (l: 11, c: 13) - mutation from <class 'ast.Sub'> to <class 'ast.FloorDiv'>
  - example/toy_example.py: (l: 11, c: 13) - mutation from <class 'ast.Sub'> to <class 'ast.Div'>
+ - example/toy_example.py: (l: 11, c: 13) - mutation from <class 'ast.Sub'> to <class 'ast.Mult'>

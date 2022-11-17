@@ -8,10 +8,19 @@ class AddSubTest(TestCase):
     #     inputs = pd.read_csv('log_1000.csv', index_col= 0)
     #     print(calculator(2,4).add())
     #     self.assertEqual(calculator(2,2).add(),4)
+
+    # MR1 TRANSFORMATION (Permutation of the input)
+    # MR2 TRANSFORMATION (Multiply by a positive constant )
+    # MR3 TRANSFORMATION (Adding a positive constant to each operand )
+
+
     global a, b, constant
     a = [0,2,3,20]
-    b = [0,2,9,1]
+    b = [1,2,9,1]
     constant = 4
+
+    # def test_bad(self):
+    #     self.assertEqual(calculator(2,2).add(), 4)
 
     def test_sub_MR1(self):
 
@@ -25,7 +34,7 @@ class AddSubTest(TestCase):
                 self.assertNotEqual(calculator(a[i],b[i]).subtraction(), expected)
 
     def test_add_MR2(self):
-        # Must to be <
+        # Output must to be <
 
         for i in range(0,len(a)):
 
