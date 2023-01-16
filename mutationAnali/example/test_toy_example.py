@@ -1,27 +1,11 @@
 from toy_example import calculator
 from unittest import TestCase
 
-# import pandas as pd
 class AddSubTest(TestCase):
-    # def test_add_MR1(self):
-
-    #     inputs = pd.read_csv('log_1000.csv', index_col= 0)
-    #     print(calculator(2,4).add())
-    #     self.assertEqual(calculator(2,2).add(),4)
-
-    # MR1 TRANSFORMATION (Permutation of the input)
-    # MR2 TRANSFORMATION (Multiply by a positive constant )
-    # MR3 TRANSFORMATION (Adding a positive constant to each operand )
-
-
     global a, b, constant
-    a = [0,2,3,20]
-    b = [1,2,9,1]
-    constant = 4
-
-    # def test_bad(self):
-    #     self.assertEqual(calculator(2,2).add(), 4)
-
+    a = [0,2,3,2,0]
+    b = [1,2,9,1,2]
+    constant = 9
     def test_sub_MR1(self):
 
         for i in range(0,len(a)):
@@ -40,7 +24,8 @@ class AddSubTest(TestCase):
 
             # Violation case
             if a[i] == 0 and b[i] == 0 :
-                self.assertEqual(calculator(a[i],b[i]).add(), 0)
+                expected = calculator(constant * a[i], constant * b[i]).add()
+                self.assertEqual(calculator(a[i],b[i]).add(), expected)
 
             #No-violation case
             else:
@@ -58,7 +43,7 @@ class AddSubTest(TestCase):
                 self.assertLess(calculator(a[i],b[i]).subtraction(), expected)
 
             elif a[i] == 0 and b[i] == 0 or a[i]==b[i]:
-                self.assertEqual(calculator(a[i],b[i]).subtraction(), 0)
+                self.assertEqual(constant * a[i], constant * b[i])
 
             #violation case
             else:
