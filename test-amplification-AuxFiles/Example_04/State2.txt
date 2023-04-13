@@ -1,0 +1,8 @@
+test_average_empty (__main__.TestToyExample) ... ok
+test_get_average (__main__.TestToyExample) ... ok
+test_get_sum (__main__.TestToyExample) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.021s
+
+OK

@@ -1,0 +1,14 @@
+test_get_average (__main__.TestToyExample) ... FAIL
+
+======================================================================
+FAIL: test_get_average (__main__.TestToyExample)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/alduck/Documents/GitHub/test-amplification-AuxFiles/Example_03/test_toyExample.py", line 66, in test_get_average
+    self.assertEqual(toy_example.get_average(), 7.0)
+AssertionError: 6.0 != 7.0
+
+----------------------------------------------------------------------
+Ran 1 test in 0.021s
+
+FAILED (failures=1)

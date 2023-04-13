@@ -1,0 +1,24 @@
+test_average_empty (__main__.TestToyExample) ... ERROR
+test_get_average (__main__.TestToyExample) ... FAIL
+test_get_sum (__main__.TestToyExample) ... ok
+
+======================================================================
+ERROR: test_average_empty (__main__.TestToyExample)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/alduck/Documents/GitHub/test-amplification-AuxFiles/Example_04/test_arrayCalculator.py", line 109, in test_average_empty
+    self.array.clear_data()
+AttributeError: 'ArrayCalculator' object has no attribute 'clear_data'
+
+======================================================================
+FAIL: test_get_average (__main__.TestToyExample)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/alduck/Documents/GitHub/test-amplification-AuxFiles/Example_04/test_arrayCalculator.py", line 100, in test_get_average
+    self.assertEqual(self.array.get_average(), 4.5)
+AssertionError: 4 != 4.5
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.022s
+
+FAILED (failures=1, errors=1)

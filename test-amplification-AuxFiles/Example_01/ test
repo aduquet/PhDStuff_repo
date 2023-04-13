@@ -1,0 +1,2 @@
+testID,input,methodCall,get_max,get_min,check_last,check_first,get_size,is_empty,is_sorted,calculate_sum,get_average
+test_count_occurrences_after_removing_duplicates,"[2, 2, 2, 3, 4, 4, 5]",remove_duplicates,5,2,5,2,7,False,True,22,3.142857142857143

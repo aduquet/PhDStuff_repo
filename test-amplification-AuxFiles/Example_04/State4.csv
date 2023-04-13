@@ -1,0 +1,6 @@
+testID,input,methodCall,get_last_element,get_first_element,get_size,is_empty,get_sum,get_average
+test_average_empty,"[2, 3, 1, 4, 5]",CTOR,-,-,-,-,-,-
+test_get_average,"[2, 3, 1, 4, 5]",CTOR,-,-,-,-,-,-
+test_get_average,"[2, 3, 1, 4, 5]",get_average,5,2,5,False,15,3.0
+test_get_sum,"[2, 3, 1, 4, 5]",CTOR,-,-,-,-,-,-
+test_get_sum,"[2, 3, 1, 4, 5]",get_sum,5,2,5,False,15,3.0

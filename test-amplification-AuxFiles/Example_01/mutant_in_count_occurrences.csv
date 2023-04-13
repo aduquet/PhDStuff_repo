@@ -1,0 +1,17 @@
+testID,input,methodCall,get_max,get_min,check_last,check_first,get_size,is_empty,is_sorted,calculate_sum,get_average
+test_sum_after_reversing_the_list,"[5, 4, 3, 2, 1]",reverse_data,5,1,1,5,5,False,False,15,3.0
+test_max_after_sorting_the_list_in_ascending_order,"[1, 2, 5, 7, 9]",sort_ascending,9,1,9,1,5,False,True,24,4.8
+test_max_after_sorting_the_list_in_ascending_order,"[9, 7, 5, 2, 1]",reverse_data,9,1,1,9,5,False,False,24,4.8
+test_is_sorted_after_multiplying_all_elements_by_negative_one,"[-1, -2, -3, -4, -5]",multiply_by_scalar,-1,-5,-5,-1,5,False,False,-15,-3.0
+test_get_min_after_appending_a_new_minimum_element,"[9, 2, 1, 4, 6, 1]",append_data,9,1,1,9,6,False,False,23,3.8333333333333335
+test_sum_after_reversing_the_list,"[5, 4, 3, 2, 1]",reverse_data,5,1,1,5,5,False,False,15,3.0
+test_max_after_sorting_the_list_in_ascending_order,"[1, 2, 5, 7, 9]",sort_ascending,9,1,9,1,5,False,True,24,4.8
+test_max_after_sorting_the_list_in_ascending_order,"[9, 7, 5, 2, 1]",reverse_data,9,1,1,9,5,False,False,24,4.8
+test_is_sorted_after_multiplying_all_elements_by_negative_one,"[-1, -2, -3, -4, -5]",multiply_by_scalar,-1,-5,-5,-1,5,False,False,-15,-3.0
+test_get_min_after_appending_a_new_minimum_element,"[9, 2, 1, 4, 6, 1]",append_data,9,1,1,9,6,False,False,23,3.8333333333333335
+test_count_occurrences_after_removing_duplicates,"[2, 2, 2, 3, 4, 4, 5]",remove_duplicatess,5,2,5,2,7,False,True,22,3.142857142857143
+test_sum_after_reversing_the_list,"[5, 4, 3, 2, 1]",reverse_data,5,1,1,5,5,False,False,15,3.0
+test_max_after_sorting_the_list_in_ascending_order,"[1, 2, 5, 7, 9]",sort_ascending,9,1,9,1,5,False,True,24,4.8
+test_max_after_sorting_the_list_in_ascending_order,"[9, 7, 5, 2, 1]",reverse_data,9,1,1,9,5,False,False,24,4.8
+test_is_sorted_after_multiplying_all_elements_by_negative_one,"[-1, -2, -3, -4, -5]",multiply_by_scalar,-1,-5,-5,-1,5,False,False,-15,-3.0
+test_get_min_after_appending_a_new_minimum_element,"[9, 2, 1, 4, 6, 1]",append_data,9,1,1,9,6,False,False,23,3.8333333333333335

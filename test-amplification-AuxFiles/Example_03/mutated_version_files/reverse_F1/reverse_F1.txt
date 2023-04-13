@@ -1,0 +1,30 @@
+test_append_data (__main__.TestToyExample) ... ok
+test_calculate_sum (__main__.TestToyExample) ... ok
+test_check_first (__main__.TestToyExample) ... ok
+test_check_last (__main__.TestToyExample) ... ok
+test_get_average (__main__.TestToyExample) ... ok
+test_get_max (__main__.TestToyExample) ... ok
+test_get_min (__main__.TestToyExample) ... ok
+test_get_size (__main__.TestToyExample) ... ok
+test_is_empty (__main__.TestToyExample) ... ok
+test_is_sorted (__main__.TestToyExample) ... ok
+test_multiply_by_scalar (__main__.TestToyExample) ... ok
+test_remove_duplicates (__main__.TestToyExample) ... ok
+test_reverse_data (__main__.TestToyExample) ... ERROR
+test_set_data (__main__.TestToyExample) ... ok
+test_sort_ascending (__main__.TestToyExample) ... ok
+
+======================================================================
+ERROR: test_reverse_data (__main__.TestToyExample)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/alduck/Documents/GitHub/test-amplification-AuxFiles/Example_03/mutated_version_files/reverse_F1/test_toyExample.py", line 56, in test_reverse_data
+    toy_example.reverse_data()
+  File "/Users/alduck/Documents/GitHub/test-amplification-AuxFiles/Example_03/mutated_version_files/reverse_F1/toyExample.py", line 12, in reverse_data
+    for i in range(n / 2):
+TypeError: 'float' object cannot be interpreted as an integer
+
+----------------------------------------------------------------------
+Ran 15 tests in 0.018s
+
+FAILED (errors=1)

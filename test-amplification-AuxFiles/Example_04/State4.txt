@@ -1,0 +1,36 @@
+test_average_empty (__main__.TestToyExample) ... ERROR
+test_get_average (__main__.TestToyExample) ... ERROR
+test_get_sum (__main__.TestToyExample) ... ERROR
+
+======================================================================
+ERROR: test_average_empty (__main__.TestToyExample)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/alduck/Documents/GitHub/test-amplification-AuxFiles/Example_04/test_arrayCalculator.py", line 109, in test_average_empty
+    self.array.clear_data()
+AttributeError: 'ArrayCalculator' object has no attribute 'clear_data'
+
+======================================================================
+ERROR: test_get_average (__main__.TestToyExample)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/alduck/Documents/GitHub/test-amplification-AuxFiles/Example_04/test_arrayCalculator.py", line 91, in test_get_average
+    self.array.reverse_data()
+  File "/Users/alduck/Documents/GitHub/test-amplification-AuxFiles/Example_04/array_calculator.py", line 53, in reverse_data
+    self.data[start], self.data[end] = self.data[end], self.data[start]
+IndexError: list index out of range
+
+======================================================================
+ERROR: test_get_sum (__main__.TestToyExample)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/alduck/Documents/GitHub/test-amplification-AuxFiles/Example_04/test_arrayCalculator.py", line 71, in test_get_sum
+    self.array.reverse_data()
+  File "/Users/alduck/Documents/GitHub/test-amplification-AuxFiles/Example_04/array_calculator.py", line 53, in reverse_data
+    self.data[start], self.data[end] = self.data[end], self.data[start]
+IndexError: list index out of range
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.009s
+
+FAILED (errors=3)
